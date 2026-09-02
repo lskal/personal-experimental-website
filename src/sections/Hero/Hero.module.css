@@ -1,0 +1,59 @@
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--space-6);
+	padding: var(--space-8) var(--space-5);
+	background-color: var(--color-hero);
+	color: var(--color-hero-on);
+	text-align: center;
+}
+
+.avatar {
+	width: 128px;
+	height: 128px;
+	border-radius: var(--radius-full);
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-3);
+	max-width: 640px;
+}
+
+.name {
+	font-size: var(--font-size-2xl);
+	font-weight: var(--font-weight-extrabold);
+}
+
+.role {
+	font-size: var(--font-size-lg);
+	font-weight: var(--font-weight-semibold);
+	opacity: 0.9;
+}
+
+.tagline {
+	font-size: var(--font-size-md);
+	font-weight: var(--font-weight-medium);
+}
+
+.bio {
+	font-size: var(--font-size-base);
+	opacity: 0.9;
+}
+
+@media (min-width: 640px) {
+	.hero {
+		flex-direction: row;
+		align-items: flex-start;
+		text-align: left;
+		padding: var(--space-9) var(--space-8);
+	}
+
+	.avatar {
+		width: 160px;
+		height: 160px;
+		flex-shrink: 0;
+	}
+}
