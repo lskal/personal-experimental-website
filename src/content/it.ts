@@ -18,16 +18,16 @@ export const experience: ExperienceEntry[] = [
 			'Ruolo da front-end developer che ha attraversato la manutenzione enterprise JSP/Hybris, la transizione a React/Next.js e la gestione autonoma del sito aziendale.',
 		projects: [
 			{
-				name: 'GeoStrategy',
-				client: 'Luxottica Group SpA',
+				name: 'Applicazione GIS Interna',
+				client: 'Cliente interno',
 				sector: 'IT & Business Intelligence',
 				period: 'Aprile 2026 – In corso',
 				activities: [
-					'Sviluppato un date picker MUI personalizzato con selezione a intervallo, con funzionalità comparabili a MUI X Pro senza licenza Pro',
-					"Lavorato su concetti cartografici chiave: sistemi di riferimento spaziale (WKID), ordinamento layer, granularità dei sublayer, gestione dell'extent",
-					'Integrato analytics PostHog con modulo di setup tipizzato, hook custom useAnalytics, error boundary dedicato e workaround per la re-inizializzazione in ambiente Vite/HMR',
-					'Migliorata la qualità del codice TypeScript: rimosso any, tipizzati i blocchi catch con unknown, aggiunte interfacce dedicate',
-					'Adottato react-virtuoso per il rendering performante di liste e tabelle di grandi dimensioni',
+					'Sviluppo un date picker MUI personalizzato con selezione a intervallo',
+					"Lavoro su concetti cartografici base: sistemi di riferimento spaziale (WKID), ordinamento layer, granularità dei sublayer, gestione dell'extent",
+					'Integro analytics PostHog con modulo di setup tipizzato, hook custom useAnalytics, error boundary dedicato e workaround per la re-inizializzazione in ambiente Vite/HMR',
+					'Miglioro la qualità del codice TypeScript: rimuovo any, tipizzo i blocchi catch con unknown, aggiungo interfacce dedicate',
+					'Adotto react-virtuoso per il rendering performante di liste e tabelle di grandi dimensioni',
 				],
 				tools: [
 					'React 19',
@@ -65,7 +65,7 @@ export const experience: ExperienceEntry[] = [
 				],
 			},
 			{
-				name: 'Mercurio',
+				name: 'Progetto Healthcare Interno',
 				sector: 'Healthcare',
 				period: 'Ottobre 2024 – Aprile 2025',
 				activities: [
@@ -87,6 +87,7 @@ export const experience: ExperienceEntry[] = [
 				client: 'Atos Hydraulics',
 				sector: 'Wholesale',
 				period: 'Dicembre 2022 – Febbraio 2024',
+				url: 'https://www.atos.com/en-it/',
 				activities: [
 					'Supportato un secondo progetto enterprise in JSP/Hybris in parallelo a Oakley, in un team ridotto di tre persone',
 					'Gestiti bugfix e piccoli sviluppi front-end sotto lo stesso tech lead di Oakley',
