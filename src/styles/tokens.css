@@ -1,0 +1,111 @@
+/*
+  Breakpoint convention (no preprocessor, applied by hand in each component):
+  tablet: 640px, desktop: 960px, wide: 1200px
+*/
+
+:root {
+	/* Neutral surface — light mode (default) */
+	--color-bg: #ffffff;
+	--color-surface: #f7f7f8;
+	--color-text: #111114;
+	--color-text-muted: #55565c;
+	--color-border: #e4e4e7;
+
+	/* Section accent colors — same hues across light/dark, only neutrals change */
+	--color-hero: #00c48c;
+	--color-hero-rgb: 0, 196, 140;
+	--color-hero-on: #ffffff;
+
+	--color-experience: #2e5cff;
+	--color-experience-rgb: 46, 92, 255;
+	--color-experience-on: #ffffff;
+
+	--color-projects: #ff5a36;
+	--color-projects-rgb: 255, 90, 54;
+	--color-projects-on: #ffffff;
+
+	--color-skills: #6c4eff;
+	--color-skills-rgb: 108, 78, 255;
+	--color-skills-on: #ffffff;
+
+	--color-education: #ffb800;
+	--color-education-rgb: 255, 184, 0;
+	--color-education-on: #111114;
+
+	--color-languages: #ff3d7f;
+	--color-languages-rgb: 255, 61, 127;
+	--color-languages-on: #ffffff;
+
+	--color-footer-bg: #111114;
+	--color-footer-text: #ffffff;
+
+	/* Typography */
+	--font-sans:
+		'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+	--font-size-xs: 0.75rem;
+	--font-size-sm: 0.875rem;
+	--font-size-base: 1rem;
+	--font-size-md: 1.125rem;
+	--font-size-lg: 1.5rem;
+	--font-size-xl: 2rem;
+	--font-size-2xl: 2.5rem;
+	--font-size-3xl: 3.5rem;
+
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+	--font-weight-extrabold: 800;
+
+	/* Spacing */
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-5: 24px;
+	--space-6: 32px;
+	--space-7: 48px;
+	--space-8: 64px;
+	--space-9: 96px;
+
+	/* Radius */
+	--radius-sm: 8px;
+	--radius-md: 16px;
+	--radius-lg: 24px;
+	--radius-full: 999px;
+
+	/* Shadow */
+	--shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+	--shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+	color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) {
+		--color-bg: #0f0f10;
+		--color-surface: #1a1a1c;
+		--color-text: #f5f5f7;
+		--color-text-muted: #a0a0a8;
+		--color-border: #2c2c30;
+
+		--color-footer-bg: #0a0a0b;
+
+		--shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+		--shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+	}
+}
+
+:root[data-theme='dark'] {
+	--color-bg: #0f0f10;
+	--color-surface: #1a1a1c;
+	--color-text: #f5f5f7;
+	--color-text-muted: #a0a0a8;
+	--color-border: #2c2c30;
+
+	--color-footer-bg: #0a0a0b;
+
+	--shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+	--shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
