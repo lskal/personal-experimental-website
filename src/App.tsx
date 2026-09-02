@@ -1,5 +1,6 @@
 import { Header } from './components/Header/Header';
 import { Hero } from './sections/Hero/Hero';
+import { Experience } from './sections/Experience/Experience';
 
 function App() {
 	return (
@@ -7,6 +8,7 @@ function App() {
 			<Header />
 			<main>
 				<Hero />
+				<Experience />
 			</main>
 		</>
 	);

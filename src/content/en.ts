@@ -18,16 +18,16 @@ export const experience: ExperienceEntry[] = [
 			'Front-end developer role spanning enterprise JSP/Hybris maintenance, the transition to React/Next.js, and autonomous ownership of the company website.',
 		projects: [
 			{
-				name: 'GeoStrategy',
-				client: 'Luxottica Group SpA',
+				name: 'Internal GIS Application',
+				client: 'Internal client',
 				sector: 'IT & Business Intelligence',
 				period: 'April 2026 – Present',
 				activities: [
-					'Built a custom MUI date picker with range selection, matching MUI X Pro features without the Pro license',
-					'Worked with core GIS concepts: spatial reference systems (WKID), layer ordering, sublayer granularity, extent management',
-					'Integrated PostHog analytics with a typed setup module, a custom useAnalytics hook, a dedicated error boundary, and a workaround for re-initialization issues in Vite/HMR',
-					'Improved TypeScript code quality: removed any, typed catch blocks with unknown, added dedicated interfaces',
-					'Adopted react-virtuoso for performant rendering of large lists and tables',
+					'Build a custom MUI date picker with range selection',
+					'Work with basic GIS concepts: spatial reference systems (WKID), layer ordering, sublayer granularity, extent management',
+					'Integrate PostHog analytics with a typed setup module, a custom useAnalytics hook, a dedicated error boundary, and a workaround for re-initialization issues in Vite/HMR',
+					'Improve TypeScript code quality: remove any, type catch blocks with unknown, add dedicated interfaces',
+					'Adopt react-virtuoso for performant rendering of large lists and tables',
 				],
 				tools: [
 					'React 19',
@@ -65,7 +65,7 @@ export const experience: ExperienceEntry[] = [
 				],
 			},
 			{
-				name: 'Mercurio',
+				name: 'Internal Healthcare Project',
 				sector: 'Healthcare',
 				period: 'October 2024 – April 2025',
 				activities: [
@@ -87,6 +87,7 @@ export const experience: ExperienceEntry[] = [
 				client: 'Atos Hydraulics',
 				sector: 'Wholesale',
 				period: 'December 2022 – February 2024',
+				url: 'https://www.atos.com/en-it/',
 				activities: [
 					'Supported a second enterprise JSP/Hybris project in parallel with Oakley, in a small team of three',
 					'Handled bugfixes and small front-end developments under the same tech lead as Oakley',
