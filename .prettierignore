@@ -4,3 +4,5 @@ build
 .vite
 .cache
 coverage
+.claude
+package-lock.json
