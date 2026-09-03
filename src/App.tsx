@@ -6,6 +6,7 @@ import { Projects } from './sections/Projects/Projects';
 import { Skills } from './sections/Skills/Skills';
 import { Education } from './sections/Education/Education';
 import { Languages } from './sections/Languages/Languages';
+import { Contact } from './sections/Contact/Contact';
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 				<Skills />
 				<Education />
 				<Languages />
+				<Contact />
 			</main>
 		</>
 	);
