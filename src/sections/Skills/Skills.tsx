@@ -10,7 +10,7 @@ export function Skills() {
 			<div className={styles.grid}>
 				{content.skills.map(group => (
 					<div key={group.category} className={styles.category}>
-						<h3 className={styles.categoryName}>{group.category}</h3>
+						<p className={styles.categoryName}>{group.category}</p>
 						<ul className={styles.tags}>
 							{group.skills.map(skill => (
 								<li key={skill} className={styles.tag}>

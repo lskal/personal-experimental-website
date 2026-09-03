@@ -41,7 +41,7 @@ export function CompanyTimelineItem({
 				<div className={styles.projects}>
 					{entry.projects.map(project => (
 						<article key={project.name} className={styles.project}>
-							<h3 className={styles.projectName}>
+							<p className={styles.projectName}>
 								{project.url ? (
 									<a href={project.url} target="_blank" rel="noreferrer">
 										{project.name}
@@ -49,7 +49,7 @@ export function CompanyTimelineItem({
 								) : (
 									project.name
 								)}
-							</h3>
+							</p>
 							<p className={styles.projectMeta}>
 								{[project.client, project.sector, project.period]
 									.filter(Boolean)

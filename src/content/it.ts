@@ -322,32 +322,32 @@ export const education: EducationEntry[] = [
 
 export const certifications: CertificationEntry[] = [
 	{
-		name: 'Large Language Models: dalla Teoria alla Pratica — Udemy',
+		name: 'Large Language Models: dalla Teoria alla Pratica - Udemy',
 		date: 'Luglio 2026',
 		url: 'https://drive.google.com/file/d/1HAJeugrsF7s1P9RPzXM4xI-Dw-O5Bay3/view?usp=sharing',
 	},
 	{
-		name: 'Object Oriented Programming and Design Crash Course — Udemy',
+		name: 'Object Oriented Programming and Design Crash Course - Udemy',
 		date: 'Giugno 2026',
 		url: 'https://drive.google.com/file/d/1eYpYRoWNvJDfPhGKwZEvBGPKJUwg8UFy/view?usp=sharing',
 	},
 	{
-		name: 'React: The Complete Guide (incl. Next.js, Redux) — Udemy',
+		name: 'React: The Complete Guide (incl. Next.js, Redux) - Udemy',
 		date: 'Marzo 2026',
 		url: 'https://drive.google.com/file/d/19l_4vEdBBoiDPH-wzdh4XTrDgLAEOHIs/view?usp=sharing',
 	},
 	{
-		name: 'Nuxt 3 & Supabase Mastery: Build 2 Full-Stack Apps — Udemy',
+		name: 'Nuxt 3 & Supabase Mastery: Build 2 Full-Stack Apps - Udemy',
 		date: 'Febbraio 2026',
 		url: 'https://drive.google.com/file/d/1wkx-pycfz7ZcvSeC0QdtnJmvuipO0oYO/view?usp=sharing',
 	},
 	{
-		name: 'Vue.js 3 Masterclass: Build 7 Real-World Apps — Udemy',
+		name: 'Vue.js 3 Masterclass: Build 7 Real-World Apps - Udemy',
 		date: 'Febbraio 2026',
 		url: 'https://drive.google.com/file/d/11E91DZ0f8LlENp8PGVW_JOVI0_o-5USo/view?usp=sharing',
 	},
 	{
-		name: 'Web performance — web.dev',
+		name: 'Web performance - web.dev',
 		date: 'Ottobre 2025',
 	},
 	{
@@ -397,7 +397,7 @@ export const hero = {
 	role: 'Front-end Developer',
 	tagline:
 		'Front-end developer con oltre 6 anni di esperienza, cresciuto tra stack enterprise legacy e React/Next.js moderno.',
-	bio: "Curioso per natura — mi piace capire come funzionano le cose, che si tratti di un nuovo framework, del motore di una moto o di una mossa di parkour. Fuori dal lavoro mi trovi in montagna, in moto, a lezione di teatro o dietro una cinepresa. Sempre pronto a una buona chiacchierata sull'ultima cosa che ho costruito o esplorato.",
+	bio: "Curioso per natura - mi piace capire come funzionano le cose, che si tratti di un nuovo framework, del motore di una moto o di una mossa di parkour. Fuori dal lavoro mi trovi in montagna, in moto, a lezione di teatro o dietro una cinepresa. Sempre pronto a una buona chiacchierata sull'ultima cosa che ho costruito o esplorato.",
 };
 
 export const ui = {
