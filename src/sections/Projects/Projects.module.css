@@ -1,0 +1,16 @@
+.section {
+	padding: var(--space-8) var(--space-5);
+}
+
+.title {
+	font-size: var(--font-size-2xl);
+	font-weight: var(--font-weight-extrabold);
+	color: var(--color-projects);
+	margin-bottom: var(--space-6);
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-5);
+}
