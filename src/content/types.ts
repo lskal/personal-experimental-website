@@ -79,6 +79,16 @@ export interface UiStrings {
 		languages: string;
 		contact: string;
 	};
+	languageLabels: {
+		listening: string;
+		reading: string;
+		interaction: string;
+		spokenProduction: string;
+		writing: string;
+	};
+	a11y: {
+		skipToContent: string;
+	};
 }
 
 export interface SiteContent {
