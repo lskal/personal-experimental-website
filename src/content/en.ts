@@ -322,32 +322,32 @@ export const education: EducationEntry[] = [
 
 export const certifications: CertificationEntry[] = [
 	{
-		name: 'Large Language Models: from Theory to Practice — Udemy',
+		name: 'Large Language Models: from Theory to Practice - Udemy',
 		date: 'July 2026',
 		url: 'https://drive.google.com/file/d/1HAJeugrsF7s1P9RPzXM4xI-Dw-O5Bay3/view?usp=sharing',
 	},
 	{
-		name: 'Object Oriented Programming and Design Crash Course — Udemy',
+		name: 'Object Oriented Programming and Design Crash Course - Udemy',
 		date: 'June 2026',
 		url: 'https://drive.google.com/file/d/1eYpYRoWNvJDfPhGKwZEvBGPKJUwg8UFy/view?usp=sharing',
 	},
 	{
-		name: 'React: The Complete Guide (incl. Next.js, Redux) — Udemy',
+		name: 'React: The Complete Guide (incl. Next.js, Redux) - Udemy',
 		date: 'March 2026',
 		url: 'https://drive.google.com/file/d/19l_4vEdBBoiDPH-wzdh4XTrDgLAEOHIs/view?usp=sharing',
 	},
 	{
-		name: 'Nuxt 3 & Supabase Mastery: Build 2 Full-Stack Apps — Udemy',
+		name: 'Nuxt 3 & Supabase Mastery: Build 2 Full-Stack Apps - Udemy',
 		date: 'February 2026',
 		url: 'https://drive.google.com/file/d/1wkx-pycfz7ZcvSeC0QdtnJmvuipO0oYO/view?usp=sharing',
 	},
 	{
-		name: 'Vue.js 3 Masterclass: Build 7 Real-World Apps — Udemy',
+		name: 'Vue.js 3 Masterclass: Build 7 Real-World Apps - Udemy',
 		date: 'February 2026',
 		url: 'https://drive.google.com/file/d/11E91DZ0f8LlENp8PGVW_JOVI0_o-5USo/view?usp=sharing',
 	},
 	{
-		name: 'Web performance — web.dev',
+		name: 'Web performance - web.dev',
 		date: 'October 2025',
 	},
 	{
@@ -397,7 +397,7 @@ export const hero = {
 	role: 'Front-end Developer',
 	tagline:
 		'Front-end developer with 6+ years of experience, grown across legacy enterprise stacks and modern React/Next.js.',
-	bio: "Curious by nature — I like understanding how things work, whether that's a new framework, a motorcycle engine, or a parkour move. After work you'll find me hiking, riding, doing a theater class, or behind a film camera. Always up for a good conversation about the last thing I built or explored.",
+	bio: "Curious by nature - I like understanding how things work, whether that's a new framework, a motorcycle engine, or a parkour move. After work you'll find me hiking, riding, doing a theater class, or behind a film camera. Always up for a good conversation about the last thing I built or explored.",
 };
 
 export const ui = {

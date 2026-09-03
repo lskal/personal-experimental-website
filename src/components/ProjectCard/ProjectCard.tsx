@@ -12,7 +12,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
 	return (
 		<article className={styles.card}>
-			<h3 className={styles.name}>{project.name}</h3>
+			<p className={styles.name}>{project.name}</p>
 			<p className={styles.description}>{project.description}</p>
 			<ul className={styles.stack}>
 				{project.stack.map(tech => (
