@@ -427,6 +427,16 @@ export const ui = {
 		languages: 'Lingue',
 		contact: 'Contattami',
 	},
+	languageLabels: {
+		listening: 'Ascolto',
+		reading: 'Lettura',
+		interaction: 'Interazione',
+		spokenProduction: 'Produzione orale',
+		writing: 'Scrittura',
+	},
+	a11y: {
+		skipToContent: 'Vai al contenuto principale',
+	},
 };
 
 export const content: SiteContent = {
