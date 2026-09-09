@@ -13,7 +13,7 @@ export const experience: ExperienceEntry[] = [
 		company: 'Abstract S.R.L.',
 		companyUrl: 'https://abstract.it/',
 		role: 'Front-end Developer',
-		period: 'Dicembre 2021 – In corso',
+		period: 'Dicembre 2021 - In corso',
 		summary:
 			'Ruolo da front-end developer che ha attraversato la manutenzione enterprise JSP/Hybris, la transizione a React/Next.js e la gestione autonoma del sito aziendale.',
 		projects: [
@@ -21,7 +21,7 @@ export const experience: ExperienceEntry[] = [
 				name: 'Applicazione GIS Interna',
 				client: 'Cliente interno',
 				sector: 'IT & Business Intelligence',
-				period: 'Aprile 2026 – In corso',
+				period: 'Aprile 2026 - In corso',
 				activities: [
 					'Sviluppo un date picker MUI personalizzato con selezione a intervallo',
 					"Lavoro su concetti cartografici base: sistemi di riferimento spaziale (WKID), ordinamento layer, granularità dei sublayer, gestione dell'extent",
@@ -46,7 +46,7 @@ export const experience: ExperienceEntry[] = [
 				name: 'Sito Aziendale',
 				client: 'Abstract',
 				sector: 'Servizi',
-				period: 'Aprile 2025 – Febbraio 2026',
+				period: 'Aprile 2025 - Febbraio 2026',
 				url: 'https://abstract.it/',
 				activities: [
 					'Sviluppato e gestito in autonomia il sito aziendale in Next.js: pagine services, compliance e magazine, oltre alle sezioni del footer',
@@ -67,7 +67,7 @@ export const experience: ExperienceEntry[] = [
 			{
 				name: 'Progetto Healthcare Interno',
 				sector: 'Healthcare',
-				period: 'Ottobre 2024 – Aprile 2025',
+				period: 'Ottobre 2024 - Aprile 2025',
 				activities: [
 					'Prima esperienza professionale in React, con sviluppo di componenti front-end custom in Next.js e libreria styled di MUI',
 					'Contributo alla gestione dello stato applicativo con Redux Toolkit, implementando slice e thunk',
@@ -86,7 +86,7 @@ export const experience: ExperienceEntry[] = [
 				name: 'Atos Hydraulics',
 				client: 'Atos Hydraulics',
 				sector: 'Wholesale',
-				period: 'Dicembre 2022 – Febbraio 2024',
+				period: 'Dicembre 2022 - Febbraio 2024',
 				url: 'https://www.atos.com/en-it/',
 				activities: [
 					'Supportato un secondo progetto enterprise in JSP/Hybris in parallelo a Oakley, in un team ridotto di tre persone',
@@ -98,7 +98,7 @@ export const experience: ExperienceEntry[] = [
 				name: 'Oakley',
 				client: 'Luxottica Group SpA',
 				sector: 'IT & Business Intelligence',
-				period: 'Dicembre 2021 – Giugno 2024',
+				period: 'Dicembre 2021 - Giugno 2024',
 				url: 'https://www.oakley.com/',
 				activities: [
 					"Manutenuta per quasi 3 anni un'applicazione enterprise in JSP/Hybris, gestendo bugfix e hotfix tramite Jira",
@@ -119,7 +119,7 @@ export const experience: ExperienceEntry[] = [
 		company: 'Triboo Group',
 		companyUrl: 'https://triboo.com/',
 		role: 'Sviluppatore Front-end Junior',
-		period: 'Dicembre 2019 – Novembre 2021',
+		period: 'Dicembre 2019 - Novembre 2021',
 		summary:
 			'Apprendistato come sviluppatore front-end junior, nello sviluppo e mantenimento di piattaforme e-commerce in Magento 1 e Shopify.',
 		projects: [
@@ -127,7 +127,7 @@ export const experience: ExperienceEntry[] = [
 				name: 'E-commerce Shopify',
 				client: 'scholl-shoes.com, casahenkel.it',
 				sector: 'E-commerce',
-				period: 'Gennaio 2021 – Novembre 2021',
+				period: 'Gennaio 2021 - Novembre 2021',
 				activities: [
 					'Sviluppati e mantenuti store Shopify per brand del settore moda e casa',
 					'Personalizzati temi Liquid e componenti front-end',
@@ -145,7 +145,7 @@ export const experience: ExperienceEntry[] = [
 				name: 'E-commerce Magento 1',
 				client: 'Piquadro, The Bridge, Lancel',
 				sector: 'E-commerce',
-				period: 'Dicembre 2019 – Dicembre 2020',
+				period: 'Dicembre 2019 - Dicembre 2020',
 				activities: [
 					'Personalizzati temi Magento 1 per diversi clienti del settore moda',
 					'Sviluppati componenti e funzionalità custom su richiesta dei clienti',
@@ -158,14 +158,14 @@ export const experience: ExperienceEntry[] = [
 	{
 		company: 'Valxer di Mariani Romeo',
 		role: 'Stagista Programmatore JSX Junior & Game Developer',
-		period: 'Aprile 2019 – Giugno 2019',
+		period: 'Aprile 2019 - Giugno 2019',
 		summary:
 			'Stage nello sviluppo di siti web in React e nella creazione di contenuti VR/game con Unreal Engine 4.',
 		projects: [
 			{
 				name: 'Sviluppo web & creazione contenuti VR',
 				sector: 'Media',
-				period: 'Aprile 2019 – Giugno 2019',
+				period: 'Aprile 2019 - Giugno 2019',
 				activities: [
 					'Sviluppati siti web con React nelle prime versioni (precedente a 16.8, senza Hooks)',
 					'Creati e distribuiti contenuti VR per clienti tramite Playcanvas',
@@ -178,17 +178,17 @@ export const experience: ExperienceEntry[] = [
 	{
 		company: 'Primachemical',
 		role: 'Stagista Grafica & Marketing',
-		period: 'Maggio 2018 – Luglio 2018',
+		period: 'Maggio 2018 - Luglio 2018',
 		summary:
-			'Stage nella gestione del sito Wordpress aziendale e nella grafica per il marketing.',
+			'Stage nella gestione del sito WordPress aziendale e nella grafica per il marketing.',
 		projects: [
 			{
 				name: 'Sito aziendale & grafica marketing',
 				client: 'Primachemical',
 				sector: 'Wellness Tech',
-				period: 'Maggio 2018 – Luglio 2018',
+				period: 'Maggio 2018 - Luglio 2018',
 				activities: [
-					'Sviluppato il sito aziendale tramite Wordpress',
+					'Sviluppato il sito aziendale tramite WordPress',
 					'Realizzati materiali grafici: brochure, cataloghi, poster, pubblicità online',
 					'Gestite campagne di marketing tramite Facebook Advertising',
 				],
@@ -216,12 +216,12 @@ export const experience: ExperienceEntry[] = [
 	{
 		company: 'Grafica 86',
 		role: 'Stagista Stampatore & Progettista Grafico',
-		period: 'Aprile 2015 – Maggio 2015',
+		period: 'Aprile 2015 - Maggio 2015',
 		summary: 'Primo stage nella progettazione e produzione di stampati.',
 		projects: [
 			{
 				name: 'Progettazione & produzione stampati',
-				period: 'Aprile 2015 – Maggio 2015',
+				period: 'Aprile 2015 - Maggio 2015',
 				activities: [
 					'Progettati materiali da stampa',
 					'Assistenza durante la fase di stampa',
@@ -275,27 +275,52 @@ export const skills: SkillCategory[] = [
 			'TypeScript',
 			'React',
 			'Next.js',
+			'Vue 3',
+			'Nuxt',
+			'React Router',
 		],
 	},
 	{
 		category: 'Styling & UI',
-		skills: ['Styled-components', 'Material UI / MUI', 'Tailwind CSS'],
+		skills: [
+			'Styled-components',
+			'Material UI / MUI',
+			'Tailwind CSS',
+			'SCSS/Sass',
+		],
 	},
 	{
 		category: 'Stato & Dati',
-		skills: ['Redux Toolkit', 'Zustand', 'RJSF (React JSON Schema Form)'],
+		skills: ['Redux Toolkit', 'Zustand', 'RJSF (React JSON Schema Form)', 'i18n'],
 	},
 	{
 		category: 'Competenze di dominio',
-		skills: ['ArcGIS/Esri', 'Chart.js', 'PostHog', 'Strapi', 'i18next / Tolgee'],
+		skills: [
+			'ArcGIS/Esri',
+			'Chart.js',
+			'PostHog',
+			'Strapi',
+			'i18next / Tolgee',
+			'Accessibilità WCAG',
+			'Web Performance',
+			'Shopify',
+		],
 	},
 	{
 		category: 'Strumenti & Workflow',
-		skills: ['Git', 'Vite', 'GitHub'],
+		skills: ['Git', 'GitHub', 'Jira', 'Vite', 'Vercel', 'GitHub Pages'],
 	},
 	{
 		category: 'AI/LLM Tooling',
-		skills: ['Claude', 'ChatGPT', 'OpenCode', 'OpenRouter'],
+		skills: [
+			'Claude',
+			'Claude Code',
+			'ChatGPT',
+			'OpenCode',
+			'OpenRouter',
+			'Obsidian',
+			'Prompt Engineering',
+		],
 	},
 ];
 
@@ -304,18 +329,18 @@ export const education: EducationEntry[] = [
 		title:
 			'Tecnico superiore per ideazione, sviluppo, gestione di progetti di comunicazione multicanale (EQF 5)',
 		institution: 'ITS Angelo Rizzoli, Milano',
-		period: 'Settembre 2017 – Luglio 2019',
+		period: 'Settembre 2017 - Luglio 2019',
 		url: 'https://maps.app.goo.gl/J1ieuycyj4VkZgDfA',
 	},
 	{
 		title: 'Certificato di Stampatore Digitale (400h)',
 		institution: 'Fondazione Daimon (ex Padre Monti)',
-		period: 'Settembre 2016 – Novembre 2016',
+		period: 'Settembre 2016 - Novembre 2016',
 	},
 	{
 		title: 'Diploma di Tecnico Grafica e Comunicazione',
 		institution: 'ITI Padre Monti, Saronno',
-		period: 'Settembre 2011 – Luglio 2016',
+		period: 'Settembre 2011 - Luglio 2016',
 		url: 'https://maps.app.goo.gl/RYTCq9engRfqx7eg8',
 	},
 ];

@@ -13,7 +13,7 @@ export const experience: ExperienceEntry[] = [
 		company: 'Abstract S.R.L.',
 		companyUrl: 'https://abstract.it/',
 		role: 'Front-end Developer',
-		period: 'December 2021 – Present',
+		period: 'December 2021 - Present',
 		summary:
 			'Front-end developer role spanning enterprise JSP/Hybris maintenance, the transition to React/Next.js, and autonomous ownership of the company website.',
 		projects: [
@@ -21,7 +21,7 @@ export const experience: ExperienceEntry[] = [
 				name: 'Internal GIS Application',
 				client: 'Internal client',
 				sector: 'IT & Business Intelligence',
-				period: 'April 2026 – Present',
+				period: 'April 2026 - Present',
 				activities: [
 					'Build a custom MUI date picker with range selection',
 					'Work with basic GIS concepts: spatial reference systems (WKID), layer ordering, sublayer granularity, extent management',
@@ -46,7 +46,7 @@ export const experience: ExperienceEntry[] = [
 				name: 'Company Website',
 				client: 'Abstract',
 				sector: 'Services',
-				period: 'April 2025 – February 2026',
+				period: 'April 2025 - February 2026',
 				url: 'https://abstract.it/',
 				activities: [
 					'Autonomously built and maintained the company website in Next.js: services, compliance, and magazine pages, plus footer sections',
@@ -67,7 +67,7 @@ export const experience: ExperienceEntry[] = [
 			{
 				name: 'Internal Healthcare Project',
 				sector: 'Healthcare',
-				period: 'October 2024 – April 2025',
+				period: 'October 2024 - April 2025',
 				activities: [
 					"First professional React project, building custom front-end components in Next.js with MUI's styled approach",
 					'Contributed to state management with Redux Toolkit, implementing slices and thunks',
@@ -86,7 +86,7 @@ export const experience: ExperienceEntry[] = [
 				name: 'Atos Hydraulics',
 				client: 'Atos Hydraulics',
 				sector: 'Wholesale',
-				period: 'December 2022 – February 2024',
+				period: 'December 2022 - February 2024',
 				url: 'https://www.atos.com/en-it/',
 				activities: [
 					'Supported a second enterprise JSP/Hybris project in parallel with Oakley, in a small team of three',
@@ -98,7 +98,7 @@ export const experience: ExperienceEntry[] = [
 				name: 'Oakley',
 				client: 'Luxottica Group SpA',
 				sector: 'IT & Business Intelligence',
-				period: 'December 2021 – June 2024',
+				period: 'December 2021 - June 2024',
 				url: 'https://www.oakley.com/',
 				activities: [
 					'Maintained an enterprise JSP/Hybris application for almost 3 years, handling bugfixes and hotfixes via Jira',
@@ -119,7 +119,7 @@ export const experience: ExperienceEntry[] = [
 		company: 'Triboo Group',
 		companyUrl: 'https://triboo.com/',
 		role: 'Junior Front-end Developer',
-		period: 'December 2019 – November 2021',
+		period: 'December 2019 - November 2021',
 		summary:
 			'Junior front-end developer apprenticeship, building and maintaining e-commerce platforms in Magento 1 and Shopify.',
 		projects: [
@@ -127,7 +127,7 @@ export const experience: ExperienceEntry[] = [
 				name: 'E-commerce Shopify',
 				client: 'scholl-shoes.com, casahenkel.it',
 				sector: 'E-commerce',
-				period: 'January 2021 – November 2021',
+				period: 'January 2021 - November 2021',
 				activities: [
 					'Developed and maintained Shopify stores for fashion and home brands',
 					'Customized Liquid themes and front-end components',
@@ -145,7 +145,7 @@ export const experience: ExperienceEntry[] = [
 				name: 'E-commerce Magento 1',
 				client: 'Piquadro, The Bridge, Lancel',
 				sector: 'E-commerce',
-				period: 'December 2019 – December 2020',
+				period: 'December 2019 - December 2020',
 				activities: [
 					'Customized Magento 1 themes for multiple fashion clients',
 					'Built custom components and features on client request',
@@ -158,14 +158,14 @@ export const experience: ExperienceEntry[] = [
 	{
 		company: 'Valxer di Mariani Romeo',
 		role: 'Junior JSX Programmer Intern & Game Developer',
-		period: 'April 2019 – June 2019',
+		period: 'April 2019 - June 2019',
 		summary:
 			'Internship building websites in React and creating VR/game content in Unreal Engine 4.',
 		projects: [
 			{
 				name: 'Web development & VR content creation',
 				sector: 'Media',
-				period: 'April 2019 – June 2019',
+				period: 'April 2019 - June 2019',
 				activities: [
 					'Built websites using early React (pre-16.8, pre-Hooks)',
 					'Created and delivered VR content for clients with Playcanvas',
@@ -178,17 +178,17 @@ export const experience: ExperienceEntry[] = [
 	{
 		company: 'Primachemical',
 		role: 'Graphic Design & Marketing Intern',
-		period: 'May 2018 – July 2018',
+		period: 'May 2018 - July 2018',
 		summary:
-			"Internship handling the company's Wordpress website and marketing graphics.",
+			"Internship handling the company's WordPress website and marketing graphics.",
 		projects: [
 			{
 				name: 'Company website & marketing graphics',
 				client: 'Primachemical',
 				sector: 'Wellness Tech',
-				period: 'May 2018 – July 2018',
+				period: 'May 2018 - July 2018',
 				activities: [
-					'Built the company website on Wordpress',
+					'Built the company website on WordPress',
 					'Produced marketing graphics: brochures, catalogs, posters, online ads',
 					'Managed marketing campaigns via Facebook Advertising',
 				],
@@ -216,12 +216,12 @@ export const experience: ExperienceEntry[] = [
 	{
 		company: 'Grafica 86',
 		role: 'Printer & Graphic Designer Intern',
-		period: 'April 2015 – May 2015',
+		period: 'April 2015 - May 2015',
 		summary: 'Early internship in print design and production.',
 		projects: [
 			{
 				name: 'Print design & production',
-				period: 'April 2015 – May 2015',
+				period: 'April 2015 - May 2015',
 				activities: [
 					'Designed print materials',
 					'Assisted during the printing phase',
@@ -275,27 +275,52 @@ export const skills: SkillCategory[] = [
 			'TypeScript',
 			'React',
 			'Next.js',
+			'Vue 3',
+			'Nuxt',
+			'React Router',
 		],
 	},
 	{
 		category: 'Styling & UI',
-		skills: ['Styled-components', 'Material UI / MUI', 'Tailwind CSS'],
+		skills: [
+			'Styled-components',
+			'Material UI / MUI',
+			'Tailwind CSS',
+			'SCSS/Sass',
+		],
 	},
 	{
 		category: 'State & Data',
-		skills: ['Redux Toolkit', 'Zustand', 'RJSF (React JSON Schema Form)'],
+		skills: ['Redux Toolkit', 'Zustand', 'RJSF (React JSON Schema Form)', 'i18n'],
 	},
 	{
 		category: 'Domain-specific',
-		skills: ['ArcGIS/Esri', 'Chart.js', 'PostHog', 'Strapi', 'i18next / Tolgee'],
+		skills: [
+			'ArcGIS/Esri',
+			'Chart.js',
+			'PostHog',
+			'Strapi',
+			'i18next / Tolgee',
+			'WCAG Accessibility',
+			'Web Performance',
+			'Shopify',
+		],
 	},
 	{
 		category: 'Tooling & Workflow',
-		skills: ['Git', 'Vite', 'GitHub'],
+		skills: ['Git', 'GitHub', 'Jira', 'Vite', 'Vercel', 'GitHub Pages'],
 	},
 	{
 		category: 'AI/LLM Tooling',
-		skills: ['Claude', 'ChatGPT', 'OpenCode', 'OpenRouter'],
+		skills: [
+			'Claude',
+			'Claude Code',
+			'ChatGPT',
+			'OpenCode',
+			'OpenRouter',
+			'Obsidian',
+			'Prompt Engineering',
+		],
 	},
 ];
 
@@ -304,18 +329,18 @@ export const education: EducationEntry[] = [
 		title:
 			'Higher technical diploma in multichannel communication project design, development, and management (EQF 5)',
 		institution: 'ITS Angelo Rizzoli, Milan',
-		period: 'September 2017 – July 2019',
+		period: 'September 2017 - July 2019',
 		url: 'https://maps.app.goo.gl/J1ieuycyj4VkZgDfA',
 	},
 	{
 		title: 'Digital Printer Certificate (400h)',
 		institution: 'Fondazione Daimon (formerly Padre Monti)',
-		period: 'September 2016 – November 2016',
+		period: 'September 2016 - November 2016',
 	},
 	{
 		title: 'Technical Diploma in Graphic Design and Communication',
 		institution: 'ITI Padre Monti, Saronno',
-		period: 'September 2011 – July 2016',
+		period: 'September 2011 - July 2016',
 		url: 'https://maps.app.goo.gl/RYTCq9engRfqx7eg8',
 	},
 ];
