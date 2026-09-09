@@ -11,7 +11,7 @@ import {
 
 const STORAGE_KEY = 'locale';
 
-const FALLBACK_CONTENT: Record<Locale, SiteContent> = {
+const PLACEHOLDER_CONTENT: Record<Locale, SiteContent> = {
 	en: enContent,
 	it: itContent,
 };
@@ -31,14 +31,26 @@ function otherLocale(locale: Locale): Locale {
 
 function getInitialContent(): Record<Locale, SiteContent> {
 	return {
-		en: getCachedContent('en') ?? FALLBACK_CONTENT.en,
-		it: getCachedContent('it') ?? FALLBACK_CONTENT.it,
+		en: getCachedContent('en') ?? PLACEHOLDER_CONTENT.en,
+		it: getCachedContent('it') ?? PLACEHOLDER_CONTENT.it,
 	};
+}
+
+function getInitialLoadedLocales(): Set<Locale> {
+	const loaded = new Set<Locale>();
+	if (getCachedContent('en')) {
+		loaded.add('en');
+	}
+	if (getCachedContent('it')) {
+		loaded.add('it');
+	}
+	return loaded;
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
 	const [locale, setLocale] = useState<Locale>(getInitialLocale);
 	const [contentByLocale, setContentByLocale] = useState(getInitialContent);
+	const [loadedLocales, setLoadedLocales] = useState(getInitialLoadedLocales);
 	const fetchedLocales = useRef(new Set<Locale>());
 
 	useEffect(() => {
@@ -59,6 +71,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 				return;
 			}
 			setContentByLocale(current => ({ ...current, [locale]: fetched }));
+			setLoadedLocales(current => new Set(current).add(locale));
 		});
 
 		return () => {
@@ -85,6 +98,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 					return;
 				}
 				setContentByLocale(current => ({ ...current, [deferredLocale]: fetched }));
+				setLoadedLocales(current => new Set(current).add(deferredLocale));
 			});
 		});
 
@@ -100,7 +114,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
 	return (
 		<LanguageContext.Provider
-			value={{ locale, toggleLocale, content: contentByLocale[locale] }}
+			value={{
+				locale,
+				toggleLocale,
+				content: contentByLocale[locale],
+				isLoading: !loadedLocales.has(locale),
+			}}
 		>
 			{children}
 		</LanguageContext.Provider>
