@@ -13,6 +13,7 @@
 	},
 	"dependencies": {
 		"@iconify/react": "^5.2.0",
+		"@vercel/edge-config": "^1.4.0",
 		"react": "^19.2.8",
 		"react-dom": "^19.2.8"
 	},
