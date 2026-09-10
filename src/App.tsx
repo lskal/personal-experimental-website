@@ -1,5 +1,5 @@
 import { SkipLink } from './components/SkipLink/SkipLink';
-import { Header } from './components/Header/Header';
+import { StickyToggles } from './components/StickyToggles/StickyToggles';
 import { Hero } from './sections/Hero/Hero';
 import { Experience } from './sections/Experience/Experience';
 import { Projects } from './sections/Projects/Projects';
@@ -13,9 +13,9 @@ function App() {
 	return (
 		<>
 			<SkipLink />
-			<Header />
 			<main id="main-content">
 				<Hero />
+				<StickyToggles />
 				<Experience />
 				<Projects />
 				<Skills />
