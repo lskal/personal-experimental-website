@@ -11,8 +11,10 @@ export function Contact() {
 
 	if (isLoading) {
 		return (
-			<section className={styles.section}>
-				<h2 className={styles.title}>{ui.sectionTitles.contact}</h2>
+			<footer className={styles.section} aria-labelledby="contact-heading">
+				<h2 id="contact-heading" className={styles.title}>
+					{ui.sectionTitles.contact}
+				</h2>
 				<div className={styles.links}>
 					{CONTACT_ROW_WIDTHS.map((width, index) => (
 						<span key={index} className={styles.link}>
@@ -21,24 +23,26 @@ export function Contact() {
 						</span>
 					))}
 				</div>
-			</section>
+			</footer>
 		);
 	}
 
 	return (
-		<section className={styles.section}>
-			<h2 className={styles.title}>{ui.sectionTitles.contact}</h2>
+		<footer className={styles.section} aria-labelledby="contact-heading">
+			<h2 id="contact-heading" className={styles.title}>
+				{ui.sectionTitles.contact}
+			</h2>
 			<div className={styles.links}>
 				<a href={`mailto:${contact.email}`} className={styles.link}>
-					<Icon icon="lucide:mail" width={20} height={20} />
+					<Icon icon="lucide:mail" width={20} height={20} aria-hidden="true" />
 					{contact.email}
 				</a>
 				<a href={`tel:${contact.phone}`} className={styles.link}>
-					<Icon icon="lucide:phone" width={20} height={20} />
+					<Icon icon="lucide:phone" width={20} height={20} aria-hidden="true" />
 					{contact.phone}
 				</a>
 				<span className={styles.link}>
-					<Icon icon="lucide:map-pin" width={20} height={20} />
+					<Icon icon="lucide:map-pin" width={20} height={20} aria-hidden="true" />
 					{contact.location}
 				</span>
 				{contact.githubUrl && (
@@ -47,8 +51,9 @@ export function Contact() {
 						target="_blank"
 						rel="noreferrer"
 						className={styles.link}
+						aria-label="GitHub (opens in a new tab)"
 					>
-						<Icon icon="lucide:github" width={20} height={20} />
+						<Icon icon="lucide:github" width={20} height={20} aria-hidden="true" />
 						GitHub
 					</a>
 				)}
@@ -58,12 +63,13 @@ export function Contact() {
 						target="_blank"
 						rel="noreferrer"
 						className={styles.link}
+						aria-label="LinkedIn (opens in a new tab)"
 					>
-						<Icon icon="lucide:linkedin" width={20} height={20} />
+						<Icon icon="lucide:linkedin" width={20} height={20} aria-hidden="true" />
 						LinkedIn
 					</a>
 				)}
 			</div>
-		</section>
+		</footer>
 	);
 }
