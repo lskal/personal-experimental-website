@@ -7,6 +7,7 @@ import { Skills } from './sections/Skills/Skills';
 import { Education } from './sections/Education/Education';
 import { Languages } from './sections/Languages/Languages';
 import { Contact } from './sections/Contact/Contact';
+import { PaletteDemo } from './components/PaletteDemo/PaletteDemo';
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 				<Education />
 				<Languages />
 				<Contact />
+				<PaletteDemo />
 			</main>
 		</>
 	);
