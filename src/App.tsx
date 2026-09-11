@@ -17,10 +17,10 @@ function App() {
 				<Hero />
 				<StickyToggles />
 				<Experience />
-				<Projects />
-				<Skills />
-				<Education />
 				<Languages />
+				<Projects />
+				<Education />
+				<Skills />
 				<Contact />
 				<PaletteDemo />
 			</main>
