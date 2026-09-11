@@ -15,6 +15,8 @@ interface PaletteBlock {
 	lightBg: string;
 	darkBg: string;
 	sections: Swatch[];
+	surface: { light: string; dark: string };
+	activeExperience: { light: string; dark: string };
 }
 
 const palettes: PaletteBlock[] = [
@@ -31,11 +33,13 @@ const palettes: PaletteBlock[] = [
 		darkBg: '#0D1321',
 		sections: [
 			{ hex: '#C8D8EA', label: 'Experience' },
-			{ hex: '#90B0D5', label: 'Projects' },
-			{ hex: '#5989C0', label: 'Skills' },
-			{ hex: '#386394', label: 'Education' },
 			{ hex: '#233E5C', label: 'Languages' },
+			{ hex: '#90B0D5', label: 'Projects' },
+			{ hex: '#386394', label: 'Education' },
+			{ hex: '#5989C0', label: 'Skills' },
 		],
+		surface: { light: '#D8D6D2', dark: '#242529' },
+		activeExperience: { light: '#EFF1F5', dark: '#6A7686' },
 	},
 	{
 		title: 'Palette 2 — Botanical greens',
@@ -50,11 +54,13 @@ const palettes: PaletteBlock[] = [
 		darkBg: '#40531B',
 		sections: [
 			{ hex: '#C8D8EA', label: 'Experience' },
-			{ hex: '#90B0D5', label: 'Projects' },
-			{ hex: '#5989C0', label: 'Skills' },
-			{ hex: '#386394', label: 'Education' },
 			{ hex: '#233E5C', label: 'Languages' },
+			{ hex: '#90B0D5', label: 'Projects' },
+			{ hex: '#386394', label: 'Education' },
+			{ hex: '#5989C0', label: 'Skills' },
 		],
+		surface: { light: '#D4DDDB', dark: '#484C41' },
+		activeExperience: { light: '#EFF1F5', dark: '#889883' },
 	},
 	{
 		title: 'Palette 3 — Vibrant multi-hue',
@@ -68,12 +74,14 @@ const palettes: PaletteBlock[] = [
 		lightBg: '#FDFFFC',
 		darkBg: '#161925',
 		sections: [
-			{ hex: '#1C7ED6', label: 'Experience' },
-			{ hex: '#2FB380', label: 'Projects' },
-			{ hex: '#F1D302', label: 'Skills' },
-			{ hex: '#FF5A36', label: 'Education' },
+			{ hex: '#235789', label: 'Experience' },
 			{ hex: '#E83E8C', label: 'Languages' },
+			{ hex: '#2FB380', label: 'Projects' },
+			{ hex: '#FF5A36', label: 'Education' },
+			{ hex: '#F1D302', label: 'Skills' },
 		],
+		surface: { light: '#EDF1EC', dark: '#2B2C2F' },
+		activeExperience: { light: '#BBC4CD', dark: '#213F61' },
 	},
 	{
 		title: 'Palette 4 — Tacky sunset',
@@ -88,11 +96,13 @@ const palettes: PaletteBlock[] = [
 		darkBg: '#00A6A6',
 		sections: [
 			{ hex: '#F4A261', label: 'Experience' },
-			{ hex: '#E76F51', label: 'Projects' },
-			{ hex: '#E9C46A', label: 'Skills' },
-			{ hex: '#D62828', label: 'Education' },
 			{ hex: '#9B5DE5', label: 'Languages' },
+			{ hex: '#E76F51', label: 'Projects' },
+			{ hex: '#D62828', label: 'Education' },
+			{ hex: '#E9C46A', label: 'Skills' },
 		],
+		surface: { light: '#C1C8CC', dark: '#547171' },
+		activeExperience: { light: '#EEE0D5', dark: '#7BAC91' },
 	},
 	{
 		title: 'Palette 5 — Tacky sunset colorful (warm shades)',
@@ -107,11 +117,13 @@ const palettes: PaletteBlock[] = [
 		darkBg: '#00A6A6',
 		sections: [
 			{ hex: '#FFE066', label: 'Experience' },
-			{ hex: '#FFC300', label: 'Projects' },
-			{ hex: '#FF8800', label: 'Skills' },
-			{ hex: '#FF5A36', label: 'Education' },
 			{ hex: '#C1272D', label: 'Languages' },
+			{ hex: '#FFC300', label: 'Projects' },
+			{ hex: '#FF5A36', label: 'Education' },
+			{ hex: '#FF8800', label: 'Skills' },
 		],
+		surface: { light: '#C1C8CC', dark: '#547171' },
+		activeExperience: { light: '#F2ECD6', dark: '#81C695' },
 	},
 	{
 		title: 'Palette 6 — Tacky sunset colorful (vibrant hues)',
@@ -125,12 +137,14 @@ const palettes: PaletteBlock[] = [
 		lightBg: '#BBDEF0',
 		darkBg: '#00A6A6',
 		sections: [
-			{ hex: '#1C7ED6', label: 'Experience' },
-			{ hex: '#2FB380', label: 'Projects' },
-			{ hex: '#F1D302', label: 'Skills' },
-			{ hex: '#FF5A36', label: 'Education' },
+			{ hex: '#235789', label: 'Experience' },
 			{ hex: '#E83E8C', label: 'Languages' },
+			{ hex: '#2FB380', label: 'Projects' },
+			{ hex: '#FF5A36', label: 'Education' },
+			{ hex: '#F1D302', label: 'Skills' },
 		],
+		surface: { light: '#C1C8CC', dark: '#547171' },
+		activeExperience: { light: '#BBC4CD', dark: '#1292AB' },
 	},
 	{
 		title: 'Palette 7 — Sage & terracotta',
@@ -147,11 +161,13 @@ const palettes: PaletteBlock[] = [
 		darkBg: '#426A5A',
 		sections: [
 			{ hex: '#F2C57C', label: 'Experience' },
-			{ hex: '#DDAE7E', label: 'Projects' },
-			{ hex: '#EF6F6C', label: 'Skills' },
-			{ hex: '#F4A9A8', label: 'Education' },
 			{ hex: '#E2C391', label: 'Languages' },
+			{ hex: '#DDAE7E', label: 'Projects' },
+			{ hex: '#F4A9A8', label: 'Education' },
+			{ hex: '#EF6F6C', label: 'Skills' },
 		],
+		surface: { light: '#869087', dark: '#626966' },
+		activeExperience: { light: '#F0E8DB', dark: '#9A9C74' },
 	},
 	{
 		title: 'Palette 8 — Violet garden',
@@ -166,11 +182,13 @@ const palettes: PaletteBlock[] = [
 		darkBg: '#54428E',
 		sections: [
 			{ hex: '#D4F0DE', label: 'Experience' },
-			{ hex: '#AFE3C0', label: 'Projects' },
-			{ hex: '#90C290', label: 'Skills' },
-			{ hex: '#688B58', label: 'Education' },
 			{ hex: '#4A6741', label: 'Languages' },
+			{ hex: '#AFE3C0', label: 'Projects' },
+			{ hex: '#688B58', label: 'Education' },
+			{ hex: '#90C290', label: 'Skills' },
 		],
+		surface: { light: '#7E7887', dark: '#74717E' },
+		activeExperience: { light: '#F2F7F4', dark: '#9A9CBA' },
 	},
 	{
 		title: 'Palette 9 — Indigo storm',
@@ -185,11 +203,13 @@ const palettes: PaletteBlock[] = [
 		darkBg: '#272838',
 		sections: [
 			{ hex: '#B8BEDE', label: 'Experience' },
-			{ hex: '#989FCE', label: 'Projects' },
-			{ hex: '#7D6B91', label: 'Skills' },
-			{ hex: '#5D536B', label: 'Education' },
 			{ hex: '#453D52', label: 'Languages' },
+			{ hex: '#989FCE', label: 'Projects' },
+			{ hex: '#5D536B', label: 'Education' },
+			{ hex: '#7D6B91', label: 'Skills' },
 		],
+		surface: { light: '#636D76', dark: '#3D3D40' },
+		activeExperience: { light: '#E9EAF0', dark: '#71748E' },
 	},
 	{
 		title: 'Palette 10 — Forest twilight',
@@ -205,11 +225,13 @@ const palettes: PaletteBlock[] = [
 		darkBg: '#493548',
 		sections: [
 			{ hex: '#8FB3B8', label: 'Experience' },
-			{ hex: '#6A8D92', label: 'Projects' },
-			{ hex: '#5B6E80', label: 'Skills' },
-			{ hex: '#4B4E6D', label: 'Education' },
 			{ hex: '#A1E887', label: 'Languages' },
+			{ hex: '#6A8D92', label: 'Projects' },
+			{ hex: '#4B4E6D', label: 'Education' },
+			{ hex: '#5B6E80', label: 'Skills' },
 		],
+		surface: { light: '#858D88', dark: '#504C50' },
+		activeExperience: { light: '#DCE2E3', dark: '#727885' },
 	},
 ];
 
@@ -240,7 +262,11 @@ export function PaletteDemo() {
 					>
 						<p className="palette-demo__mode-label">Light mode ({palette.lightBg.replace('#', '')})</p>
 						<div className="palette-demo__row">
-							{palette.sections.map((swatch) => (
+							{[
+								...palette.sections,
+								{ hex: palette.surface.light, label: 'Surface' },
+								{ hex: palette.activeExperience.light, label: 'Experience (active)' },
+							].map((swatch) => (
 								<div className="palette-demo__swatch" key={swatch.label}>
 									<span className="palette-demo__chip" style={{ backgroundColor: swatch.hex }} />
 									<code>
@@ -259,7 +285,11 @@ export function PaletteDemo() {
 					>
 						<p className="palette-demo__mode-label">Dark mode ({palette.darkBg.replace('#', '')})</p>
 						<div className="palette-demo__row">
-							{palette.sections.map((swatch) => (
+							{[
+								...palette.sections,
+								{ hex: palette.surface.dark, label: 'Surface' },
+								{ hex: palette.activeExperience.dark, label: 'Experience (active)' },
+							].map((swatch) => (
 								<div className="palette-demo__swatch" key={swatch.label}>
 									<span className="palette-demo__chip" style={{ backgroundColor: swatch.hex }} />
 									<code>
