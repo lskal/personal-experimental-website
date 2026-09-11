@@ -4,7 +4,7 @@ import type { SiteContent, SkillCategory, UiStrings } from './types';
 // loading skeleton's layout height equals the real content's height — no layout
 // shift when the fetch resolves and swaps placeholders for real data.
 const EXPERIENCE_COUNT = 6;
-const PERSONAL_PROJECTS_COUNT = 3;
+const PERSONAL_PROJECTS_COUNT = 4;
 const SKILLS_TAG_COUNTS = [10, 4, 4, 8, 6, 7];
 const EDUCATION_COUNT = 3;
 const CERTIFICATIONS_COUNT = 7;

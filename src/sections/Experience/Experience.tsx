@@ -41,12 +41,8 @@ export function Experience() {
 								</div>
 							</div>
 						))
-					: content.experience.map((entry, index) => (
-							<CompanyTimelineItem
-								key={entry.company}
-								entry={entry}
-								defaultOpen={index === 0}
-							/>
+					: content.experience.map((entry) => (
+							<CompanyTimelineItem key={entry.company} entry={entry} />
 						))}
 			</div>
 		</section>
