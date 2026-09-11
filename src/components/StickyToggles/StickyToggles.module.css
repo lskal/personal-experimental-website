@@ -20,18 +20,6 @@
 	pointer-events: auto;
 }
 
-@media (min-width: 640px) {
-	.bar {
-		top: var(--space-4);
-		bottom: auto;
-		transform: translateY(-12px);
-	}
-
-	.bar.visible {
-		transform: translateY(0);
-	}
-}
-
 @media (prefers-reduced-motion: reduce) {
 	.bar {
 		transition: none;
