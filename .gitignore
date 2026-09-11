@@ -25,3 +25,6 @@ package-lock.json
 *.sw?
 .vercel
 .env*
+
+# Local-only project notes for Claude Code — not meant to be pushed
+CLAUDE.md
