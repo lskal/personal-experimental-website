@@ -84,27 +84,6 @@ const palettes: PaletteBlock[] = [
 		activeExperience: { light: '#BBC4CD', dark: '#213F61' },
 	},
 	{
-		title: 'Palette 4 — Tacky sunset',
-		core: [
-			{ hex: '#BBDEF0', label: 'BBDEF0 (light bg)' },
-			{ hex: '#EFCA08', label: 'EFCA08' },
-			{ hex: '#F49F0A', label: 'F49F0A' },
-			{ hex: '#F08700', label: 'F08700' },
-			{ hex: '#00A6A6', label: '00A6A6 (dark bg)' },
-		],
-		lightBg: '#BBDEF0',
-		darkBg: '#00A6A6',
-		sections: [
-			{ hex: '#F4A261', label: 'Experience' },
-			{ hex: '#9B5DE5', label: 'Languages' },
-			{ hex: '#E76F51', label: 'Projects' },
-			{ hex: '#D62828', label: 'Education' },
-			{ hex: '#E9C46A', label: 'Skills' },
-		],
-		surface: { light: '#C1C8CC', dark: '#547171' },
-		activeExperience: { light: '#EEE0D5', dark: '#7BAC91' },
-	},
-	{
 		title: 'Palette 5 — Tacky sunset colorful (warm shades)',
 		core: [
 			{ hex: '#BBDEF0', label: 'BBDEF0 (light bg)' },
@@ -232,6 +211,27 @@ const palettes: PaletteBlock[] = [
 		],
 		surface: { light: '#858D88', dark: '#504C50' },
 		activeExperience: { light: '#DCE2E3', dark: '#727885' },
+	},
+	{
+		title: 'Original — current site colors',
+		core: [
+			{ hex: '#FFFFFF', label: 'FFFFFF (light bg)' },
+			{ hex: '#F7F7F8', label: 'F7F7F8' },
+			{ hex: '#E4E4E7', label: 'E4E4E7' },
+			{ hex: '#1A1A1C', label: '1A1A1C' },
+			{ hex: '#0F0F10', label: '0F0F10 (dark bg)' },
+		],
+		lightBg: '#FFFFFF',
+		darkBg: '#0F0F10',
+		sections: [
+			{ hex: '#2E5CFF', label: 'Experience' },
+			{ hex: '#FF3D7F', label: 'Languages' },
+			{ hex: '#FF5A36', label: 'Projects' },
+			{ hex: '#FFB800', label: 'Education' },
+			{ hex: '#6C4EFF', label: 'Skills' },
+		],
+		surface: { light: '#F7F7F8', dark: '#1A1A1C' },
+		activeExperience: { light: '#F5F7FF', dark: '#11131C' },
 	},
 ];
 
