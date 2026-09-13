@@ -3,6 +3,7 @@ import { GithubIcon } from '../BrandIcons/BrandIcons';
 import { useLanguage } from '../../hooks/useLanguage';
 import type { PersonalProject } from '../../content/types';
 import { Tag } from '../Tag/Tag';
+import { Card } from '../Card/Card';
 import styles from './ProjectCard.module.css';
 
 interface ProjectCardProps {
@@ -13,7 +14,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 	const { content } = useLanguage();
 
 	return (
-		<article className={styles.card}>
+		<Card as="article" className={styles.card}>
 			<p className={styles.name}>{project.name}</p>
 			<p className={styles.description}>{project.description}</p>
 			<ul className={styles.stack}>
@@ -49,6 +50,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
 					)}
 				</div>
 			)}
-		</article>
+		</Card>
 	);
 }

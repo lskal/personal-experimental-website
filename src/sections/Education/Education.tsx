@@ -1,6 +1,7 @@
 import { ExternalLink } from 'lucide-react';
 import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
+import { Card } from '../../components/Card/Card';
 import styles from './Education.module.css';
 
 export function Education() {
@@ -13,12 +14,12 @@ export function Education() {
 			<div className={styles.grid}>
 				{content.education.map((entry, index) =>
 					isLoading ? (
-						<div key={index} className={styles.card}>
+						<Card key={index} className={styles.card}>
 							<SkeletonBlock className={styles.entryTitle} width="100%" height="1em" />
 							<SkeletonBlock className={styles.entryMeta} width="70%" height="0.9em" />
-						</div>
+						</Card>
 					) : (
-						<div key={entry.title} className={styles.card}>
+						<Card key={entry.title} className={styles.card}>
 							<p className={styles.entryTitle}>{entry.title}</p>
 							<p className={styles.entryMeta}>
 								{entry.url ? (
@@ -31,7 +32,7 @@ export function Education() {
 								{' · '}
 								{entry.period}
 							</p>
-						</div>
+						</Card>
 					),
 				)}
 			</div>
@@ -42,12 +43,12 @@ export function Education() {
 			<div className={styles.grid}>
 				{content.certifications.map((cert, index) =>
 					isLoading ? (
-						<div key={index} className={styles.card}>
+						<Card key={index} className={styles.card}>
 							<SkeletonBlock className={styles.entryTitle} width="90%" height="1em" />
 							<SkeletonBlock className={styles.entryMeta} width="60%" height="0.9em" />
-						</div>
+						</Card>
 					) : (
-						<div key={cert.name} className={styles.card}>
+						<Card key={cert.name} className={styles.card}>
 							<div className={styles.certRow}>
 								<div>
 									<p className={styles.entryTitle}>{cert.name}</p>
@@ -64,7 +65,7 @@ export function Education() {
 									</a>
 								)}
 							</div>
-						</div>
+						</Card>
 					),
 				)}
 			</div>

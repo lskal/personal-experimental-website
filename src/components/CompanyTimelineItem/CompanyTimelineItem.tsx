@@ -1,6 +1,7 @@
 import { ChevronDown } from 'lucide-react';
 import type { ExperienceEntry } from '../../content/types';
 import { Tag } from '../Tag/Tag';
+import { Card } from '../Card/Card';
 import styles from './CompanyTimelineItem.module.css';
 
 interface CompanyTimelineItemProps {
@@ -15,7 +16,7 @@ export function CompanyTimelineItem({
 	return (
 		<div className={styles.item}>
 			<span className={styles.dot} />
-			<details className={styles.details} open={defaultOpen}>
+			<Card as="details" active={defaultOpen} className={styles.details}>
 				<summary className={styles.summary}>
 					<div className={styles.summaryText}>
 						<span className={styles.company}>
@@ -68,7 +69,7 @@ export function CompanyTimelineItem({
 						</article>
 					))}
 				</div>
-			</details>
+			</Card>
 		</div>
 	);
 }

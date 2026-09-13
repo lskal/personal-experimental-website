@@ -1,6 +1,7 @@
 import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
 import { Tag } from '../../components/Tag/Tag';
+import { Card } from '../../components/Card/Card';
 import styles from './Skills.module.css';
 
 export function Skills() {
@@ -11,7 +12,10 @@ export function Skills() {
 			<h2 className={styles.title}>{content.ui.sectionTitles.skills}</h2>
 			<div className={styles.grid}>
 				{content.skills.map((group, groupIndex) => (
-					<div key={isLoading ? groupIndex : group.category} className={styles.category}>
+					<Card
+						key={isLoading ? groupIndex : group.category}
+						className={styles.category}
+					>
 						{isLoading ? (
 							<SkeletonBlock
 								className={styles.categoryName}
@@ -34,7 +38,7 @@ export function Skills() {
 								),
 							)}
 						</ul>
-					</div>
+					</Card>
 				))}
 			</div>
 		</section>
