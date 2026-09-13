@@ -4,10 +4,14 @@
 	flex-direction: column;
 	align-items: center;
 	gap: var(--space-6);
-	padding: var(--space-8) var(--space-5);
+	padding: var(--space-5)  var(--space-5) var(--space-8);
 	background-color: var(--color-hero);
 	color: var(--color-hero-on);
 	text-align: center;
+}
+
+.controls {
+	display: contents;
 }
 
 .toggles {
@@ -59,12 +63,27 @@
 	opacity: 0.9;
 }
 
+@media (max-width: 639px) {
+	.controls {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		order: -1;
+		width: 100%;
+	}
+
+	.toggles,
+	.paletteSelector {
+		position: static;
+	}
+}
+
 @media (min-width: 640px) {
 	.hero {
 		flex-direction: row;
 		align-items: flex-start;
 		text-align: left;
-		padding: var(--space-9) var(--space-8);
+		padding: var(--space-8) var(--space-5);
 	}
 
 	.avatar {
