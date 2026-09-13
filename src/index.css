@@ -1,5 +1,6 @@
 @import './styles/reset.css';
 @import './styles/tokens.css';
+@import './styles/palettes.css';
 
 body {
 	font-family: var(--font-sans);
