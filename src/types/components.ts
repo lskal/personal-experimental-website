@@ -58,6 +58,12 @@ export interface PaletteBlock {
 	 * that mode. False for multi-hue palettes, where sections/hero stay identical in both modes.
 	 */
 	scale: boolean;
+	/**
+	 * Explicit dark-mode section hexes, for palettes where the live CSS no longer follows
+	 * a pure mirrored reversal of `sections` (some slots were independently WCAG-retuned
+	 * per mode instead). When omitted, dark mode is computed via `reverseSectionHexes`.
+	 */
+	sectionsDark?: Swatch[];
 	surface: { light: string; dark: string };
 	activeExperience: { light: string; dark: string };
 }

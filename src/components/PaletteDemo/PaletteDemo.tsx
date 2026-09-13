@@ -29,10 +29,17 @@ const palettes: PaletteBlock[] = [
 			{ hex: '#233E5C', label: 'Experience' },
 			{ hex: '#386394', label: 'Languages' },
 			{ hex: '#5989C0', label: 'Projects' },
-			{ hex: '#90B0D5', label: 'Education' },
-			{ hex: '#C8D8EA', label: 'Skills' },
+			{ hex: '#3A597E', label: 'Education' },
+			{ hex: '#3F6189', label: 'Skills' },
 		],
 		scale: true,
+		sectionsDark: [
+			{ hex: '#C8D8EA', label: 'Experience' },
+			{ hex: '#90B0D5', label: 'Languages' },
+			{ hex: '#5989C0', label: 'Projects' },
+			{ hex: '#8A9DB4', label: 'Education' },
+			{ hex: '#778DA8', label: 'Skills' },
+		],
 		surface: { light: '#D8D6D2', dark: '#242529' },
 		activeExperience: { light: '#EFF1F5', dark: '#6A7686' },
 	},
@@ -52,10 +59,17 @@ const palettes: PaletteBlock[] = [
 			{ hex: '#233E5C', label: 'Experience' },
 			{ hex: '#386394', label: 'Languages' },
 			{ hex: '#5989C0', label: 'Projects' },
-			{ hex: '#90B0D5', label: 'Education' },
-			{ hex: '#C8D8EA', label: 'Skills' },
+			{ hex: '#43602C', label: 'Education' },
+			{ hex: '#4A6B31', label: 'Skills' },
 		],
 		scale: true,
+		sectionsDark: [
+			{ hex: '#C8D8EA', label: 'Experience' },
+			{ hex: '#90B0D5', label: 'Languages' },
+			{ hex: '#5989C0', label: 'Projects' },
+			{ hex: '#ADC19E', label: 'Education' },
+			{ hex: '#A8BD98', label: 'Skills' },
+		],
 		surface: { light: '#D4DDDB', dark: '#484C41' },
 		activeExperience: { light: '#EFF1F5', dark: '#889883' },
 	},
@@ -146,10 +160,17 @@ const palettes: PaletteBlock[] = [
 			{ hex: '#4A6741', label: 'Experience' },
 			{ hex: '#688B58', label: 'Languages' },
 			{ hex: '#90C290', label: 'Projects' },
-			{ hex: '#AFE3C0', label: 'Education' },
-			{ hex: '#D4F0DE', label: 'Skills' },
+			{ hex: '#0D120F', label: 'Education' },
+			{ hex: '#121513', label: 'Skills' },
 		],
 		scale: true,
+		sectionsDark: [
+			{ hex: '#F8F9F8', label: 'Experience' },
+			{ hex: '#F6F8F6', label: 'Languages' },
+			{ hex: '#90C290', label: 'Projects' },
+			{ hex: '#688B58', label: 'Education' },
+			{ hex: '#4A6741', label: 'Skills' },
+		],
 		surface: { light: '#7E7887', dark: '#74717E' },
 		activeExperience: { light: '#F2F7F4', dark: '#9A9CBA' },
 	},
@@ -164,16 +185,23 @@ const palettes: PaletteBlock[] = [
 		],
 		lightBg: '#347FC4',
 		darkBg: '#272838',
-		hero: { hex: '#453D52', label: 'Hero' },
+		hero: { hex: '#1E1A24', label: 'Hero' },
 		sections: [
-			{ hex: '#453D52', label: 'Experience' },
-			{ hex: '#5D536B', label: 'Languages' },
-			{ hex: '#7D6B91', label: 'Projects' },
-			{ hex: '#989FCE', label: 'Education' },
-			{ hex: '#B8BEDE', label: 'Skills' },
+			{ hex: '#1E1A24', label: 'Experience' },
+			{ hex: '#312B38', label: 'Languages' },
+			{ hex: '#3F3649', label: 'Projects' },
+			{ hex: '#3E4053', label: 'Education' },
+			{ hex: '#41434F', label: 'Skills' },
 		],
 		scale: true,
-		surface: { light: '#636D76', dark: '#3D3D40' },
+		sectionsDark: [
+			{ hex: '#B8BEDE', label: 'Experience' },
+			{ hex: '#989FCE', label: 'Languages' },
+			{ hex: '#7D6B91', label: 'Projects' },
+			{ hex: '#B8B4BE', label: 'Education' },
+			{ hex: '#C6C4CA', label: 'Skills' },
+		],
+		surface: { light: '#A9AEB3', dark: '#3D3D40' },
 		activeExperience: { light: '#E9EAF0', dark: '#71748E' },
 	},
 	{
@@ -192,11 +220,18 @@ const palettes: PaletteBlock[] = [
 		sections: [
 			{ hex: '#4B4E6D', label: 'Experience' },
 			{ hex: '#5B6E80', label: 'Languages' },
-			{ hex: '#6A8D92', label: 'Projects' },
-			{ hex: '#8FB3B8', label: 'Education' },
+			{ hex: '#161D1F', label: 'Projects' },
+			{ hex: '#1F2628', label: 'Education' },
 			{ hex: '#A1E887', label: 'Skills' },
 		],
 		scale: true,
+		sectionsDark: [
+			{ hex: '#A1E887', label: 'Experience' },
+			{ hex: '#8FB3B8', label: 'Languages' },
+			{ hex: '#6A8D92', label: 'Projects' },
+			{ hex: '#5B6E80', label: 'Education' },
+			{ hex: '#4B4E6D', label: 'Skills' },
+		],
 		surface: { light: '#858D88', dark: '#504C50' },
 		activeExperience: { light: '#DCE2E3', dark: '#727885' },
 	},
@@ -233,9 +268,9 @@ export function PaletteDemo() {
 	return (
 		<section className="palette-demo" aria-label="Color palette options">
 			{palettes.map(palette => {
-				const darkSections = palette.scale
-					? reverseSectionHexes(palette.sections)
-					: palette.sections;
+				const darkSections =
+					palette.sectionsDark ??
+					(palette.scale ? reverseSectionHexes(palette.sections) : palette.sections);
 				const lightHero = palette.scale
 					? { hex: palette.sections[0].hex, label: 'Hero' }
 					: palette.hero;
