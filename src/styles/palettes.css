@@ -16,15 +16,14 @@
   against each palette's own --color-surface. Where the raw demo hue failed,
   it was retuned independently per mode rather than mechanically mirrored
   (same approach used for Cool Blues' Projects/Skills) -- see the source
-  computation notes for the full adjustment list per palette.
+  computation notes for the full adjustment list per palette. As of the
+  2026-09-13 full audit, every section/mode combination across all 9
+  palettes passes this floor; Warm sunset and Sage & terracotta's dark-mode
+  blocks are no longer a mechanical reversal of their light-mode values --
+  they joined Cool Blues/Botanical greens/Violet garden/Indigo storm/Forest
+  twilight in having independently-tuned per-mode values.
 
-  Known limitation (not fixed here -- would require changing the original
-  explored palette's own neutral colors, a creative call left to Max):
-  - Palette 7 (Indigo storm): light-mode --color-surface (#636D76) is a
-    medium gray, not light. Even pure black text only reaches 3.98:1 against
-    it -- used as the best achievable value.
-
-  The Contact/footer section reuses --color-hero/--color-hero-on directly
+  The Contact/footer section reuses --color-hero/--color-hero-font directly
   (no separate --color-footer-* tokens) so it always matches the Hero band.
 */
 
@@ -38,28 +37,31 @@
 
 	--color-hero: #233e5c;
 	--color-hero-rgb: 35, 62, 92;
-	--color-hero-on: #ffffff;
+	--color-hero-font: #ffffff;
 
 	--color-experience: #233e5c;
 	--color-experience-rgb: 35, 62, 92;
-	--color-experience-on: #ffffff;
+	--color-experience-font: #ffffff;
 
 	--color-languages: #386394;
 	--color-languages-rgb: 56, 99, 148;
+	--color-languages-font: #ffffff;
 
-	--color-projects: #5989c0;
-	--color-projects-rgb: 89, 137, 192;
+	--color-projects: #42668f;
+	--color-projects-rgb: 66, 102, 143;
+	--color-projects-font: #ffffff;
 
 	--color-education: #43602c;
 	--color-education-rgb: 67, 96, 44;
 
 	--color-skills: #4a6b31;
 	--color-skills-rgb: 74, 107, 49;
+	--color-skills-font: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root[data-palette='2']:not([data-theme='light']) {
-		--color-bg: #40531b;
+		--color-bg: #202a0e;
 		--color-surface: #484c41;
 		--color-text: #b2bf8d;
 		--color-text-muted: #a5bfb7;
@@ -67,28 +69,31 @@
 
 		--color-hero: #c8d8ea;
 		--color-hero-rgb: 200, 216, 234;
-		--color-hero-on: #496938;
+		--color-hero-font: #496938;
 
 		--color-experience: #c8d8ea;
 		--color-experience-rgb: 200, 216, 234;
-		--color-experience-on: #496938;
+		--color-experience-font: #496938;
 
-		--color-languages: #90b0d5;
-		--color-languages-rgb: 144, 176, 213;
+		--color-languages: #9bb8d9;
+		--color-languages-rgb: 155, 184, 217;
+		--color-languages-font: #000000;
 
-		--color-projects: #5989c0;
-		--color-projects-rgb: 89, 137, 192;
+		--color-projects: #9cb8d9;
+		--color-projects-rgb: 156, 184, 217;
+		--color-projects-font: #000000;
 
 		--color-education: #adc19e;
 		--color-education-rgb: 173, 193, 158;
 
 		--color-skills: #a8bd98;
 		--color-skills-rgb: 168, 189, 152;
+		--color-skills-font: #000000;
 	}
 }
 
 :root[data-palette='2'][data-theme='dark'] {
-	--color-bg: #40531b;
+	--color-bg: #202a0e;
 	--color-surface: #484c41;
 	--color-text: #b2bf8d;
 	--color-text-muted: #a5bfb7;
@@ -96,23 +101,26 @@
 
 	--color-hero: #c8d8ea;
 	--color-hero-rgb: 200, 216, 234;
-	--color-hero-on: #496938;
+	--color-hero-font: #496938;
 
 	--color-experience: #c8d8ea;
 	--color-experience-rgb: 200, 216, 234;
-	--color-experience-on: #496938;
+	--color-experience-font: #496938;
 
-	--color-languages: #90b0d5;
-	--color-languages-rgb: 144, 176, 213;
+	--color-languages: #9bb8d9;
+	--color-languages-rgb: 155, 184, 217;
+	--color-languages-font: #000000;
 
-	--color-projects: #5989c0;
-	--color-projects-rgb: 89, 137, 192;
+	--color-projects: #9cb8d9;
+	--color-projects-rgb: 156, 184, 217;
+	--color-projects-font: #000000;
 
 	--color-education: #adc19e;
 	--color-education-rgb: 173, 193, 158;
 
 	--color-skills: #a8bd98;
 	--color-skills-rgb: 168, 189, 152;
+	--color-skills-font: #000000;
 }
 
 /* 3 — Warm sunset */
@@ -123,25 +131,28 @@
 	--color-text-muted: #744b05;
 	--color-border: #aeb5bb;
 
-	--color-hero: #c1272d;
-	--color-hero-rgb: 193, 39, 45;
-	--color-hero-on: #ffffff;
+	--color-hero: #a62227;
+	--color-hero-rgb: 166, 34, 39;
+	--color-hero-font: #ffffff;
 
-	--color-experience: #c1272d;
-	--color-experience-rgb: 193, 39, 45;
-	--color-experience-on: #ffffff;
+	--color-experience: #a62227;
+	--color-experience-rgb: 166, 34, 39;
+	--color-experience-font: #ffffff;
 
-	--color-languages: #ff5a36;
-	--color-languages-rgb: 255, 90, 54;
+	--color-languages: #993620;
+	--color-languages-rgb: 153, 54, 32;
+	--color-languages-font: #ffffff;
 
-	--color-projects: #ff8800;
-	--color-projects-rgb: 255, 136, 0;
+	--color-projects: #844700;
+	--color-projects-rgb: 132, 71, 0;
+	--color-projects-font: #ffffff;
 
-	--color-education: #ffc300;
-	--color-education-rgb: 255, 195, 0;
+	--color-education: #6c5300;
+	--color-education-rgb: 108, 83, 0;
 
-	--color-skills: #ffe066;
-	--color-skills-rgb: 255, 224, 102;
+	--color-skills: #625727;
+	--color-skills-rgb: 98, 87, 39;
+	--color-skills-font: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -152,25 +163,28 @@
 		--color-text-muted: #fdebcb;
 		--color-border: #668385;
 
-		--color-hero: #ffe066;
-		--color-hero-rgb: 255, 224, 102;
-		--color-hero-on: #7d4600;
+		--color-hero: #ffe78b;
+		--color-hero-rgb: 255, 231, 139;
+		--color-hero-font: #7d4600;
 
-		--color-experience: #ffe066;
-		--color-experience-rgb: 255, 224, 102;
-		--color-experience-on: #7d4600;
+		--color-experience: #ffe78b;
+		--color-experience-rgb: 255, 231, 139;
+		--color-experience-font: #7d4600;
 
-		--color-languages: #ffc300;
-		--color-languages-rgb: 255, 195, 0;
+		--color-languages: #ffe797;
+		--color-languages-rgb: 255, 231, 151;
+		--color-languages-font: #000000;
 
-		--color-projects: #ff8800;
-		--color-projects-rgb: 255, 136, 0;
+		--color-projects: #ffe3c4;
+		--color-projects-rgb: 255, 227, 196;
+		--color-projects-font: #000000;
 
-		--color-education: #ff5a36;
-		--color-education-rgb: 255, 90, 54;
+		--color-education: #ffe1db;
+		--color-education-rgb: 255, 225, 219;
 
-		--color-skills: #c1272d;
-		--color-skills-rgb: 193, 39, 45;
+		--color-skills: #f7e4e4;
+		--color-skills-rgb: 247, 228, 228;
+		--color-skills-font: #000000;
 	}
 }
 
@@ -181,25 +195,28 @@
 	--color-text-muted: #fdebcb;
 	--color-border: #668385;
 
-	--color-hero: #ffe066;
-	--color-hero-rgb: 255, 224, 102;
-	--color-hero-on: #7d4600;
+	--color-hero: #ffe78b;
+	--color-hero-rgb: 255, 231, 139;
+	--color-hero-font: #7d4600;
 
-	--color-experience: #ffe066;
-	--color-experience-rgb: 255, 224, 102;
-	--color-experience-on: #7d4600;
+	--color-experience: #ffe78b;
+	--color-experience-rgb: 255, 231, 139;
+	--color-experience-font: #7d4600;
 
-	--color-languages: #ffc300;
-	--color-languages-rgb: 255, 195, 0;
+	--color-languages: #ffe797;
+	--color-languages-rgb: 255, 231, 151;
+	--color-languages-font: #000000;
 
-	--color-projects: #ff8800;
-	--color-projects-rgb: 255, 136, 0;
+	--color-projects: #ffe3c4;
+	--color-projects-rgb: 255, 227, 196;
+	--color-projects-font: #000000;
 
-	--color-education: #ff5a36;
-	--color-education-rgb: 255, 90, 54;
+	--color-education: #ffe1db;
+	--color-education-rgb: 255, 225, 219;
 
-	--color-skills: #c1272d;
-	--color-skills-rgb: 193, 39, 45;
+	--color-skills: #f7e4e4;
+	--color-skills-rgb: 247, 228, 228;
+	--color-skills-font: #000000;
 }
 
 /* 4 — Rainbow sunset */
@@ -212,23 +229,26 @@
 
 	--color-hero: #a91e00;
 	--color-hero-rgb: 169, 30, 0;
-	--color-hero-on: #ffffff;
+	--color-hero-font: #ffffff;
 
 	--color-experience: #235789;
 	--color-experience-rgb: 35, 87, 137;
-	--color-experience-on: #ffffff;
+	--color-experience-font: #ffffff;
 
 	--color-languages: #a71457;
 	--color-languages-rgb: 167, 20, 87;
+	--color-languages-font: #ffffff;
 
 	--color-projects: #1a6246;
 	--color-projects-rgb: 26, 98, 70;
+	--color-projects-font: #ffffff;
 
 	--color-education: #a91e00;
 	--color-education-rgb: 169, 30, 0;
 
-	--color-skills: #635701;
-	--color-skills-rgb: 99, 87, 1;
+	--color-skills: #625701;
+	--color-skills-rgb: 98, 87, 1;
+	--color-skills-font: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -241,23 +261,26 @@
 
 		--color-hero: #ffe2db;
 		--color-hero-rgb: 255, 226, 219;
-		--color-hero-on: #7d4600;
+		--color-hero-font: #7d4600;
 
 		--color-experience: #dceaf6;
 		--color-experience-rgb: 220, 234, 246;
-		--color-experience-on: #7d4600;
+		--color-experience-font: #7d4600;
 
 		--color-languages: #fbe1ed;
 		--color-languages-rgb: 251, 225, 237;
+		--color-languages-font: #000000;
 
 		--color-projects: #c8f1e1;
 		--color-projects-rgb: 200, 241, 225;
+		--color-projects-font: #000000;
 
 		--color-education: #ffe2db;
 		--color-education-rgb: 255, 226, 219;
 
 		--color-skills: #feea5f;
 		--color-skills-rgb: 254, 234, 95;
+		--color-skills-font: #000000;
 	}
 }
 
@@ -270,23 +293,26 @@
 
 	--color-hero: #ffe2db;
 	--color-hero-rgb: 255, 226, 219;
-	--color-hero-on: #7d4600;
+	--color-hero-font: #7d4600;
 
 	--color-experience: #dceaf6;
 	--color-experience-rgb: 220, 234, 246;
-	--color-experience-on: #7d4600;
+	--color-experience-font: #7d4600;
 
 	--color-languages: #fbe1ed;
 	--color-languages-rgb: 251, 225, 237;
+	--color-languages-font: #000000;
 
 	--color-projects: #c8f1e1;
 	--color-projects-rgb: 200, 241, 225;
+	--color-projects-font: #000000;
 
 	--color-education: #ffe2db;
 	--color-education-rgb: 255, 226, 219;
 
 	--color-skills: #feea5f;
 	--color-skills-rgb: 254, 234, 95;
+	--color-skills-font: #000000;
 }
 
 /* 5 — Sage & terracotta */
@@ -297,112 +323,124 @@
 	--color-text-muted: #37230f;
 	--color-border: #737d76;
 
-	--color-hero: #ef6f6c;
-	--color-hero-rgb: 239, 111, 108;
-	--color-hero-on: #ffffff;
+	--color-hero: #44201f;
+	--color-hero-rgb: 68, 32, 31;
+	--color-hero-font: #ffffff;
 
-	--color-experience: #ef6f6c;
-	--color-experience-rgb: 239, 111, 108;
-	--color-experience-on: #ffffff;
+	--color-experience: #44201f;
+	--color-experience-rgb: 68, 32, 31;
+	--color-experience-font: #ffffff;
 
-	--color-languages: #f4a9a8;
-	--color-languages-rgb: 244, 169, 168;
+	--color-languages: #382726;
+	--color-languages-rgb: 56, 39, 38;
+	--color-languages-font: #ffffff;
 
-	--color-projects: #ddae7e;
-	--color-projects-rgb: 221, 174, 126;
+	--color-projects: #33291d;
+	--color-projects-rgb: 51, 41, 29;
+	--color-projects-font: #ffffff;
 
-	--color-education: #e2c391;
-	--color-education-rgb: 226, 195, 145;
+	--color-education: #312a1f;
+	--color-education-rgb: 49, 42, 31;
 
-	--color-skills: #f2c57c;
-	--color-skills-rgb: 242, 197, 124;
+	--color-skills: #33291a;
+	--color-skills-rgb: 51, 41, 26;
+	--color-skills-font: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root[data-palette='5']:not([data-theme='light']) {
-		--color-bg: #426a5a;
+		--color-bg: #2e4a3f;
 		--color-surface: #626966;
 		--color-text: #f9e3c0;
 		--color-text-muted: #f2e4ce;
 		--color-border: #747b7a;
 
-		--color-hero: #f2c57c;
-		--color-hero-rgb: 242, 197, 124;
-		--color-hero-on: #520b09;
+		--color-hero: #f7ddb3;
+		--color-hero-rgb: 247, 221, 179;
+		--color-hero-font: #520b09;
 
-		--color-experience: #f2c57c;
-		--color-experience-rgb: 242, 197, 124;
-		--color-experience-on: #520b09;
+		--color-experience: #f7ddb3;
+		--color-experience-rgb: 247, 221, 179;
+		--color-experience-font: #520b09;
 
-		--color-languages: #e2c391;
-		--color-languages-rgb: 226, 195, 145;
+		--color-languages: #f0dfc4;
+		--color-languages-rgb: 240, 223, 196;
+		--color-languages-font: #000000;
 
-		--color-projects: #ddae7e;
-		--color-projects-rgb: 221, 174, 126;
+		--color-projects: #f1decb;
+		--color-projects-rgb: 241, 222, 203;
+		--color-projects-font: #000000;
 
-		--color-education: #f4a9a8;
-		--color-education-rgb: 244, 169, 168;
+		--color-education: #fadad9;
+		--color-education-rgb: 250, 218, 217;
 
-		--color-skills: #ef6f6c;
-		--color-skills-rgb: 239, 111, 108;
+		--color-skills: #fbdad9;
+		--color-skills-rgb: 251, 218, 217;
+		--color-skills-font: #000000;
 	}
 }
 
 :root[data-palette='5'][data-theme='dark'] {
-	--color-bg: #426a5a;
+	--color-bg: #2e4a3f;
 	--color-surface: #626966;
 	--color-text: #f9e3c0;
 	--color-text-muted: #f2e4ce;
 	--color-border: #747b7a;
 
-	--color-hero: #f2c57c;
-	--color-hero-rgb: 242, 197, 124;
-	--color-hero-on: #520b09;
+	--color-hero: #f7ddb3;
+	--color-hero-rgb: 247, 221, 179;
+	--color-hero-font: #520b09;
 
-	--color-experience: #f2c57c;
-	--color-experience-rgb: 242, 197, 124;
-	--color-experience-on: #520b09;
+	--color-experience: #f7ddb3;
+	--color-experience-rgb: 247, 221, 179;
+	--color-experience-font: #520b09;
 
-	--color-languages: #e2c391;
-	--color-languages-rgb: 226, 195, 145;
+	--color-languages: #f0dfc4;
+	--color-languages-rgb: 240, 223, 196;
+	--color-languages-font: #000000;
 
-	--color-projects: #ddae7e;
-	--color-projects-rgb: 221, 174, 126;
+	--color-projects: #f1decb;
+	--color-projects-rgb: 241, 222, 203;
+	--color-projects-font: #000000;
 
-	--color-education: #f4a9a8;
-	--color-education-rgb: 244, 169, 168;
+	--color-education: #fadad9;
+	--color-education-rgb: 250, 218, 217;
 
-	--color-skills: #ef6f6c;
-	--color-skills-rgb: 239, 111, 108;
+	--color-skills: #fbdad9;
+	--color-skills-rgb: 251, 218, 217;
+	--color-skills-font: #000000;
 }
 
 /* 6 — Violet garden */
 :root[data-palette='6'] {
-	--color-bg: #8963ba;
+	--color-bg: #604582;
 	--color-surface: #7e7887;
 	--color-text: #0c100a;
 	--color-text-muted: #091109;
 	--color-border: #6b6576;
 
-	--color-hero: #4a6741;
-	--color-hero-rgb: 74, 103, 65;
-	--color-hero-on: #ffffff;
+	--color-hero: #10170e;
+	--color-hero-rgb: 16, 23, 14;
+	--color-hero-font: #ffffff;
 
-	--color-experience: #4a6741;
-	--color-experience-rgb: 74, 103, 65;
-	--color-experience-on: #ffffff;
+	--color-experience: #10170e;
+	--color-experience-rgb: 16, 23, 14;
+	--color-experience-font: #ffffff;
 
-	--color-languages: #688b58;
-	--color-languages-rgb: 104, 139, 88;
+	--color-languages: #11170e;
+	--color-languages-rgb: 17, 23, 14;
+	--color-languages-font: #ffffff;
 
-	--color-projects: #90c290;
-	--color-projects-rgb: 144, 194, 144;
+	--color-projects: #111611;
+	--color-projects-rgb: 17, 22, 17;
+	--color-projects-font: #ffffff;
 
 	--color-education: #0d120f;
 	--color-education-rgb: 13, 18, 15;
 
 	--color-skills: #121513;
 	--color-skills-rgb: 18, 21, 19;
+	--color-skills-font: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -415,23 +453,26 @@
 
 		--color-hero: #f8f9f8;
 		--color-hero-rgb: 248, 249, 248;
-		--color-hero-on: #0c100a;
+		--color-hero-font: #0c100a;
 
 		--color-experience: #f8f9f8;
 		--color-experience-rgb: 248, 249, 248;
-		--color-experience-on: #0c100a;
+		--color-experience-font: #0c100a;
 
 		--color-languages: #f6f8f6;
 		--color-languages-rgb: 246, 248, 246;
+		--color-languages-font: #000000;
 
-		--color-projects: #90c290;
-		--color-projects-rgb: 144, 194, 144;
+		--color-projects: #eef6ee;
+		--color-projects-rgb: 238, 246, 238;
+		--color-projects-font: #000000;
 
-		--color-education: #688b58;
-		--color-education-rgb: 104, 139, 88;
+		--color-education: #f1f5f0;
+		--color-education-rgb: 241, 245, 240;
 
-		--color-skills: #4a6741;
-		--color-skills-rgb: 74, 103, 65;
+		--color-skills: #f1f3f1;
+		--color-skills-rgb: 241, 243, 241;
+		--color-skills-font: #000000;
 	}
 }
 
@@ -444,23 +485,26 @@
 
 	--color-hero: #f8f9f8;
 	--color-hero-rgb: 248, 249, 248;
-	--color-hero-on: #0c100a;
+	--color-hero-font: #0c100a;
 
 	--color-experience: #f8f9f8;
 	--color-experience-rgb: 248, 249, 248;
-	--color-experience-on: #0c100a;
+	--color-experience-font: #0c100a;
 
 	--color-languages: #f6f8f6;
 	--color-languages-rgb: 246, 248, 246;
+	--color-languages-font: #000000;
 
-	--color-projects: #90c290;
-	--color-projects-rgb: 144, 194, 144;
+	--color-projects: #eef6ee;
+	--color-projects-rgb: 238, 246, 238;
+	--color-projects-font: #000000;
 
-	--color-education: #688b58;
-	--color-education-rgb: 104, 139, 88;
+	--color-education: #f1f5f0;
+	--color-education-rgb: 241, 245, 240;
 
-	--color-skills: #4a6741;
-	--color-skills-rgb: 74, 103, 65;
+	--color-skills: #f1f3f1;
+	--color-skills-rgb: 241, 243, 241;
+	--color-skills-font: #000000;
 }
 
 /* 7 — Indigo storm */
@@ -473,23 +517,26 @@
 
 	--color-hero: #1e1a24;
 	--color-hero-rgb: 30, 26, 36;
-	--color-hero-on: #ffffff;
+	--color-hero-font: #ffffff;
 
 	--color-experience: #1e1a24;
 	--color-experience-rgb: 30, 26, 36;
-	--color-experience-on: #ffffff;
+	--color-experience-font: #ffffff;
 
 	--color-languages: #312b38;
 	--color-languages-rgb: 49, 43, 56;
+	--color-languages-font: #ffffff;
 
 	--color-projects: #3f3649;
 	--color-projects-rgb: 63, 54, 73;
+	--color-projects-font: #ffffff;
 
 	--color-education: #3e4053;
 	--color-education-rgb: 62, 64, 83;
 
 	--color-skills: #41434f;
 	--color-skills-rgb: 65, 67, 79;
+	--color-skills-font: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -502,23 +549,26 @@
 
 		--color-hero: #b8bede;
 		--color-hero-rgb: 184, 190, 222;
-		--color-hero-on: #000000;
+		--color-hero-font: #000000;
 
 		--color-experience: #b8bede;
 		--color-experience-rgb: 184, 190, 222;
-		--color-experience-on: #000000;
+		--color-experience-font: #000000;
 
-		--color-languages: #989fce;
-		--color-languages-rgb: 152, 159, 206;
+		--color-languages: #9aa1cf;
+		--color-languages-rgb: 154, 161, 207;
+		--color-languages-font: #000000;
 
-		--color-projects: #7d6b91;
-		--color-projects-rgb: 125, 107, 145;
+		--color-projects: #aa9fb7;
+		--color-projects-rgb: 170, 159, 183;
+		--color-projects-font: #000000;
 
 		--color-education: #b8b4be;
 		--color-education-rgb: 184, 180, 190;
 
 		--color-skills: #c6c4ca;
 		--color-skills-rgb: 198, 196, 202;
+		--color-skills-font: #000000;
 	}
 }
 
@@ -531,23 +581,26 @@
 
 	--color-hero: #b8bede;
 	--color-hero-rgb: 184, 190, 222;
-	--color-hero-on: #000000;
+	--color-hero-font: #000000;
 
 	--color-experience: #b8bede;
 	--color-experience-rgb: 184, 190, 222;
-	--color-experience-on: #000000;
+	--color-experience-font: #000000;
 
-	--color-languages: #989fce;
-	--color-languages-rgb: 152, 159, 206;
+	--color-languages: #9aa1cf;
+	--color-languages-rgb: 154, 161, 207;
+	--color-languages-font: #000000;
 
-	--color-projects: #7d6b91;
-	--color-projects-rgb: 125, 107, 145;
+	--color-projects: #aa9fb7;
+	--color-projects-rgb: 170, 159, 183;
+	--color-projects-font: #000000;
 
 	--color-education: #b8b4be;
 	--color-education-rgb: 184, 180, 190;
 
 	--color-skills: #c6c4ca;
 	--color-skills-rgb: 198, 196, 202;
+	--color-skills-font: #000000;
 }
 
 /* 8 — Forest twilight */
@@ -558,25 +611,28 @@
 	--color-text-muted: #1f262c;
 	--color-border: #727a77;
 
-	--color-hero: #4b4e6d;
-	--color-hero-rgb: 75, 78, 109;
-	--color-hero-on: #ffffff;
+	--color-hero: #262837;
+	--color-hero-rgb: 38, 40, 55;
+	--color-hero-font: #ffffff;
 
-	--color-experience: #4b4e6d;
-	--color-experience-rgb: 75, 78, 109;
-	--color-experience-on: #ffffff;
+	--color-experience: #262837;
+	--color-experience-rgb: 38, 40, 55;
+	--color-experience-font: #ffffff;
 
-	--color-languages: #5b6e80;
-	--color-languages-rgb: 91, 110, 128;
+	--color-languages: #222930;
+	--color-languages-rgb: 34, 41, 48;
+	--color-languages-font: #ffffff;
 
 	--color-projects: #161d1f;
 	--color-projects-rgb: 22, 29, 31;
+	--color-projects-font: #ffffff;
 
 	--color-education: #1f2628;
 	--color-education-rgb: 31, 38, 40;
 
-	--color-skills: #a1e887;
-	--color-skills-rgb: 161, 232, 135;
+	--color-skills: #1e2c1a;
+	--color-skills-rgb: 30, 44, 26;
+	--color-skills-font: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -589,23 +645,26 @@
 
 		--color-hero: #a1e887;
 		--color-hero-rgb: 161, 232, 135;
-		--color-hero-on: #232432;
+		--color-hero-font: #232432;
 
 		--color-experience: #a1e887;
 		--color-experience-rgb: 161, 232, 135;
-		--color-experience-on: #232432;
+		--color-experience-font: #232432;
 
-		--color-languages: #8fb3b8;
-		--color-languages-rgb: 143, 179, 184;
+		--color-languages: #a0bec3;
+		--color-languages-rgb: 160, 190, 195;
+		--color-languages-font: #000000;
 
-		--color-projects: #6a8d92;
-		--color-projects-rgb: 106, 141, 146;
+		--color-projects: #a8bdc0;
+		--color-projects-rgb: 168, 189, 192;
+		--color-projects-font: #000000;
 
-		--color-education: #5b6e80;
-		--color-education-rgb: 91, 110, 128;
+		--color-education: #b2bac3;
+		--color-education-rgb: 178, 186, 195;
 
-		--color-skills: #4b4e6d;
-		--color-skills-rgb: 75, 78, 109;
+		--color-skills: #b7b9c5;
+		--color-skills-rgb: 183, 185, 197;
+		--color-skills-font: #000000;
 	}
 }
 
@@ -618,23 +677,26 @@
 
 	--color-hero: #a1e887;
 	--color-hero-rgb: 161, 232, 135;
-	--color-hero-on: #232432;
+	--color-hero-font: #232432;
 
 	--color-experience: #a1e887;
 	--color-experience-rgb: 161, 232, 135;
-	--color-experience-on: #232432;
+	--color-experience-font: #232432;
 
-	--color-languages: #8fb3b8;
-	--color-languages-rgb: 143, 179, 184;
+	--color-languages: #a0bec3;
+	--color-languages-rgb: 160, 190, 195;
+	--color-languages-font: #000000;
 
-	--color-projects: #6a8d92;
-	--color-projects-rgb: 106, 141, 146;
+	--color-projects: #a8bdc0;
+	--color-projects-rgb: 168, 189, 192;
+	--color-projects-font: #000000;
 
-	--color-education: #5b6e80;
-	--color-education-rgb: 91, 110, 128;
+	--color-education: #b2bac3;
+	--color-education-rgb: 178, 186, 195;
 
-	--color-skills: #4b4e6d;
-	--color-skills-rgb: 75, 78, 109;
+	--color-skills: #b7b9c5;
+	--color-skills-rgb: 183, 185, 197;
+	--color-skills-font: #000000;
 }
 
 /* 9 — Originals */
@@ -645,25 +707,28 @@
 	--color-text-muted: #71717f;
 	--color-border: #e4e4e7;
 
-	--color-hero: #008660;
-	--color-hero-rgb: 0, 134, 96;
-	--color-hero-on: #ffffff;
+	--color-hero: #008560;
+	--color-hero-rgb: 0, 133, 96;
+	--color-hero-font: #ffffff;
 
 	--color-experience: #2e5cff;
 	--color-experience-rgb: 46, 92, 255;
-	--color-experience-on: #ffffff;
+	--color-experience-font: #ffffff;
 
 	--color-languages: #e9004f;
 	--color-languages-rgb: 233, 0, 79;
+	--color-languages-font: #ffffff;
 
 	--color-projects: #e32900;
 	--color-projects-rgb: 227, 41, 0;
+	--color-projects-font: #ffffff;
 
-	--color-education: #986e00;
-	--color-education-rgb: 152, 110, 0;
+	--color-education: #976e00;
+	--color-education-rgb: 151, 110, 0;
 
 	--color-skills: #6c4eff;
 	--color-skills-rgb: 108, 78, 255;
+	--color-skills-font: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -676,23 +741,26 @@
 
 		--color-hero: #00c48c;
 		--color-hero-rgb: 0, 196, 140;
-		--color-hero-on: #1a1a1c;
+		--color-hero-font: #1a1a1c;
 
 		--color-experience: #4b73ff;
 		--color-experience-rgb: 75, 115, 255;
-		--color-experience-on: #1a1a1c;
+		--color-experience-font: #1a1a1c;
 
 		--color-languages: #ff3d7f;
 		--color-languages-rgb: 255, 61, 127;
+		--color-languages-font: #000000;
 
 		--color-projects: #ff5a36;
 		--color-projects-rgb: 255, 90, 54;
+		--color-projects-font: #000000;
 
 		--color-education: #ffb800;
 		--color-education-rgb: 255, 184, 0;
 
 		--color-skills: #7f65ff;
 		--color-skills-rgb: 127, 101, 255;
+		--color-skills-font: #000000;
 	}
 }
 
@@ -705,21 +773,24 @@
 
 	--color-hero: #00c48c;
 	--color-hero-rgb: 0, 196, 140;
-	--color-hero-on: #1a1a1c;
+	--color-hero-font: #1a1a1c;
 
 	--color-experience: #4b73ff;
 	--color-experience-rgb: 75, 115, 255;
-	--color-experience-on: #1a1a1c;
+	--color-experience-font: #1a1a1c;
 
 	--color-languages: #ff3d7f;
 	--color-languages-rgb: 255, 61, 127;
+	--color-languages-font: #000000;
 
 	--color-projects: #ff5a36;
 	--color-projects-rgb: 255, 90, 54;
+	--color-projects-font: #000000;
 
 	--color-education: #ffb800;
 	--color-education-rgb: 255, 184, 0;
 
 	--color-skills: #7f65ff;
 	--color-skills-rgb: 127, 101, 255;
+	--color-skills-font: #000000;
 }
