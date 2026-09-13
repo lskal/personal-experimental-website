@@ -1,13 +1,5 @@
+import type { SkeletonBlockProps } from '../../types/components';
 import styles from './SkeletonBlock.module.css';
-
-interface SkeletonBlockProps {
-	/** Omit to let the className's own CSS control sizing (e.g. reusing an existing fixed-size class). */
-	width?: string;
-	/** Omit to let the className's own CSS control sizing (e.g. reusing an existing fixed-size class). */
-	height?: string;
-	variant?: 'text' | 'block' | 'pill' | 'circle';
-	className?: string;
-}
 
 export function SkeletonBlock({
 	width,

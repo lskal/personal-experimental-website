@@ -1,5 +1,5 @@
-import type { Locale } from '../context/LanguageContext';
-import type { SiteContent } from './types';
+import type { Locale } from '../types/context';
+import type { SiteContent } from '../types/content';
 
 const CACHE_PREFIX = 'site-content-cache-';
 
@@ -24,7 +24,9 @@ function setCachedContent(locale: Locale, content: SiteContent): void {
 	}
 }
 
-export async function fetchLocaleContent(locale: Locale): Promise<SiteContent | null> {
+export async function fetchLocaleContent(
+	locale: Locale,
+): Promise<SiteContent | null> {
 	try {
 		const response = await fetch(`/api/content?locale=${locale}`);
 		if (!response.ok) {

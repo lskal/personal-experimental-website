@@ -1,32 +1,9 @@
 import './PaletteDemo.css';
+import type { Swatch, PaletteBlock } from '../../types/components';
 
 // Temporary reference block for the color-palette decision (CLAUDE.md backlog item 1).
 // Flip this to true to show it again; set back to false once a palette is chosen.
 const SHOW_PALETTE_DEMO = true;
-
-interface Swatch {
-	hex: string;
-	label: string;
-}
-
-interface PaletteBlock {
-	title: string;
-	core: Swatch[];
-	lightBg: string;
-	darkBg: string;
-	hero: Swatch;
-	sections: Swatch[];
-	/**
-	 * True for monochromatic "scale" palettes: sections are ordered darkest (Experience)
-	 * to lightest (Skills) for light mode, and the dark-mode row shows the same 5 hexes
-	 * with the order reversed relative to the (unchanged) labels — Experience becomes the
-	 * lightest, Skills the darkest. Hero always mirrors whatever hex Experience shows in
-	 * that mode. False for multi-hue palettes, where sections/hero stay identical in both modes.
-	 */
-	scale: boolean;
-	surface: { light: string; dark: string };
-	activeExperience: { light: string; dark: string };
-}
 
 function reverseSectionHexes(sections: Swatch[]): Swatch[] {
 	return sections.map((swatch, index) => ({

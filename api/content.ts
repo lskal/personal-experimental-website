@@ -1,6 +1,6 @@
 import { get } from '@vercel/global-config';
-import type { Locale } from '../src/context/LanguageContext';
-import type { SiteContent } from '../src/content/types';
+import type { Locale } from '../src/types/context';
+import type { SiteContent } from '../src/types/content';
 
 export const config = { runtime: 'edge' };
 
@@ -24,12 +24,16 @@ export default async function handler(request: Request): Promise<Response> {
 	const content = await get<SiteContent>(locale);
 
 	if (!content) {
-		return Response.json({ error: `no content for locale "${locale}"` }, { status: 404 });
+		return Response.json(
+			{ error: `no content for locale "${locale}"` },
+			{ status: 404 },
+		);
 	}
 
 	return Response.json(content, {
 		headers: {
-			'cache-control': 'public, max-age=0, s-maxage=60, stale-while-revalidate=300',
+			'cache-control':
+				'public, max-age=0, s-maxage=60, stale-while-revalidate=300',
 		},
 	});
 }

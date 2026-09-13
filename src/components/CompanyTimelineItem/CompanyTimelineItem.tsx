@@ -1,13 +1,8 @@
 import { ChevronDown } from 'lucide-react';
-import type { ExperienceEntry } from '../../content/types';
+import type { CompanyTimelineItemProps } from '../../types/components';
 import { Tag } from '../Tag/Tag';
 import { Card } from '../Card/Card';
 import styles from './CompanyTimelineItem.module.css';
-
-interface CompanyTimelineItemProps {
-	entry: ExperienceEntry;
-	defaultOpen?: boolean;
-}
 
 export function CompanyTimelineItem({
 	entry,

@@ -1,14 +1,6 @@
-import type { CSSProperties, ElementType, ReactNode } from 'react';
-import type { TagAccent } from '../Tag/Tag';
+import type { CSSProperties, ElementType } from 'react';
+import type { CardProps } from '../../types/components';
 import styles from './Card.module.css';
-
-interface CardProps {
-	as?: 'div' | 'article' | 'details';
-	accent?: TagAccent;
-	active?: boolean;
-	className?: string;
-	children: ReactNode;
-}
 
 export function Card({
 	as = 'div',

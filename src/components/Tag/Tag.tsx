@@ -1,12 +1,6 @@
-import type { ReactNode, CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
+import type { TagProps } from '../../types/components';
 import styles from './Tag.module.css';
-
-export type TagAccent = 'skills' | 'projects' | 'languages' | 'experience';
-
-interface TagProps {
-	accent: TagAccent;
-	children: ReactNode;
-}
 
 export function Tag({ accent, children }: TagProps) {
 	const style = {
