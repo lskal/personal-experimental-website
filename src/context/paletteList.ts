@@ -1,4 +1,4 @@
-import type { PaletteId } from './PaletteContext';
+import type { PaletteId } from '../types/context';
 
 export const DEFAULT_PALETTE_ID: PaletteId = 1;
 

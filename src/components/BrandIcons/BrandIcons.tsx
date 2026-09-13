@@ -1,6 +1,4 @@
-interface BrandIconProps {
-	size?: number;
-}
+import type { BrandIconProps } from '../../types/components';
 
 export function GithubIcon({ size = 24 }: BrandIconProps) {
 	return (

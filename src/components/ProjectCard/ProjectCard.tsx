@@ -1,14 +1,10 @@
 import { ExternalLink } from 'lucide-react';
 import { GithubIcon } from '../BrandIcons/BrandIcons';
 import { useLanguage } from '../../hooks/useLanguage';
-import type { PersonalProject } from '../../content/types';
+import type { ProjectCardProps } from '../../types/components';
 import { Tag } from '../Tag/Tag';
 import { Card } from '../Card/Card';
 import styles from './ProjectCard.module.css';
-
-interface ProjectCardProps {
-	project: PersonalProject;
-}
 
 export function ProjectCard({ project }: ProjectCardProps) {
 	const { content } = useLanguage();

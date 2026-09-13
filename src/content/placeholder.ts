@@ -1,4 +1,4 @@
-import type { SiteContent, SkillCategory, UiStrings } from './types';
+import type { SiteContent, SkillCategory, UiStrings } from '../types/content';
 
 // Matches the real content's item counts exactly (see en.ts/it.ts history) so the
 // loading skeleton's layout height equals the real content's height — no layout

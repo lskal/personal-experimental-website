@@ -1,4 +1,4 @@
-import type { SiteContent, UiStrings } from './types';
+import type { SiteContent, UiStrings } from '../types/content';
 import { createPlaceholderContent } from './placeholder';
 
 const ui: UiStrings = {

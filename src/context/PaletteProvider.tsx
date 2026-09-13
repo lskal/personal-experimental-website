@@ -1,5 +1,6 @@
 import { useEffect, useState, type ReactNode } from 'react';
-import { PaletteContext, type PaletteId } from './PaletteContext';
+import { PaletteContext } from './PaletteContext';
+import type { PaletteId } from '../types/context';
 import { PALETTES, DEFAULT_PALETTE_ID } from './paletteList';
 
 const STORAGE_KEY = 'palette';

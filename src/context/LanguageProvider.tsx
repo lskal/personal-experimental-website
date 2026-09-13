@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { LanguageContext, type Locale } from './LanguageContext';
+import { LanguageContext } from './LanguageContext';
 import { content as enContent } from '../content/en';
 import { content as itContent } from '../content/it';
-import type { SiteContent } from '../content/types';
+import type { SiteContent } from '../types/content';
+import type { Locale } from '../types/context';
 import {
 	fetchLocaleContent,
 	getCachedContent,
