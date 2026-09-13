@@ -1,5 +1,6 @@
 import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
+import { Tag } from '../../components/Tag/Tag';
 import styles from './Languages.module.css';
 
 const LEVEL_ROW_COUNT = 5;
@@ -35,27 +36,25 @@ export function Languages() {
 							<ul className={styles.levels}>
 								<li className={styles.levelRow}>
 									<span className={styles.levelLabel}>{labels.listening}</span>
-									<span className={styles.levelValue}>{lang.listening}</span>
+									<Tag accent="languages">{lang.listening}</Tag>
 								</li>
 								<li className={styles.levelRow}>
 									<span className={styles.levelLabel}>{labels.reading}</span>
-									<span className={styles.levelValue}>{lang.reading}</span>
+									<Tag accent="languages">{lang.reading}</Tag>
 								</li>
 								<li className={styles.levelRow}>
 									<span className={styles.levelLabel}>{labels.interaction}</span>
-									<span className={styles.levelValue}>{lang.interaction}</span>
+									<Tag accent="languages">{lang.interaction}</Tag>
 								</li>
 								<li className={styles.levelRow}>
 									<span className={styles.levelLabel}>
 										{labels.spokenProduction}
 									</span>
-									<span className={styles.levelValue}>
-										{lang.spokenProduction}
-									</span>
+									<Tag accent="languages">{lang.spokenProduction}</Tag>
 								</li>
 								<li className={styles.levelRow}>
 									<span className={styles.levelLabel}>{labels.writing}</span>
-									<span className={styles.levelValue}>{lang.writing}</span>
+									<Tag accent="languages">{lang.writing}</Tag>
 								</li>
 							</ul>
 						</div>

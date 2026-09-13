@@ -1,6 +1,7 @@
 import { Icon } from '@iconify/react';
 import { useLanguage } from '../../hooks/useLanguage';
 import type { PersonalProject } from '../../content/types';
+import { Tag } from '../Tag/Tag';
 import styles from './ProjectCard.module.css';
 
 interface ProjectCardProps {
@@ -16,8 +17,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
 			<p className={styles.description}>{project.description}</p>
 			<ul className={styles.stack}>
 				{project.stack.map(tech => (
-					<li key={tech} className={styles.tag}>
-						{tech}
+					<li key={tech}>
+						<Tag accent="projects">{tech}</Tag>
 					</li>
 				))}
 			</ul>
