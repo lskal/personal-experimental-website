@@ -4,7 +4,7 @@
 	flex-direction: column;
 	align-items: center;
 	gap: var(--space-6);
-	padding: var(--space-5)  var(--space-5) var(--space-8);
+	padding: var(--space-5) var(--space-5) var(--space-8);
 	background-color: var(--color-hero);
 	color: var(--color-hero-on);
 	text-align: center;
@@ -68,7 +68,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
-		order: -1;
 		width: 100%;
 	}
 
