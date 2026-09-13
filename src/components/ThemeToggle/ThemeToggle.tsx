@@ -1,4 +1,4 @@
-import { Icon } from '@iconify/react';
+import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../hooks/useTheme';
 import { useLanguage } from '../../hooks/useLanguage';
 import styles from './ThemeToggle.module.css';
@@ -20,11 +20,7 @@ export function ThemeToggle() {
 			aria-label={label}
 			title={label}
 		>
-			<Icon
-				icon={theme === 'light' ? 'lucide:moon' : 'lucide:sun'}
-				width={20}
-				height={20}
-			/>
+			{theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
 		</button>
 	);
 }
