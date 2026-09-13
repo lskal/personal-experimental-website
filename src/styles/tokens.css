@@ -14,32 +14,31 @@
 	/*
 	  Section accent colors — Palette 1 is a chromatic scale, ordered darkest (Experience)
 	  to lightest (Skills), as specified directly by Max. Hero mirrors Experience. These accents
-	  (and their -on companions) DO change between light/dark mode: the dark-mode blocks below
+	  (and their -font companions) DO change between light/dark mode: the dark-mode blocks below
 	  reverse the assignment so Experience becomes the lightest and Skills the darkest.
 	*/
 	--color-hero: #233e5c;
 	--color-hero-rgb: 35, 62, 92;
-	--color-hero-on: #ffffff;
+	--color-hero-font: #ffffff;
 
 	--color-experience: #233e5c;
 	--color-experience-rgb: 35, 62, 92;
-	--color-experience-on: #ffffff;
+	--color-experience-font: #ffffff;
 
-	--color-languages: #386394;
-	--color-languages-rgb: 56, 99, 148;
-	--color-languages-on: #ffffff;
+	--color-languages: #386293;
+	--color-languages-rgb: 56, 98, 147;
+	--color-languages-font: #ffffff;
 
-	--color-projects: #5989c0;
-	--color-projects-rgb: 89, 137, 192;
-	--color-projects-on: #ffffff;
+	--color-projects: #40628a;
+	--color-projects-rgb: 64, 98, 138;
+	--color-projects-font: #ffffff;
 
 	--color-education: #3a597e;
 	--color-education-rgb: 58, 89, 126;
-	--color-education-on: #1d2d44;
 
 	--color-skills: #3f6189;
 	--color-skills-rgb: 63, 97, 137;
-	--color-skills-on: #ffffff;
+	--color-skills-font: #ffffff;
 
 	/* Typography */
 	--font-sans:
@@ -95,27 +94,26 @@
 		/* Palette 1 chromatic-scale reversal: Experience/Hero become the lightest, Skills the darkest */
 		--color-hero: #c8d8ea;
 		--color-hero-rgb: 200, 216, 234;
-		--color-hero-on: #1d2d44;
+		--color-hero-font: #1d2d44;
 
 		--color-experience: #c8d8ea;
 		--color-experience-rgb: 200, 216, 234;
-		--color-experience-on: #1d2d44;
+		--color-experience-font: #1d2d44;
 
 		--color-languages: #90b0d5;
 		--color-languages-rgb: 144, 176, 213;
-		--color-languages-on: #1d2d44;
+		--color-languages-font: #000000;
 
-		--color-projects: #5989c0;
-		--color-projects-rgb: 89, 137, 192;
-		--color-projects-on: #1d2d44;
+		--color-projects: #5b8bc1;
+		--color-projects-rgb: 91, 139, 193;
+		--color-projects-font: #000000;
 
 		--color-education: #8a9db4;
 		--color-education-rgb: 138, 157, 180;
-		--color-education-on: #ffffff;
 
 		--color-skills: #778da8;
 		--color-skills-rgb: 119, 141, 168;
-		--color-skills-on: #ffffff;
+		--color-skills-font: #000000;
 
 		--shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
 		--shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
@@ -132,27 +130,26 @@
 	/* Palette 1 chromatic-scale reversal: Experience/Hero become the lightest, Skills the darkest */
 	--color-hero: #c8d8ea;
 	--color-hero-rgb: 200, 216, 234;
-	--color-hero-on: #1d2d44;
+	--color-hero-font: #1d2d44;
 
 	--color-experience: #c8d8ea;
 	--color-experience-rgb: 200, 216, 234;
-	--color-experience-on: #1d2d44;
+	--color-experience-font: #1d2d44;
 
 	--color-languages: #90b0d5;
 	--color-languages-rgb: 144, 176, 213;
-	--color-languages-on: #1d2d44;
+	--color-languages-font: #000000;
 
-	--color-projects: #5989c0;
-	--color-projects-rgb: 89, 137, 192;
-	--color-projects-on: #1d2d44;
+	--color-projects: #5b8bc1;
+	--color-projects-rgb: 91, 139, 193;
+	--color-projects-font: #000000;
 
 	--color-education: #8a9db4;
 	--color-education-rgb: 138, 157, 180;
-	--color-education-on: #ffffff;
 
 	--color-skills: #778da8;
 	--color-skills-rgb: 119, 141, 168;
-	--color-skills-on: #ffffff;
+	--color-skills-font: #000000;
 
 	--shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
 	--shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);

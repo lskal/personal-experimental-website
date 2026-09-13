@@ -4,8 +4,8 @@ import styles from './Tag.module.css';
 
 export function Tag({ accent, children }: TagProps) {
 	const style = {
-		'--tag-bg': `rgba(var(--color-${accent}-rgb), 0.12)`,
-		'--tag-color': `var(--color-${accent})`,
+		'--tag-bg': `var(--color-${accent})`,
+		'--tag-color': `var(--color-${accent}-font)`,
 	} as CSSProperties;
 
 	return (

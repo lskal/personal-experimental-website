@@ -77,7 +77,7 @@
 
 .details[open] .chevron {
 	background: var(--color-experience);
-	color: var(--color-experience-on);
+	color: var(--color-experience-font);
 	transform: rotate(180deg);
 }
 

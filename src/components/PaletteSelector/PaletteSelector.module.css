@@ -31,6 +31,6 @@
 .name {
 	font-size: var(--font-size-xs);
 	font-weight: var(--font-weight-medium);
-	color: var(--color-hero-on);
+	color: var(--color-hero-font);
 	opacity: 0.85;
 }
