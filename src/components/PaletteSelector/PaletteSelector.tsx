@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Icon } from '@iconify/react';
+import { RotateCcw, Shuffle } from 'lucide-react';
 import { usePalette } from '../../hooks/usePalette';
 import styles from './PaletteSelector.module.css';
 
@@ -31,7 +31,7 @@ export function PaletteSelector() {
 						aria-label="Return to default palette"
 						title="Return to default palette"
 					>
-						<Icon icon="lucide:rotate-ccw" width={18} height={18} />
+						<RotateCcw size={18} />
 					</button>
 				)}
 				<button
@@ -41,7 +41,7 @@ export function PaletteSelector() {
 					aria-label="Choose next palette"
 					title="Choose next palette"
 				>
-					<Icon icon="lucide:shuffle" width={18} height={18} />
+					<Shuffle size={18} />
 				</button>
 			</div>
 			<span

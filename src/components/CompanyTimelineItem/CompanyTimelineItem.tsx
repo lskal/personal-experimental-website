@@ -1,4 +1,4 @@
-import { Icon } from '@iconify/react';
+import { ChevronDown } from 'lucide-react';
 import type { ExperienceEntry } from '../../content/types';
 import { Tag } from '../Tag/Tag';
 import styles from './CompanyTimelineItem.module.css';
@@ -31,12 +31,7 @@ export function CompanyTimelineItem({
 						<span className={styles.period}>{entry.period}</span>
 						<p className={styles.companySummary}>{entry.summary}</p>
 					</div>
-					<Icon
-						icon="lucide:chevron-down"
-						className={styles.chevron}
-						width={20}
-						height={20}
-					/>
+					<ChevronDown className={styles.chevron} size={20} />
 				</summary>
 
 				<div className={styles.projects}>

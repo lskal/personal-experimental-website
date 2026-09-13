@@ -1,4 +1,5 @@
-import { Icon } from '@iconify/react';
+import { ExternalLink } from 'lucide-react';
+import { GithubIcon } from '../BrandIcons/BrandIcons';
 import { useLanguage } from '../../hooks/useLanguage';
 import type { PersonalProject } from '../../content/types';
 import { Tag } from '../Tag/Tag';
@@ -31,7 +32,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 							rel="noreferrer"
 							className={styles.link}
 						>
-							<Icon icon="lucide:external-link" width={16} height={16} />
+							<ExternalLink size={16} />
 							{content.ui.actions.viewProject}
 						</a>
 					)}
@@ -42,7 +43,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 							rel="noreferrer"
 							className={styles.link}
 						>
-							<Icon icon="lucide:github" width={16} height={16} />
+							<GithubIcon size={16} />
 							{content.ui.actions.viewRepo}
 						</a>
 					)}

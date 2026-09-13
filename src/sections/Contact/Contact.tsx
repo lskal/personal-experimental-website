@@ -1,4 +1,8 @@
-import { Icon } from '@iconify/react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import {
+	GithubIcon,
+	LinkedinIcon,
+} from '../../components/BrandIcons/BrandIcons';
 import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
 import styles from './Contact.module.css';
@@ -34,15 +38,15 @@ export function Contact() {
 			</h2>
 			<div className={styles.links}>
 				<a href={`mailto:${contact.email}`} className={styles.link}>
-					<Icon icon="lucide:mail" width={20} height={20} aria-hidden="true" />
+					<Mail size={20} aria-hidden="true" />
 					{contact.email}
 				</a>
 				<a href={`tel:${contact.phone}`} className={styles.link}>
-					<Icon icon="lucide:phone" width={20} height={20} aria-hidden="true" />
+					<Phone size={20} aria-hidden="true" />
 					{contact.phone}
 				</a>
 				<span className={styles.link}>
-					<Icon icon="lucide:map-pin" width={20} height={20} aria-hidden="true" />
+					<MapPin size={20} aria-hidden="true" />
 					{contact.location}
 				</span>
 				{contact.githubUrl && (
@@ -53,7 +57,7 @@ export function Contact() {
 						className={styles.link}
 						aria-label="GitHub (opens in a new tab)"
 					>
-						<Icon icon="lucide:github" width={20} height={20} aria-hidden="true" />
+						<GithubIcon size={20} />
 						GitHub
 					</a>
 				)}
@@ -65,7 +69,7 @@ export function Contact() {
 						className={styles.link}
 						aria-label="LinkedIn (opens in a new tab)"
 					>
-						<Icon icon="lucide:linkedin" width={20} height={20} aria-hidden="true" />
+						<LinkedinIcon size={20} />
 						LinkedIn
 					</a>
 				)}

@@ -1,4 +1,4 @@
-import { Icon } from '@iconify/react';
+import { ExternalLink } from 'lucide-react';
 import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
 import styles from './Education.module.css';
@@ -14,16 +14,8 @@ export function Education() {
 				{content.education.map((entry, index) =>
 					isLoading ? (
 						<div key={index} className={styles.card}>
-							<SkeletonBlock
-								className={styles.entryTitle}
-								width="100%"
-								height="1em"
-							/>
-							<SkeletonBlock
-								className={styles.entryMeta}
-								width="70%"
-								height="0.9em"
-							/>
+							<SkeletonBlock className={styles.entryTitle} width="100%" height="1em" />
+							<SkeletonBlock className={styles.entryMeta} width="70%" height="0.9em" />
 						</div>
 					) : (
 						<div key={entry.title} className={styles.card}>
@@ -51,16 +43,8 @@ export function Education() {
 				{content.certifications.map((cert, index) =>
 					isLoading ? (
 						<div key={index} className={styles.card}>
-							<SkeletonBlock
-								className={styles.entryTitle}
-								width="90%"
-								height="1em"
-							/>
-							<SkeletonBlock
-								className={styles.entryMeta}
-								width="60%"
-								height="0.9em"
-							/>
+							<SkeletonBlock className={styles.entryTitle} width="90%" height="1em" />
+							<SkeletonBlock className={styles.entryMeta} width="60%" height="0.9em" />
 						</div>
 					) : (
 						<div key={cert.name} className={styles.card}>
@@ -76,7 +60,7 @@ export function Education() {
 										rel="noreferrer"
 										className={styles.certLink}
 									>
-										<Icon icon="lucide:external-link" width={18} height={18} />
+										<ExternalLink size={18} />
 									</a>
 								)}
 							</div>
