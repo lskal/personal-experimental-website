@@ -1,0 +1,725 @@
+/*
+  Overrides for the 8 non-default palettes selectable via PaletteSelector
+  (src/components/PaletteSelector/). The default palette (id 1, Cool blues)
+  needs no entry here — it's the base :root block in tokens.css.
+
+  Selector convention per palette, mirroring tokens.css's own light/dark
+  structure with an added [data-palette] dimension:
+    :root[data-palette='N'] { ...light-mode values... }
+    @media (prefers-color-scheme: dark) {
+      :root[data-palette='N']:not([data-theme='light']) { ...dark-mode values... }
+    }
+    :root[data-palette='N'][data-theme='dark'] { ...same dark-mode values... }
+
+  Values computed against WCAG relative luminance, contrast-checked (target
+  >=4.3:1, this project's accepted floor per Cool Blues' Languages precedent)
+  against each palette's own --color-surface. Where the raw demo hue failed,
+  it was retuned independently per mode rather than mechanically mirrored
+  (same approach used for Cool Blues' Projects/Skills) -- see the source
+  computation notes for the full adjustment list per palette.
+
+  Known limitation (not fixed here -- would require changing the original
+  explored palette's own neutral colors, a creative call left to Max):
+  - Palette 7 (Indigo storm): light-mode --color-surface (#636D76) is a
+    medium gray, not light. Even pure black text only reaches 3.98:1 against
+    it -- used as the best achievable value.
+
+  The Contact/footer section reuses --color-hero/--color-hero-on directly
+  (no separate --color-footer-* tokens) so it always matches the Hero band.
+*/
+
+/* 2 — Botanical greens */
+:root[data-palette='2'] {
+	--color-bg: #d7f9f1;
+	--color-surface: #d4dddb;
+	--color-text: #496938;
+	--color-text-muted: #49675e;
+	--color-border: #c1caca;
+
+	--color-hero: #212f16;
+	--color-hero-rgb: 33, 47, 22;
+	--color-hero-on: #ffffff;
+
+	--color-experience: #212f16;
+	--color-experience-rgb: 33, 47, 22;
+	--color-experience-on: #ffffff;
+
+	--color-languages: #2f4420;
+	--color-languages-rgb: 47, 68, 32;
+
+	--color-projects: #3a5427;
+	--color-projects-rgb: 58, 84, 39;
+
+	--color-education: #43602c;
+	--color-education-rgb: 67, 96, 44;
+
+	--color-skills: #4a6b31;
+	--color-skills-rgb: 74, 107, 49;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root[data-palette='2']:not([data-theme='light']) {
+		--color-bg: #40531b;
+		--color-surface: #484c41;
+		--color-text: #b2bf8d;
+		--color-text-muted: #a5bfb7;
+		--color-border: #5a5e55;
+
+		--color-hero: #e6ece2;
+		--color-hero-rgb: 230, 236, 226;
+		--color-hero-on: #496938;
+
+		--color-experience: #e6ece2;
+		--color-experience-rgb: 230, 236, 226;
+		--color-experience-on: #496938;
+
+		--color-languages: #d1dcc8;
+		--color-languages-rgb: 209, 220, 200;
+
+		--color-projects: #bacbad;
+		--color-projects-rgb: 186, 203, 173;
+
+		--color-education: #adc19e;
+		--color-education-rgb: 173, 193, 158;
+
+		--color-skills: #a8bd98;
+		--color-skills-rgb: 168, 189, 152;
+	}
+}
+
+:root[data-palette='2'][data-theme='dark'] {
+	--color-bg: #40531b;
+	--color-surface: #484c41;
+	--color-text: #b2bf8d;
+	--color-text-muted: #a5bfb7;
+	--color-border: #5a5e55;
+
+	--color-hero: #e6ece2;
+	--color-hero-rgb: 230, 236, 226;
+	--color-hero-on: #496938;
+
+	--color-experience: #e6ece2;
+	--color-experience-rgb: 230, 236, 226;
+	--color-experience-on: #496938;
+
+	--color-languages: #d1dcc8;
+	--color-languages-rgb: 209, 220, 200;
+
+	--color-projects: #bacbad;
+	--color-projects-rgb: 186, 203, 173;
+
+	--color-education: #adc19e;
+	--color-education-rgb: 173, 193, 158;
+
+	--color-skills: #a8bd98;
+	--color-skills-rgb: 168, 189, 152;
+}
+
+/* 3 — Warm sunset */
+:root[data-palette='3'] {
+	--color-bg: #bbdef0;
+	--color-surface: #c1c8cc;
+	--color-text: #7d4600;
+	--color-text-muted: #744b05;
+	--color-border: #aeb5bb;
+
+	--color-hero: #a62227;
+	--color-hero-rgb: 166, 34, 39;
+	--color-hero-on: #ffffff;
+
+	--color-experience: #a62227;
+	--color-experience-rgb: 166, 34, 39;
+	--color-experience-on: #ffffff;
+
+	--color-languages: #a91e00;
+	--color-languages-rgb: 169, 30, 0;
+
+	--color-projects: #854700;
+	--color-projects-rgb: 133, 71, 0;
+
+	--color-education: #6d5300;
+	--color-education-rgb: 109, 83, 0;
+
+	--color-skills: #6a5400;
+	--color-skills-rgb: 106, 84, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root[data-palette='3']:not([data-theme='light']) {
+		--color-bg: #00a6a6;
+		--color-surface: #547171;
+		--color-text: #fceea4;
+		--color-text-muted: #fdebcb;
+		--color-border: #668385;
+
+		--color-hero: #ffe78b;
+		--color-hero-rgb: 255, 231, 139;
+		--color-hero-on: #7d4600;
+
+		--color-experience: #ffe78b;
+		--color-experience-rgb: 255, 231, 139;
+		--color-experience-on: #7d4600;
+
+		--color-languages: #ffe798;
+		--color-languages-rgb: 255, 231, 152;
+
+		--color-projects: #ffe4c4;
+		--color-projects-rgb: 255, 228, 196;
+
+		--color-education: #ffe2db;
+		--color-education-rgb: 255, 226, 219;
+
+		--color-skills: #f9e3e4;
+		--color-skills-rgb: 249, 227, 228;
+	}
+}
+
+:root[data-palette='3'][data-theme='dark'] {
+	--color-bg: #00a6a6;
+	--color-surface: #547171;
+	--color-text: #fceea4;
+	--color-text-muted: #fdebcb;
+	--color-border: #668385;
+
+	--color-hero: #ffe78b;
+	--color-hero-rgb: 255, 231, 139;
+	--color-hero-on: #7d4600;
+
+	--color-experience: #ffe78b;
+	--color-experience-rgb: 255, 231, 139;
+	--color-experience-on: #7d4600;
+
+	--color-languages: #ffe798;
+	--color-languages-rgb: 255, 231, 152;
+
+	--color-projects: #ffe4c4;
+	--color-projects-rgb: 255, 228, 196;
+
+	--color-education: #ffe2db;
+	--color-education-rgb: 255, 226, 219;
+
+	--color-skills: #f9e3e4;
+	--color-skills-rgb: 249, 227, 228;
+}
+
+/* 4 — Rainbow sunset */
+:root[data-palette='4'] {
+	--color-bg: #bbdef0;
+	--color-surface: #c1c8cc;
+	--color-text: #7d4600;
+	--color-text-muted: #744b05;
+	--color-border: #aeb5bb;
+
+	--color-hero: #a91e00;
+	--color-hero-rgb: 169, 30, 0;
+	--color-hero-on: #ffffff;
+
+	--color-experience: #235789;
+	--color-experience-rgb: 35, 87, 137;
+	--color-experience-on: #ffffff;
+
+	--color-languages: #a71457;
+	--color-languages-rgb: 167, 20, 87;
+
+	--color-projects: #1a6246;
+	--color-projects-rgb: 26, 98, 70;
+
+	--color-education: #a91e00;
+	--color-education-rgb: 169, 30, 0;
+
+	--color-skills: #635701;
+	--color-skills-rgb: 99, 87, 1;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root[data-palette='4']:not([data-theme='light']) {
+		--color-bg: #00a6a6;
+		--color-surface: #547171;
+		--color-text: #fceea4;
+		--color-text-muted: #fdebcb;
+		--color-border: #668385;
+
+		--color-hero: #ffe2db;
+		--color-hero-rgb: 255, 226, 219;
+		--color-hero-on: #7d4600;
+
+		--color-experience: #dceaf6;
+		--color-experience-rgb: 220, 234, 246;
+		--color-experience-on: #7d4600;
+
+		--color-languages: #fbe1ed;
+		--color-languages-rgb: 251, 225, 237;
+
+		--color-projects: #c8f1e1;
+		--color-projects-rgb: 200, 241, 225;
+
+		--color-education: #ffe2db;
+		--color-education-rgb: 255, 226, 219;
+
+		--color-skills: #feea5f;
+		--color-skills-rgb: 254, 234, 95;
+	}
+}
+
+:root[data-palette='4'][data-theme='dark'] {
+	--color-bg: #00a6a6;
+	--color-surface: #547171;
+	--color-text: #fceea4;
+	--color-text-muted: #fdebcb;
+	--color-border: #668385;
+
+	--color-hero: #ffe2db;
+	--color-hero-rgb: 255, 226, 219;
+	--color-hero-on: #7d4600;
+
+	--color-experience: #dceaf6;
+	--color-experience-rgb: 220, 234, 246;
+	--color-experience-on: #7d4600;
+
+	--color-languages: #fbe1ed;
+	--color-languages-rgb: 251, 225, 237;
+
+	--color-projects: #c8f1e1;
+	--color-projects-rgb: 200, 241, 225;
+
+	--color-education: #ffe2db;
+	--color-education-rgb: 255, 226, 219;
+
+	--color-skills: #feea5f;
+	--color-skills-rgb: 254, 234, 95;
+}
+
+/* 5 — Sage & terracotta */
+:root[data-palette='5'] {
+	--color-bg: #7fb685;
+	--color-surface: #869087;
+	--color-text: #520b09;
+	--color-text-muted: #37230f;
+	--color-border: #737d76;
+
+	--color-hero: #590b0a;
+	--color-hero-rgb: 89, 11, 10;
+	--color-hero-on: #ffffff;
+
+	--color-experience: #590b0a;
+	--color-experience-rgb: 89, 11, 10;
+	--color-experience-on: #ffffff;
+
+	--color-languages: #580c0b;
+	--color-languages-rgb: 88, 12, 11;
+
+	--color-projects: #3c2610;
+	--color-projects-rgb: 60, 38, 16;
+
+	--color-education: #38280f;
+	--color-education-rgb: 56, 40, 15;
+
+	--color-skills: #3b2706;
+	--color-skills-rgb: 59, 39, 6;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root[data-palette='5']:not([data-theme='light']) {
+		--color-bg: #426a5a;
+		--color-surface: #626966;
+		--color-text: #f9e3c0;
+		--color-text-muted: #f2e4ce;
+		--color-border: #747b7a;
+
+		--color-hero: #f8deb4;
+		--color-hero-rgb: 248, 222, 180;
+		--color-hero-on: #520b09;
+
+		--color-experience: #f8deb4;
+		--color-experience-rgb: 248, 222, 180;
+		--color-experience-on: #520b09;
+
+		--color-languages: #f0dfc4;
+		--color-languages-rgb: 240, 223, 196;
+
+		--color-projects: #f1deca;
+		--color-projects-rgb: 241, 222, 202;
+
+		--color-education: #fad9d9;
+		--color-education-rgb: 250, 217, 217;
+
+		--color-skills: #fbd9d9;
+		--color-skills-rgb: 251, 217, 217;
+	}
+}
+
+:root[data-palette='5'][data-theme='dark'] {
+	--color-bg: #426a5a;
+	--color-surface: #626966;
+	--color-text: #f9e3c0;
+	--color-text-muted: #f2e4ce;
+	--color-border: #747b7a;
+
+	--color-hero: #f8deb4;
+	--color-hero-rgb: 248, 222, 180;
+	--color-hero-on: #520b09;
+
+	--color-experience: #f8deb4;
+	--color-experience-rgb: 248, 222, 180;
+	--color-experience-on: #520b09;
+
+	--color-languages: #f0dfc4;
+	--color-languages-rgb: 240, 223, 196;
+
+	--color-projects: #f1deca;
+	--color-projects-rgb: 241, 222, 202;
+
+	--color-education: #fad9d9;
+	--color-education-rgb: 250, 217, 217;
+
+	--color-skills: #fbd9d9;
+	--color-skills-rgb: 251, 217, 217;
+}
+
+/* 6 — Violet garden */
+:root[data-palette='6'] {
+	--color-bg: #8963ba;
+	--color-surface: #7e7887;
+	--color-text: #0c100a;
+	--color-text-muted: #091109;
+	--color-border: #6b6576;
+
+	--color-hero: #10160e;
+	--color-hero-rgb: 16, 22, 14;
+	--color-hero-on: #ffffff;
+
+	--color-experience: #10160e;
+	--color-experience-rgb: 16, 22, 14;
+	--color-experience-on: #ffffff;
+
+	--color-languages: #11160e;
+	--color-languages-rgb: 17, 22, 14;
+
+	--color-projects: #0d170d;
+	--color-projects-rgb: 13, 23, 13;
+
+	--color-education: #08180d;
+	--color-education-rgb: 8, 24, 13;
+
+	--color-skills: #08180e;
+	--color-skills-rgb: 8, 24, 14;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root[data-palette='6']:not([data-theme='light']) {
+		--color-bg: #54428e;
+		--color-surface: #74717e;
+		--color-text: #f2faf5;
+		--color-text-muted: #f5faf5;
+		--color-border: #868392;
+
+		--color-hero: #e8f7ed;
+		--color-hero-rgb: 232, 247, 237;
+		--color-hero-on: #0c100a;
+
+		--color-experience: #e8f7ed;
+		--color-experience-rgb: 232, 247, 237;
+		--color-experience-on: #0c100a;
+
+		--color-languages: #e8f7ed;
+		--color-languages-rgb: 232, 247, 237;
+
+		--color-projects: #edf5ed;
+		--color-projects-rgb: 237, 245, 237;
+
+		--color-education: #f0f4ee;
+		--color-education-rgb: 240, 244, 238;
+
+		--color-skills: #f0f5ee;
+		--color-skills-rgb: 240, 245, 238;
+	}
+}
+
+:root[data-palette='6'][data-theme='dark'] {
+	--color-bg: #54428e;
+	--color-surface: #74717e;
+	--color-text: #f2faf5;
+	--color-text-muted: #f5faf5;
+	--color-border: #868392;
+
+	--color-hero: #e8f7ed;
+	--color-hero-rgb: 232, 247, 237;
+	--color-hero-on: #0c100a;
+
+	--color-experience: #e8f7ed;
+	--color-experience-rgb: 232, 247, 237;
+	--color-experience-on: #0c100a;
+
+	--color-languages: #e8f7ed;
+	--color-languages-rgb: 232, 247, 237;
+
+	--color-projects: #edf5ed;
+	--color-projects-rgb: 237, 245, 237;
+
+	--color-education: #f0f4ee;
+	--color-education-rgb: 240, 244, 238;
+
+	--color-skills: #f0f5ee;
+	--color-skills-rgb: 240, 245, 238;
+}
+
+/* 7 — Indigo storm */
+:root[data-palette='7'] {
+	--color-bg: #347fc4;
+	--color-surface: #636d76;
+	--color-text: #000000;
+	--color-text-muted: #000000;
+	--color-border: #505a65;
+
+	--color-hero: #000000;
+	--color-hero-rgb: 0, 0, 0;
+	--color-hero-on: #ffffff;
+
+	--color-experience: #000000;
+	--color-experience-rgb: 0, 0, 0;
+	--color-experience-on: #ffffff;
+
+	--color-languages: #000000;
+	--color-languages-rgb: 0, 0, 0;
+
+	--color-projects: #000000;
+	--color-projects-rgb: 0, 0, 0;
+
+	--color-education: #000000;
+	--color-education-rgb: 0, 0, 0;
+
+	--color-skills: #000000;
+	--color-skills-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root[data-palette='7']:not([data-theme='light']) {
+		--color-bg: #272838;
+		--color-surface: #3d3d40;
+		--color-text: #9ea5d1;
+		--color-text-muted: #aea3bb;
+		--color-border: #4f4f54;
+
+		--color-hero: #b8bede;
+		--color-hero-rgb: 184, 190, 222;
+		--color-hero-on: #000000;
+
+		--color-experience: #b8bede;
+		--color-experience-rgb: 184, 190, 222;
+		--color-experience-on: #000000;
+
+		--color-languages: #9aa1cf;
+		--color-languages-rgb: 154, 161, 207;
+
+		--color-projects: #ab9fb8;
+		--color-projects-rgb: 171, 159, 184;
+
+		--color-education: #a8a0b5;
+		--color-education-rgb: 168, 160, 181;
+
+		--color-skills: #a99fb8;
+		--color-skills-rgb: 169, 159, 184;
+	}
+}
+
+:root[data-palette='7'][data-theme='dark'] {
+	--color-bg: #272838;
+	--color-surface: #3d3d40;
+	--color-text: #9ea5d1;
+	--color-text-muted: #aea3bb;
+	--color-border: #4f4f54;
+
+	--color-hero: #b8bede;
+	--color-hero-rgb: 184, 190, 222;
+	--color-hero-on: #000000;
+
+	--color-experience: #b8bede;
+	--color-experience-rgb: 184, 190, 222;
+	--color-experience-on: #000000;
+
+	--color-languages: #9aa1cf;
+	--color-languages-rgb: 154, 161, 207;
+
+	--color-projects: #ab9fb8;
+	--color-projects-rgb: 171, 159, 184;
+
+	--color-education: #a8a0b5;
+	--color-education-rgb: 168, 160, 181;
+
+	--color-skills: #a99fb8;
+	--color-skills-rgb: 169, 159, 184;
+}
+
+/* 8 — Forest twilight */
+:root[data-palette='8'] {
+	--color-bg: #80b192;
+	--color-surface: #858d88;
+	--color-text: #232432;
+	--color-text-muted: #1f262c;
+	--color-border: #727a77;
+
+	--color-hero: #262737;
+	--color-hero-rgb: 38, 39, 55;
+	--color-hero-on: #ffffff;
+
+	--color-experience: #262737;
+	--color-experience-rgb: 38, 39, 55;
+	--color-experience-on: #ffffff;
+
+	--color-languages: #222930;
+	--color-languages-rgb: 34, 41, 48;
+
+	--color-projects: #202a2c;
+	--color-projects-rgb: 32, 42, 44;
+
+	--color-education: #1c2b2d;
+	--color-education-rgb: 28, 43, 45;
+
+	--color-skills: #132f09;
+	--color-skills-rgb: 19, 47, 9;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root[data-palette='8']:not([data-theme='light']) {
+		--color-bg: #493548;
+		--color-surface: #504c50;
+		--color-text: #a1e887;
+		--color-text-muted: #adc1c4;
+		--color-border: #625e64;
+
+		--color-hero: #a1e887;
+		--color-hero-rgb: 161, 232, 135;
+		--color-hero-on: #232432;
+
+		--color-experience: #a1e887;
+		--color-experience-rgb: 161, 232, 135;
+		--color-experience-on: #232432;
+
+		--color-languages: #a0bfc3;
+		--color-languages-rgb: 160, 191, 195;
+
+		--color-projects: #a8bdc0;
+		--color-projects-rgb: 168, 189, 192;
+
+		--color-education: #afbbc6;
+		--color-education-rgb: 175, 187, 198;
+
+		--color-skills: #b6b8cd;
+		--color-skills-rgb: 182, 184, 205;
+	}
+}
+
+:root[data-palette='8'][data-theme='dark'] {
+	--color-bg: #493548;
+	--color-surface: #504c50;
+	--color-text: #a1e887;
+	--color-text-muted: #adc1c4;
+	--color-border: #625e64;
+
+	--color-hero: #a1e887;
+	--color-hero-rgb: 161, 232, 135;
+	--color-hero-on: #232432;
+
+	--color-experience: #a1e887;
+	--color-experience-rgb: 161, 232, 135;
+	--color-experience-on: #232432;
+
+	--color-languages: #a0bfc3;
+	--color-languages-rgb: 160, 191, 195;
+
+	--color-projects: #a8bdc0;
+	--color-projects-rgb: 168, 189, 192;
+
+	--color-education: #afbbc6;
+	--color-education-rgb: 175, 187, 198;
+
+	--color-skills: #b6b8cd;
+	--color-skills-rgb: 182, 184, 205;
+}
+
+/* 9 — Originals */
+:root[data-palette='9'] {
+	--color-bg: #ffffff;
+	--color-surface: #f7f7f8;
+	--color-text: #1a1a1c;
+	--color-text-muted: #71717f;
+	--color-border: #e4e4e7;
+
+	--color-hero: #008660;
+	--color-hero-rgb: 0, 134, 96;
+	--color-hero-on: #ffffff;
+
+	--color-experience: #2e5cff;
+	--color-experience-rgb: 46, 92, 255;
+	--color-experience-on: #ffffff;
+
+	--color-languages: #e9004f;
+	--color-languages-rgb: 233, 0, 79;
+
+	--color-projects: #e32900;
+	--color-projects-rgb: 227, 41, 0;
+
+	--color-education: #986e00;
+	--color-education-rgb: 152, 110, 0;
+
+	--color-skills: #6c4eff;
+	--color-skills-rgb: 108, 78, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root[data-palette='9']:not([data-theme='light']) {
+		--color-bg: #0f0f10;
+		--color-surface: #1a1a1c;
+		--color-text: #f7f7f8;
+		--color-text-muted: #e4e4e7;
+		--color-border: #2c2c30;
+
+		--color-hero: #00c48c;
+		--color-hero-rgb: 0, 196, 140;
+		--color-hero-on: #1a1a1c;
+
+		--color-experience: #4b73ff;
+		--color-experience-rgb: 75, 115, 255;
+		--color-experience-on: #1a1a1c;
+
+		--color-languages: #ff3d7f;
+		--color-languages-rgb: 255, 61, 127;
+
+		--color-projects: #ff5a36;
+		--color-projects-rgb: 255, 90, 54;
+
+		--color-education: #ffb800;
+		--color-education-rgb: 255, 184, 0;
+
+		--color-skills: #7f65ff;
+		--color-skills-rgb: 127, 101, 255;
+	}
+}
+
+:root[data-palette='9'][data-theme='dark'] {
+	--color-bg: #0f0f10;
+	--color-surface: #1a1a1c;
+	--color-text: #f7f7f8;
+	--color-text-muted: #e4e4e7;
+	--color-border: #2c2c30;
+
+	--color-hero: #00c48c;
+	--color-hero-rgb: 0, 196, 140;
+	--color-hero-on: #1a1a1c;
+
+	--color-experience: #4b73ff;
+	--color-experience-rgb: 75, 115, 255;
+	--color-experience-on: #1a1a1c;
+
+	--color-languages: #ff3d7f;
+	--color-languages-rgb: 255, 61, 127;
+
+	--color-projects: #ff5a36;
+	--color-projects-rgb: 255, 90, 54;
+
+	--color-education: #ffb800;
+	--color-education-rgb: 255, 184, 0;
+
+	--color-skills: #7f65ff;
+	--color-skills-rgb: 127, 101, 255;
+}

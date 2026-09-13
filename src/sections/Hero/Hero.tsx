@@ -1,11 +1,23 @@
 import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
 import { ToggleButtons } from '../../components/ToggleButtons/ToggleButtons';
+import { PaletteSelector } from '../../components/PaletteSelector/PaletteSelector';
 import styles from './Hero.module.css';
 
-function AvatarPlaceholder({ className, label }: { className?: string; label: string }) {
+function AvatarPlaceholder({
+	className,
+	label,
+}: {
+	className?: string;
+	label: string;
+}) {
 	return (
-		<svg className={className} viewBox="0 0 160 160" role="img" aria-label={label}>
+		<svg
+			className={className}
+			viewBox="0 0 160 160"
+			role="img"
+			aria-label={label}
+		>
 			<circle cx="80" cy="80" r="80" fill="currentColor" fillOpacity="0.15" />
 			<circle cx="80" cy="64" r="28" fill="currentColor" fillOpacity="0.6" />
 			<path
@@ -24,6 +36,9 @@ export function Hero() {
 		<section id="hero" className={styles.hero}>
 			<div className={styles.toggles}>
 				<ToggleButtons />
+			</div>
+			<div className={styles.paletteSelector}>
+				<PaletteSelector />
 			</div>
 			{isLoading ? (
 				<>

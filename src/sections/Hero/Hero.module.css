@@ -19,6 +19,12 @@
 	gap: var(--space-2);
 }
 
+.paletteSelector {
+	position: absolute;
+	bottom: var(--space-4);
+	right: var(--space-4);
+}
+
 .avatar {
 	width: 128px;
 	height: 128px;

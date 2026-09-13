@@ -1,0 +1,48 @@
+import { useEffect, useState, type ReactNode } from 'react';
+import { PaletteContext, type PaletteId } from './PaletteContext';
+import { PALETTES, DEFAULT_PALETTE_ID } from './paletteList';
+
+const STORAGE_KEY = 'palette';
+
+function isPaletteId(value: number): value is PaletteId {
+	return PALETTES.some(palette => palette.id === value);
+}
+
+function getInitialPalette(): PaletteId {
+	const stored = Number(localStorage.getItem(STORAGE_KEY));
+	return isPaletteId(stored) ? stored : DEFAULT_PALETTE_ID;
+}
+
+export function PaletteProvider({ children }: { children: ReactNode }) {
+	const [paletteId, setPaletteId] = useState<PaletteId>(getInitialPalette);
+
+	useEffect(() => {
+		document.documentElement.setAttribute('data-palette', String(paletteId));
+		localStorage.setItem(STORAGE_KEY, String(paletteId));
+	}, [paletteId]);
+
+	const nextPalette = () => {
+		setPaletteId(current => {
+			const index = PALETTES.findIndex(palette => palette.id === current);
+			return PALETTES[(index + 1) % PALETTES.length].id;
+		});
+	};
+
+	const resetPalette = () => setPaletteId(DEFAULT_PALETTE_ID);
+
+	const paletteName = PALETTES.find(palette => palette.id === paletteId)!.name;
+
+	return (
+		<PaletteContext.Provider
+			value={{
+				paletteId,
+				paletteName,
+				isDefaultPalette: paletteId === DEFAULT_PALETTE_ID,
+				nextPalette,
+				resetPalette,
+			}}
+		>
+			{children}
+		</PaletteContext.Provider>
+	);
+}
