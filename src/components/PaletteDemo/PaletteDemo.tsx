@@ -37,7 +37,7 @@ function reverseSectionHexes(sections: Swatch[]): Swatch[] {
 
 const palettes: PaletteBlock[] = [
 	{
-		title: 'Palette 1 — Cool blues',
+		title: 'Cool blues',
 		core: [
 			{ hex: '#F0EBD8', label: 'F0EBD8 (light bg)' },
 			{ hex: '#748CAB', label: '748CAB' },
@@ -60,7 +60,7 @@ const palettes: PaletteBlock[] = [
 		activeExperience: { light: '#EFF1F5', dark: '#6A7686' },
 	},
 	{
-		title: 'Palette 2 — Botanical greens',
+		title: 'Botanical greens',
 		core: [
 			{ hex: '#D7F9F1', label: 'D7F9F1 (light bg)' },
 			{ hex: '#AFBC88', label: 'AFBC88' },
@@ -83,30 +83,7 @@ const palettes: PaletteBlock[] = [
 		activeExperience: { light: '#EFF1F5', dark: '#889883' },
 	},
 	{
-		title: 'Palette 3 — Vibrant multi-hue',
-		core: [
-			{ hex: '#FDFFFC', label: 'FDFFFC (light bg)' },
-			{ hex: '#F1D302', label: 'F1D302' },
-			{ hex: '#235789', label: '235789' },
-			{ hex: '#FF5A36', label: 'FF5A36' },
-			{ hex: '#161925', label: '161925 (dark bg)' },
-		],
-		lightBg: '#FDFFFC',
-		darkBg: '#161925',
-		hero: { hex: '#FF5A36', label: 'Hero' },
-		sections: [
-			{ hex: '#235789', label: 'Experience' },
-			{ hex: '#E83E8C', label: 'Languages' },
-			{ hex: '#2FB380', label: 'Projects' },
-			{ hex: '#FF5A36', label: 'Education' },
-			{ hex: '#F1D302', label: 'Skills' },
-		],
-		scale: false,
-		surface: { light: '#EDF1EC', dark: '#2B2C2F' },
-		activeExperience: { light: '#BBC4CD', dark: '#213F61' },
-	},
-	{
-		title: 'Palette 4 — Tacky sunset colorful (warm shades)',
+		title: 'Warm sunset',
 		core: [
 			{ hex: '#BBDEF0', label: 'BBDEF0 (light bg)' },
 			{ hex: '#EFCA08', label: 'EFCA08' },
@@ -129,7 +106,7 @@ const palettes: PaletteBlock[] = [
 		activeExperience: { light: '#F2ECD6', dark: '#81C695' },
 	},
 	{
-		title: 'Palette 5 — Tacky sunset colorful (vibrant hues)',
+		title: 'Rainbow sunset',
 		core: [
 			{ hex: '#BBDEF0', label: 'BBDEF0 (light bg)' },
 			{ hex: '#EFCA08', label: 'EFCA08' },
@@ -152,7 +129,7 @@ const palettes: PaletteBlock[] = [
 		activeExperience: { light: '#BBC4CD', dark: '#1292AB' },
 	},
 	{
-		title: 'Palette 6 — Sage & terracotta',
+		title: 'Sage & terracotta',
 		core: [
 			{ hex: '#7FB685', label: '7FB685 (light bg)' },
 			{ hex: '#F2C57C', label: 'F2C57C' },
@@ -177,7 +154,7 @@ const palettes: PaletteBlock[] = [
 		activeExperience: { light: '#F0E8DB', dark: '#9A9C74' },
 	},
 	{
-		title: 'Palette 7 — Violet garden',
+		title: 'Violet garden',
 		core: [
 			{ hex: '#8963BA', label: '8963BA (light bg)' },
 			{ hex: '#AFE3C0', label: 'AFE3C0' },
@@ -200,7 +177,7 @@ const palettes: PaletteBlock[] = [
 		activeExperience: { light: '#F2F7F4', dark: '#9A9CBA' },
 	},
 	{
-		title: 'Palette 8 — Indigo storm',
+		title: 'Indigo storm',
 		core: [
 			{ hex: '#347FC4', label: '347FC4 (light bg)' },
 			{ hex: '#989FCE', label: '989FCE' },
@@ -223,7 +200,7 @@ const palettes: PaletteBlock[] = [
 		activeExperience: { light: '#E9EAF0', dark: '#71748E' },
 	},
 	{
-		title: 'Palette 9 — Forest twilight',
+		title: 'Forest twilight',
 		core: [
 			{ hex: '#80B192', label: '80B192 (light bg)' },
 			{ hex: '#6A8D92', label: '6A8D92' },
@@ -247,7 +224,7 @@ const palettes: PaletteBlock[] = [
 		activeExperience: { light: '#DCE2E3', dark: '#727885' },
 	},
 	{
-		title: 'Original 10 — current site colors',
+		title: 'Originals',
 		core: [
 			{ hex: '#FFFFFF', label: 'FFFFFF (light bg)' },
 			{ hex: '#F7F7F8', label: 'F7F7F8' },
