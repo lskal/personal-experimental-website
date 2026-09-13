@@ -13,18 +13,9 @@
 
 	/*
 	  Section accent colors — Palette 1 is a chromatic scale, ordered darkest (Experience)
-	  to lightest (Skills). Hero mirrors Experience. Unlike every other palette, these accents
+	  to lightest (Skills), as specified directly by Max. Hero mirrors Experience. These accents
 	  (and their -on companions) DO change between light/dark mode: the dark-mode blocks below
 	  reverse the assignment so Experience becomes the lightest and Skills the darkest.
-	  -on values are recalculated per hex, not copied.
-
-	  Projects/Skills are NOT the literal gradient endpoints used for solid-fill chips (Hero/
-	  Experience): they're rendered as plain text on tag pills AND section headings, tinted
-	  softly like Languages (background: rgba(var(--color-x-rgb), 0.12); color: var(--color-x)).
-	  That pattern needs the raw color itself — not just an -on companion — to already contrast
-	  ≥4.5:1 against --color-surface, which the true gradient extremes (near-white pastels,
-	  near-black navies) can never do. So Projects/Skills use muted, WCAG-checked tones instead
-	  of the raw gradient hex, independently chosen per mode (not mirrored from one shared set).
 	*/
 	--color-hero: #233e5c;
 	--color-hero-rgb: 35, 62, 92;
@@ -38,16 +29,16 @@
 	--color-languages-rgb: 56, 99, 148;
 	--color-languages-on: #ffffff;
 
-	--color-projects: #294863;
-	--color-projects-rgb: 41, 72, 99;
+	--color-projects: #5989c0;
+	--color-projects-rgb: 89, 137, 192;
 	--color-projects-on: #ffffff;
 
-	--color-education: #90b0d5;
-	--color-education-rgb: 144, 176, 213;
+	--color-education: #3a597e;
+	--color-education-rgb: 58, 89, 126;
 	--color-education-on: #1d2d44;
 
-	--color-skills: #375c82;
-	--color-skills-rgb: 55, 92, 130;
+	--color-skills: #3f6189;
+	--color-skills-rgb: 63, 97, 137;
 	--color-skills-on: #ffffff;
 
 	/* Typography */
@@ -114,17 +105,17 @@
 		--color-languages-rgb: 144, 176, 213;
 		--color-languages-on: #1d2d44;
 
-		--color-projects: #6e93be;
-		--color-projects-rgb: 110, 147, 190;
+		--color-projects: #5989c0;
+		--color-projects-rgb: 89, 137, 192;
 		--color-projects-on: #1d2d44;
 
-		--color-education: #386394;
-		--color-education-rgb: 56, 99, 148;
+		--color-education: #8a9db4;
+		--color-education-rgb: 138, 157, 180;
 		--color-education-on: #ffffff;
 
-		--color-skills: #82a2c7;
-		--color-skills-rgb: 130, 162, 199;
-		--color-skills-on: #1d2d44;
+		--color-skills: #778da8;
+		--color-skills-rgb: 119, 141, 168;
+		--color-skills-on: #ffffff;
 
 		--shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
 		--shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
@@ -151,17 +142,17 @@
 	--color-languages-rgb: 144, 176, 213;
 	--color-languages-on: #1d2d44;
 
-	--color-projects: #6e93be;
-	--color-projects-rgb: 110, 147, 190;
+	--color-projects: #5989c0;
+	--color-projects-rgb: 89, 137, 192;
 	--color-projects-on: #1d2d44;
 
-	--color-education: #386394;
-	--color-education-rgb: 56, 99, 148;
+	--color-education: #8a9db4;
+	--color-education-rgb: 138, 157, 180;
 	--color-education-on: #ffffff;
 
-	--color-skills: #82a2c7;
-	--color-skills-rgb: 130, 162, 199;
-	--color-skills-on: #1d2d44;
+	--color-skills: #778da8;
+	--color-skills-rgb: 119, 141, 168;
+	--color-skills-on: #ffffff;
 
 	--shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
 	--shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
