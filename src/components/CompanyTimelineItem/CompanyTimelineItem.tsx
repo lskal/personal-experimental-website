@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react';
 import type { ExperienceEntry } from '../../content/types';
+import { Tag } from '../Tag/Tag';
 import styles from './CompanyTimelineItem.module.css';
 
 interface CompanyTimelineItemProps {
@@ -63,8 +64,8 @@ export function CompanyTimelineItem({
 							{project.tools.length > 0 && (
 								<ul className={styles.tools}>
 									{project.tools.map(tool => (
-										<li key={tool} className={styles.tag}>
-											{tool}
+										<li key={tool}>
+											<Tag accent="experience">{tool}</Tag>
 										</li>
 									))}
 								</ul>

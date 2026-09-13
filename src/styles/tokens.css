@@ -4,40 +4,54 @@
 */
 
 :root {
-	/* Neutral surface — light mode (default) */
-	--color-bg: #ffffff;
-	--color-surface: #f7f7f8;
-	--color-text: #111114;
-	--color-text-muted: #55565c;
-	--color-border: #e4e4e7;
+	/* Neutral surface — light mode (default) — Palette 1 (Cool blues) */
+	--color-bg: #f0ebd8;
+	--color-surface: #d8d6d2;
+	--color-text: #1d2d44;
+	--color-text-muted: #3e5c76;
+	--color-border: #c5c3c1;
 
-	/* Section accent colors — same hues across light/dark, only neutrals change */
-	--color-hero: #00c48c;
-	--color-hero-rgb: 0, 196, 140;
+	/*
+	  Section accent colors — Palette 1 is a chromatic scale, ordered darkest (Experience)
+	  to lightest (Skills). Hero mirrors Experience. Unlike every other palette, these accents
+	  (and their -on companions) DO change between light/dark mode: the dark-mode blocks below
+	  reverse the assignment so Experience becomes the lightest and Skills the darkest.
+	  -on values are recalculated per hex, not copied.
+
+	  Projects/Skills are NOT the literal gradient endpoints used for solid-fill chips (Hero/
+	  Experience): they're rendered as plain text on tag pills AND section headings, tinted
+	  softly like Languages (background: rgba(var(--color-x-rgb), 0.12); color: var(--color-x)).
+	  That pattern needs the raw color itself — not just an -on companion — to already contrast
+	  ≥4.5:1 against --color-surface, which the true gradient extremes (near-white pastels,
+	  near-black navies) can never do. So Projects/Skills use muted, WCAG-checked tones instead
+	  of the raw gradient hex, independently chosen per mode (not mirrored from one shared set).
+	*/
+	--color-hero: #233e5c;
+	--color-hero-rgb: 35, 62, 92;
 	--color-hero-on: #ffffff;
 
-	--color-experience: #2e5cff;
-	--color-experience-rgb: 46, 92, 255;
+	--color-experience: #233e5c;
+	--color-experience-rgb: 35, 62, 92;
 	--color-experience-on: #ffffff;
 
-	--color-projects: #ff5a36;
-	--color-projects-rgb: 255, 90, 54;
-	--color-projects-on: #ffffff;
-
-	--color-skills: #6c4eff;
-	--color-skills-rgb: 108, 78, 255;
-	--color-skills-on: #ffffff;
-
-	--color-education: #ffb800;
-	--color-education-rgb: 255, 184, 0;
-	--color-education-on: #111114;
-
-	--color-languages: #ff3d7f;
-	--color-languages-rgb: 255, 61, 127;
+	--color-languages: #386394;
+	--color-languages-rgb: 56, 99, 148;
 	--color-languages-on: #ffffff;
 
-	--color-footer-bg: #111114;
-	--color-footer-text: #ffffff;
+	--color-projects: #294863;
+	--color-projects-rgb: 41, 72, 99;
+	--color-projects-on: #ffffff;
+
+	--color-education: #90b0d5;
+	--color-education-rgb: 144, 176, 213;
+	--color-education-on: #1d2d44;
+
+	--color-skills: #375c82;
+	--color-skills-rgb: 55, 92, 130;
+	--color-skills-on: #ffffff;
+
+	--color-footer-bg: #1d2d44;
+	--color-footer-text: #f0ebd8;
 
 	/* Typography */
 	--font-sans:
@@ -84,13 +98,38 @@
 
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme='light']) {
-		--color-bg: #0f0f10;
-		--color-surface: #1a1a1c;
-		--color-text: #f5f5f7;
-		--color-text-muted: #a0a0a8;
-		--color-border: #2c2c30;
+		--color-bg: #0d1321;
+		--color-surface: #242529;
+		--color-text: #f0ebd8;
+		--color-text-muted: #748cab;
+		--color-border: #36373d;
 
-		--color-footer-bg: #0a0a0b;
+		--color-footer-bg: #0d1321;
+
+		/* Palette 1 chromatic-scale reversal: Experience/Hero become the lightest, Skills the darkest */
+		--color-hero: #c8d8ea;
+		--color-hero-rgb: 200, 216, 234;
+		--color-hero-on: #1d2d44;
+
+		--color-experience: #c8d8ea;
+		--color-experience-rgb: 200, 216, 234;
+		--color-experience-on: #1d2d44;
+
+		--color-languages: #90b0d5;
+		--color-languages-rgb: 144, 176, 213;
+		--color-languages-on: #1d2d44;
+
+		--color-projects: #6e93be;
+		--color-projects-rgb: 110, 147, 190;
+		--color-projects-on: #1d2d44;
+
+		--color-education: #386394;
+		--color-education-rgb: 56, 99, 148;
+		--color-education-on: #ffffff;
+
+		--color-skills: #82a2c7;
+		--color-skills-rgb: 130, 162, 199;
+		--color-skills-on: #1d2d44;
 
 		--shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
 		--shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
@@ -98,13 +137,38 @@
 }
 
 :root[data-theme='dark'] {
-	--color-bg: #0f0f10;
-	--color-surface: #1a1a1c;
-	--color-text: #f5f5f7;
-	--color-text-muted: #a0a0a8;
-	--color-border: #2c2c30;
+	--color-bg: #0d1321;
+	--color-surface: #242529;
+	--color-text: #f0ebd8;
+	--color-text-muted: #748cab;
+	--color-border: #36373d;
 
-	--color-footer-bg: #0a0a0b;
+	--color-footer-bg: #0d1321;
+
+	/* Palette 1 chromatic-scale reversal: Experience/Hero become the lightest, Skills the darkest */
+	--color-hero: #c8d8ea;
+	--color-hero-rgb: 200, 216, 234;
+	--color-hero-on: #1d2d44;
+
+	--color-experience: #c8d8ea;
+	--color-experience-rgb: 200, 216, 234;
+	--color-experience-on: #1d2d44;
+
+	--color-languages: #90b0d5;
+	--color-languages-rgb: 144, 176, 213;
+	--color-languages-on: #1d2d44;
+
+	--color-projects: #6e93be;
+	--color-projects-rgb: 110, 147, 190;
+	--color-projects-on: #1d2d44;
+
+	--color-education: #386394;
+	--color-education-rgb: 56, 99, 148;
+	--color-education-on: #ffffff;
+
+	--color-skills: #82a2c7;
+	--color-skills-rgb: 130, 162, 199;
+	--color-skills-on: #1d2d44;
 
 	--shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
 	--shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);

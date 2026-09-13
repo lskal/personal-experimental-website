@@ -1,8 +1,21 @@
 import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
 import { ToggleButtons } from '../../components/ToggleButtons/ToggleButtons';
-import avatarPlaceholder from '../../assets/avatar-placeholder.svg';
 import styles from './Hero.module.css';
+
+function AvatarPlaceholder({ className, label }: { className?: string; label: string }) {
+	return (
+		<svg className={className} viewBox="0 0 160 160" role="img" aria-label={label}>
+			<circle cx="80" cy="80" r="80" fill="currentColor" fillOpacity="0.15" />
+			<circle cx="80" cy="64" r="28" fill="currentColor" fillOpacity="0.6" />
+			<path
+				d="M28 146c6-30 30-46 52-46s46 16 52 46"
+				fill="currentColor"
+				fillOpacity="0.6"
+			/>
+		</svg>
+	);
+}
 
 export function Hero() {
 	const { content, isLoading } = useLanguage();
@@ -25,7 +38,7 @@ export function Hero() {
 				</>
 			) : (
 				<>
-					<img className={styles.avatar} src={avatarPlaceholder} alt={content.hero.name} />
+					<AvatarPlaceholder className={styles.avatar} label={content.hero.name} />
 					<div className={styles.text}>
 						<h1 className={styles.name}>{content.hero.name}</h1>
 						<h2 className={styles.role}>{content.hero.role}</h2>

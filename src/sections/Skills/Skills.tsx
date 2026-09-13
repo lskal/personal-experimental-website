@@ -1,5 +1,6 @@
 import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
+import { Tag } from '../../components/Tag/Tag';
 import styles from './Skills.module.css';
 
 export function Skills() {
@@ -27,8 +28,8 @@ export function Skills() {
 										<SkeletonBlock variant="pill" width="60px" height="1.2em" />
 									</li>
 								) : (
-									<li key={skill} className={styles.tag}>
-										{skill}
+									<li key={skill}>
+										<Tag accent="skills">{skill}</Tag>
 									</li>
 								),
 							)}
