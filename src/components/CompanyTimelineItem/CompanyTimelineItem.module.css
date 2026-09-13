@@ -13,21 +13,6 @@
 	border: 3px solid var(--color-bg);
 }
 
-.details {
-	background: var(--color-surface);
-	border: 1px solid var(--color-border);
-	border-radius: var(--radius-md);
-	padding: var(--space-4) var(--space-5);
-	transition:
-		border-color 0.15s ease,
-		background-color 0.15s ease;
-}
-
-.details[open] {
-	border-color: var(--color-experience);
-	background: rgba(var(--color-experience-rgb), 0.05);
-}
-
 .summary {
 	display: flex;
 	align-items: flex-start;

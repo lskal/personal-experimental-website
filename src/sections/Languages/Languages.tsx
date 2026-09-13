@@ -1,6 +1,7 @@
 import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
 import { Tag } from '../../components/Tag/Tag';
+import { Card } from '../../components/Card/Card';
 import styles from './Languages.module.css';
 
 const LEVEL_ROW_COUNT = 5;
@@ -15,7 +16,7 @@ export function Languages() {
 			<div className={styles.grid}>
 				{content.languages.map((lang, index) =>
 					isLoading ? (
-						<div key={index} className={styles.card}>
+						<Card key={index} className={styles.card}>
 							<SkeletonBlock
 								className={styles.language}
 								width="120px"
@@ -29,9 +30,9 @@ export function Languages() {
 									</li>
 								))}
 							</ul>
-						</div>
+						</Card>
 					) : (
-						<div key={lang.language} className={styles.card}>
+						<Card key={lang.language} className={styles.card}>
 							<p className={styles.language}>{lang.language}</p>
 							<ul className={styles.levels}>
 								<li className={styles.levelRow}>
@@ -47,9 +48,7 @@ export function Languages() {
 									<Tag accent="languages">{lang.interaction}</Tag>
 								</li>
 								<li className={styles.levelRow}>
-									<span className={styles.levelLabel}>
-										{labels.spokenProduction}
-									</span>
+									<span className={styles.levelLabel}>{labels.spokenProduction}</span>
 									<Tag accent="languages">{lang.spokenProduction}</Tag>
 								</li>
 								<li className={styles.levelRow}>
@@ -57,7 +56,7 @@ export function Languages() {
 									<Tag accent="languages">{lang.writing}</Tag>
 								</li>
 							</ul>
-						</div>
+						</Card>
 					),
 				)}
 			</div>

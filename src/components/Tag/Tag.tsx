@@ -1,7 +1,7 @@
 import type { ReactNode, CSSProperties } from 'react';
 import styles from './Tag.module.css';
 
-type TagAccent = 'skills' | 'projects' | 'languages' | 'experience';
+export type TagAccent = 'skills' | 'projects' | 'languages' | 'experience';
 
 interface TagProps {
 	accent: TagAccent;
