@@ -1,32 +1,70 @@
-# React + TypeScript + Vite
+# Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Max Arosio's personal portfolio site — a bilingual (Italian/English), single-page React application showcasing experience, projects, skills, education, and languages, deployed on Vercel.
 
-Currently, two official plugins are available:
+**Live site:** _add your deployed URL here_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Bilingual content (IT/EN)**, switchable at runtime via a language toggle. Real content lives in a Vercel Global Config store, fetched through a Vercel Edge Function (`api/content.ts`) and cached in `localStorage` for stale-while-revalidate behavior. While content loads, every section renders a layout-matched skeleton instead of a blank screen or spinner.
+- **Light/dark theme**, toggled independently of the palette, persisted in `localStorage`.
+- **9 selectable color palettes** (a "next" button cycles through them, with a reset-to-default option), each independently tuned for WCAG contrast (≥4.3:1) against its own background in both light and dark mode — including the color used as text on a Tag pill's own solid fill, not just against the page surface.
+- **Accessibility-conscious markup**: semantic landmarks (the contact section is a real `<footer>`), `aria-label`s on icon-only and new-tab links, a skip link, and keyboard-navigable accordions for the experience timeline.
+- **Seven content sections**: Hero, Experience (an accordion timeline per company), Projects, Skills (grouped by category), Education, Languages (with per-skill proficiency tags), and Contact.
+- **No layout-shift loading**: typed placeholder content (matching the real content's shape and item counts) renders skeletons while the real data streams in from Global Config.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the Oxlint configuration
+- **[React 19](https://react.dev/)** with functional components and hooks — no class components, no external state-management library (state lives in a few focused Context providers: theme, language, palette).
+- **TypeScript**, with all shared types centralized under `src/types/`.
+- **[Vite](https://vitejs.dev/)** for dev server and build tooling.
+- **CSS Modules**, flexbox-first layout (no CSS Grid, no CSS framework) — a boxy, flat-color, IFTTT-inspired visual style.
+- **[Vercel Global Config](https://vercel.com/docs/storage/edge-config)** (`@vercel/global-config`) for bilingual content storage, read through a Vercel Function.
+- **[lucide-react](https://lucide.dev/)** for icons (bundled at build time, not fetched at runtime), with a couple of hand-rolled inline SVGs for brand marks not in that set (GitHub, LinkedIn).
+- **ESLint + Prettier** for linting and formatting.
+- Deployed on **[Vercel](https://vercel.com/)**.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Project structure
 
-```json
-{
-	"$schema": "./node_modules/oxlint/configuration_schema.json",
-	"plugins": ["react", "typescript", "oxc"],
-	"options": {
-		"typeAware": true
-	},
-	"rules": {
-		"react/rules-of-hooks": "error",
-		"react/only-export-components": ["warn", { "allowConstantExport": true }]
-	}
-}
+```
+api/
+  content.ts            # Vercel Function serving bilingual content from Global Config
+src/
+  components/            # Shared, reusable UI building blocks (Card, Tag, ToggleButtons, ...)
+  sections/               # One folder per page section (Hero, Experience, Projects, ...)
+  context/                # Theme / Language / Palette React Context providers
+  hooks/                  # Custom hooks (useTheme, useLanguage, usePalette, ...)
+  content/                # Locale label strings + typed placeholder content generator
+  styles/                 # Design tokens (tokens.css) and the 9 color palettes (palettes.css)
+  types/                  # Centralized TypeScript types (content, context, components)
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Getting started
+
+```bash
+npm install
+```
+
+Local development needs the **Vercel CLI**, not plain Vite, because the app fetches its real content through a Vercel Function (`api/content.ts`):
+
+```bash
+vercel dev
+```
+
+Plain `npm run dev` also works for pure UI/styling work — the app falls back gracefully to bundled placeholder content when `/api/content` isn't reachable, it just won't reflect live Global Config data.
+
+## Scripts
+
+| Command                | Description                              |
+| ----------------------- | ----------------------------------------- |
+| `npm run dev`           | Start the Vite dev server (no API routes) |
+| `vercel dev`            | Start the full dev server, including `api/content.ts` |
+| `npm run build`         | Type-check and build for production       |
+| `npm run lint`          | Run ESLint                                |
+| `npm run format`        | Format the codebase with Prettier         |
+| `npm run format:check`  | Check formatting without writing changes  |
+| `npm run preview`       | Preview a production build locally        |
+
+## Deployment
+
+The project is deployed on Vercel. Real content (both locales) is managed through a Vercel Global Config store, connected via the `GLOBAL_CONFIG` environment variable.
