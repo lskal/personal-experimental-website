@@ -34,11 +34,13 @@ export function Hero() {
 
 	return (
 		<section id="hero" className={styles.hero}>
-			<div className={styles.toggles}>
-				<ToggleButtons />
-			</div>
-			<div className={styles.paletteSelector}>
-				<PaletteSelector />
+			<div className={styles.controls}>
+				<div className={styles.toggles}>
+					<ToggleButtons />
+				</div>
+				<div className={styles.paletteSelector}>
+					<PaletteSelector />
+				</div>
 			</div>
 			{isLoading ? (
 				<>
