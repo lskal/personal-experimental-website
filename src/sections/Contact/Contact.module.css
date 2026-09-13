@@ -1,7 +1,7 @@
 .section {
 	padding: var(--space-9) var(--space-5);
-	background: var(--color-footer-bg);
-	color: var(--color-footer-text);
+	background: var(--color-hero);
+	color: var(--color-hero-on);
 	text-align: center;
 }
 
@@ -24,7 +24,7 @@
 	gap: var(--space-2);
 	font-size: var(--font-size-sm);
 	font-weight: var(--font-weight-medium);
-	color: var(--color-footer-text);
+	color: var(--color-hero-on);
 }
 
 a.link:hover {

@@ -50,9 +50,6 @@
 	--color-skills-rgb: 55, 92, 130;
 	--color-skills-on: #ffffff;
 
-	--color-footer-bg: #1d2d44;
-	--color-footer-text: #f0ebd8;
-
 	/* Typography */
 	--font-sans:
 		'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -104,8 +101,6 @@
 		--color-text-muted: #748cab;
 		--color-border: #36373d;
 
-		--color-footer-bg: #0d1321;
-
 		/* Palette 1 chromatic-scale reversal: Experience/Hero become the lightest, Skills the darkest */
 		--color-hero: #c8d8ea;
 		--color-hero-rgb: 200, 216, 234;
@@ -142,8 +137,6 @@
 	--color-text: #f0ebd8;
 	--color-text-muted: #748cab;
 	--color-border: #36373d;
-
-	--color-footer-bg: #0d1321;
 
 	/* Palette 1 chromatic-scale reversal: Experience/Hero become the lightest, Skills the darkest */
 	--color-hero: #c8d8ea;
