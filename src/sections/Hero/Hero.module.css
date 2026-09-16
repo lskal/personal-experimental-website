@@ -30,9 +30,18 @@
 }
 
 .avatar {
-	width: 128px;
-	height: 128px;
+	width: 200px;
+	height: 200px;
 	border-radius: var(--radius-full);
+	background:
+		linear-gradient(
+			rgba(var(--color-hero-rgb), var(--color-hero-tint-alpha)),
+			rgba(var(--color-hero-rgb), var(--color-hero-tint-alpha))
+		),
+		url('/avatar.jpg');
+	background-blend-mode: var(--color-hero-tint-blend);
+	background-size: cover;
+	background-position: center;
 }
 
 .text {
@@ -80,14 +89,14 @@
 @media (min-width: 640px) {
 	.hero {
 		flex-direction: row;
-		align-items: flex-start;
+		align-items: center;
 		text-align: left;
 		padding: var(--space-8) var(--space-5);
 	}
 
 	.avatar {
-		width: 160px;
-		height: 160px;
+		width: 250px;
+		height: 250px;
 		flex-shrink: 0;
 	}
 }
