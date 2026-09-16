@@ -14,6 +14,39 @@ export function GithubIcon({ size = 24 }: BrandIconProps) {
 	);
 }
 
+export function PersonalityIcon({ size = 24 }: BrandIconProps) {
+	return (
+		<svg
+			width={size}
+			height={size}
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			aria-hidden="true"
+		>
+			<circle cx="12" cy="2.5" r="0.85" />
+			<circle cx="15.64" cy="3.22" r="0.85" />
+			<circle cx="18.72" cy="5.28" r="0.85" />
+			<circle cx="20.78" cy="8.36" r="0.85" />
+			<circle cx="21.5" cy="12" r="0.85" />
+			<circle cx="20.78" cy="15.64" r="0.85" />
+			<circle cx="18.72" cy="18.72" r="0.85" />
+			<circle cx="15.64" cy="20.78" r="0.85" />
+			<circle cx="12" cy="21.5" r="0.85" />
+			<circle cx="8.36" cy="20.78" r="0.85" />
+			<circle cx="5.28" cy="18.72" r="0.85" />
+			<circle cx="3.22" cy="15.64" r="0.85" />
+			<circle cx="2.5" cy="12" r="0.85" />
+			<circle cx="3.22" cy="8.36" r="0.85" />
+			<circle cx="5.28" cy="5.28" r="0.85" />
+			<circle cx="8.36" cy="3.22" r="0.85" />
+			<circle cx="10.3" cy="9" r="2.1" />
+			<circle cx="15.2" cy="10.6" r="2.7" />
+			<circle cx="9.2" cy="14.6" r="2.5" />
+			<circle cx="14" cy="15.5" r="1.8" />
+		</svg>
+	);
+}
+
 export function LinkedinIcon({ size = 24 }: BrandIconProps) {
 	return (
 		<svg

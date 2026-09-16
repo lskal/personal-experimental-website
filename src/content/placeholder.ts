@@ -23,6 +23,8 @@ export function createPlaceholderContent(ui: UiStrings): SiteContent {
 			role: 'Loading…',
 			tagline: 'Loading…',
 			bio: 'Loading…',
+			mbti: '—',
+			mbtiUrl: undefined,
 		},
 		experience: Array.from({ length: EXPERIENCE_COUNT }, () => ({
 			company: 'Loading…',
