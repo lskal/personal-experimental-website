@@ -98,6 +98,8 @@ export interface SiteContent {
 		role: string;
 		tagline: string;
 		bio: string;
+		mbti: string;
+		mbtiUrl?: string;
 	};
 	experience: ExperienceEntry[];
 	personalProjects: PersonalProject[];

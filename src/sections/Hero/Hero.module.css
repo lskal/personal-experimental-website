@@ -1,13 +1,18 @@
 .hero {
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: var(--space-6);
 	padding: var(--space-5) var(--space-5) var(--space-8);
 	background-color: var(--color-hero);
 	color: var(--color-hero-font);
 	text-align: center;
+}
+
+.inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--space-6);
+	max-width: 1400px;
+	margin: 0 auto;
 }
 
 .controls {
@@ -88,10 +93,13 @@
 
 @media (min-width: 640px) {
 	.hero {
-		flex-direction: row;
-		align-items: center;
 		text-align: left;
 		padding: var(--space-8) var(--space-5);
+	}
+
+	.inner {
+		flex-direction: row;
+		align-items: center;
 	}
 
 	.avatar {

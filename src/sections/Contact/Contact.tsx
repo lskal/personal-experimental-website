@@ -5,9 +5,12 @@ import {
 } from '../../components/BrandIcons/BrandIcons';
 import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
+import { SHOW_PHONE } from '../../config/featureFlags';
 import styles from './Contact.module.css';
 
-const CONTACT_ROW_WIDTHS = ['180px', '120px', '140px', '90px', '90px'];
+const CONTACT_ROW_WIDTHS = SHOW_PHONE
+	? ['180px', '120px', '140px', '90px', '90px']
+	: ['180px', '140px', '90px', '90px'];
 
 export function Contact() {
 	const { content, isLoading } = useLanguage();
@@ -41,10 +44,12 @@ export function Contact() {
 					<Mail size={20} aria-hidden="true" />
 					{contact.email}
 				</a>
-				<a href={`tel:${contact.phone}`} className={styles.link}>
-					<Phone size={20} aria-hidden="true" />
-					{contact.phone}
-				</a>
+				{SHOW_PHONE && (
+					<a href={`tel:${contact.phone}`} className={styles.link}>
+						<Phone size={20} aria-hidden="true" />
+						{contact.phone}
+					</a>
+				)}
 				<span className={styles.link}>
 					<MapPin size={20} aria-hidden="true" />
 					{contact.location}
