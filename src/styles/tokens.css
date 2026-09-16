@@ -20,6 +20,8 @@
 	--color-hero: #233e5c;
 	--color-hero-rgb: 35, 62, 92;
 	--color-hero-font: #ffffff;
+	--color-hero-tint-alpha: 0.5;
+	--color-hero-tint-blend: normal;
 
 	--color-experience: #233e5c;
 	--color-experience-rgb: 35, 62, 92;
@@ -95,6 +97,8 @@
 		--color-hero: #c8d8ea;
 		--color-hero-rgb: 200, 216, 234;
 		--color-hero-font: #1d2d44;
+		--color-hero-tint-alpha: 1;
+		--color-hero-tint-blend: multiply;
 
 		--color-experience: #c8d8ea;
 		--color-experience-rgb: 200, 216, 234;
@@ -131,6 +135,8 @@
 	--color-hero: #c8d8ea;
 	--color-hero-rgb: 200, 216, 234;
 	--color-hero-font: #1d2d44;
+	--color-hero-tint-alpha: 1;
+	--color-hero-tint-blend: multiply;
 
 	--color-experience: #c8d8ea;
 	--color-experience-rgb: 200, 216, 234;
