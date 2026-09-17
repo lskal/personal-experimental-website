@@ -1,5 +1,5 @@
 import { ToggleButtons } from '../ToggleButtons/ToggleButtons';
-import { useStickyToggleVisibility } from '../../hooks/useStickyToggleVisibility';
+import { useStickyToggleVisibility } from '../../../hooks/useStickyToggleVisibility';
 import styles from './StickyToggles.module.css';
 
 export const StickyToggles = () => {

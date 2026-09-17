@@ -37,6 +37,7 @@ const ui: UiStrings = {
 	},
 	a11y: {
 		skipToContent: 'Vai al contenuto principale',
+		scrollToTop: 'Torna in cima',
 	},
 };
 

@@ -7,6 +7,7 @@ import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
 import { SHOW_PHONE } from '../../config/featureFlags';
 import { handleFromUrl } from '../../utils/handleFromUrl';
+import { ScrollToTopToggle } from '../../components/toggles/ScrollToTopToggle/ScrollToTopToggle';
 import styles from './Contact.module.css';
 
 const CONTACT_ROW_WIDTHS = SHOW_PHONE
@@ -30,6 +31,9 @@ export const Contact = () => {
 							<SkeletonBlock width={width} height="1em" />
 						</span>
 					))}
+				</div>
+				<div className={styles.scrollToTop}>
+					<ScrollToTopToggle />
 				</div>
 			</footer>
 		);
@@ -84,6 +88,9 @@ export const Contact = () => {
 						{handleFromUrl(contact.linkedinUrl)}
 					</a>
 				)}
+			</div>
+			<div className={styles.scrollToTop}>
+				<ScrollToTopToggle />
 			</div>
 		</footer>
 	);

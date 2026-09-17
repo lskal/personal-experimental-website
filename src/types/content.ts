@@ -88,6 +88,7 @@ export interface UiStrings {
 	};
 	a11y: {
 		skipToContent: string;
+		scrollToTop: string;
 	};
 }
 

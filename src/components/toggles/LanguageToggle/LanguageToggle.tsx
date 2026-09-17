@@ -1,19 +1,18 @@
-import { useLanguage } from '../../hooks/useLanguage';
-import styles from './LanguageToggle.module.css';
+import { useLanguage } from '../../../hooks/useLanguage';
+import { Toggle } from '../Toggle/Toggle';
 
 export const LanguageToggle = () => {
 	const { locale, toggleLocale } = useLanguage();
 	const nextLocaleLabel = locale === 'en' ? 'IT' : 'EN';
 
 	return (
-		<button
-			type="button"
-			className={styles.toggle}
+		<Toggle
+			wide
 			onClick={toggleLocale}
-			aria-label={`Switch language to ${nextLocaleLabel}`}
+			ariaLabel={`Switch language to ${nextLocaleLabel}`}
 			title={`Switch language to ${nextLocaleLabel}`}
 		>
 			{nextLocaleLabel}
-		</button>
+		</Toggle>
 	);
 };
