@@ -6,6 +6,7 @@ import {
 import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
 import { SHOW_PHONE } from '../../config/featureFlags';
+import { handleFromUrl } from '../../utils/handleFromUrl';
 import styles from './Contact.module.css';
 
 const CONTACT_ROW_WIDTHS = SHOW_PHONE
@@ -40,30 +41,35 @@ export const Contact = () => {
 				{ui.sectionTitles.contact}
 			</h2>
 			<div className={styles.links}>
-				<a href={`mailto:${contact.email}`} className={styles.link}>
-					<Mail size={20} aria-hidden="true" />
-					{contact.email}
-				</a>
-				{SHOW_PHONE && (
+				{contact.location && (
+					<span className={styles.link}>
+						<MapPin size={20} aria-hidden="true" />
+						{contact.location}
+					</span>
+				)}
+
+				{contact.email && (
+					<a href={`mailto:${contact.email}`} className={styles.link}>
+						<Mail size={20} aria-hidden="true" />
+						{contact.email}
+					</a>
+				)}
+				{SHOW_PHONE && contact.phone && (
 					<a href={`tel:${contact.phone}`} className={styles.link}>
 						<Phone size={20} aria-hidden="true" />
 						{contact.phone}
 					</a>
 				)}
-				<span className={styles.link}>
-					<MapPin size={20} aria-hidden="true" />
-					{contact.location}
-				</span>
 				{contact.githubUrl && (
 					<a
 						href={contact.githubUrl}
 						target="_blank"
 						rel="noreferrer"
 						className={styles.link}
-						aria-label="GitHub (opens in a new tab)"
+						aria-label={`GitHub: ${handleFromUrl(contact.githubUrl)} (opens in a new tab)`}
 					>
 						<GithubIcon size={20} />
-						GitHub
+						{handleFromUrl(contact.githubUrl)}
 					</a>
 				)}
 				{contact.linkedinUrl && (
@@ -72,10 +78,10 @@ export const Contact = () => {
 						target="_blank"
 						rel="noreferrer"
 						className={styles.link}
-						aria-label="LinkedIn (opens in a new tab)"
+						aria-label={`LinkedIn: ${handleFromUrl(contact.linkedinUrl)} (opens in a new tab)`}
 					>
 						<LinkedinIcon size={20} />
-						LinkedIn
+						{handleFromUrl(contact.linkedinUrl)}
 					</a>
 				)}
 			</div>
