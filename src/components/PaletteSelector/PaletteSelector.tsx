@@ -3,7 +3,7 @@ import { RotateCcw, Shuffle } from 'lucide-react';
 import { usePalette } from '../../hooks/usePalette';
 import styles from './PaletteSelector.module.css';
 
-export function PaletteSelector() {
+export const PaletteSelector = () => {
 	const { paletteName, isDefaultPalette, nextPalette, resetPalette } =
 		usePalette();
 	const [hasInteracted, setHasInteracted] = useState(false);
@@ -52,4 +52,4 @@ export function PaletteSelector() {
 			</span>
 		</div>
 	);
-}
+};

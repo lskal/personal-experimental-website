@@ -6,7 +6,7 @@ import styles from './Languages.module.css';
 
 const LEVEL_ROW_COUNT = 5;
 
-export function Languages() {
+export const Languages = () => {
 	const { content, isLoading } = useLanguage();
 	const labels = content.ui.languageLabels;
 
@@ -62,4 +62,4 @@ export function Languages() {
 			</div>
 		</section>
 	);
-}
+};

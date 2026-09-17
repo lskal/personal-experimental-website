@@ -1,7 +1,7 @@
 import { useLanguage } from '../../hooks/useLanguage';
 import styles from './SkipLink.module.css';
 
-export function SkipLink() {
+export const SkipLink = () => {
 	const { content } = useLanguage();
 
 	return (
@@ -9,4 +9,4 @@ export function SkipLink() {
 			{content.ui.a11y.skipToContent}
 		</a>
 	);
-}
+};

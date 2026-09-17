@@ -7,18 +7,10 @@ import {
 import { Card } from '../../components/Card/Card';
 import { useLanguage } from '../../hooks/useLanguage';
 import { SHOW_PHONE } from '../../config/featureFlags';
+import { handleFromUrl } from '../../utils/handleFromUrl';
 import styles from './HeroContactPanel.module.css';
 
-function handleFromUrl(url: string) {
-	try {
-		const segments = new URL(url).pathname.split('/').filter(Boolean);
-		return segments.at(-1) ?? url;
-	} catch {
-		return url;
-	}
-}
-
-export function HeroContactPanel() {
+export const HeroContactPanel = () => {
 	const { content } = useLanguage();
 	const { contact, hero } = content;
 
@@ -83,4 +75,4 @@ export function HeroContactPanel() {
 			</ul>
 		</Card>
 	);
-}
+};

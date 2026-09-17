@@ -5,16 +5,16 @@ import { PALETTES, DEFAULT_PALETTE_ID } from './paletteList';
 
 const STORAGE_KEY = 'palette';
 
-function isPaletteId(value: number): value is PaletteId {
+const isPaletteId = (value: number): value is PaletteId => {
 	return PALETTES.some(palette => palette.id === value);
-}
+};
 
-function getInitialPalette(): PaletteId {
+const getInitialPalette = (): PaletteId => {
 	const stored = Number(localStorage.getItem(STORAGE_KEY));
 	return isPaletteId(stored) ? stored : DEFAULT_PALETTE_ID;
-}
+};
 
-export function PaletteProvider({ children }: { children: ReactNode }) {
+export const PaletteProvider = ({ children }: { children: ReactNode }) => {
 	const [paletteId, setPaletteId] = useState<PaletteId>(getInitialPalette);
 
 	useEffect(() => {
@@ -46,4 +46,4 @@ export function PaletteProvider({ children }: { children: ReactNode }) {
 			{children}
 		</PaletteContext.Provider>
 	);
-}
+};

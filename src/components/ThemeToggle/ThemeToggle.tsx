@@ -3,7 +3,7 @@ import { useTheme } from '../../hooks/useTheme';
 import { useLanguage } from '../../hooks/useLanguage';
 import styles from './ThemeToggle.module.css';
 
-export function ThemeToggle() {
+export const ThemeToggle = () => {
 	const { theme, toggleTheme } = useTheme();
 	const { content } = useLanguage();
 
@@ -23,4 +23,4 @@ export function ThemeToggle() {
 			{theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
 		</button>
 	);
-}
+};

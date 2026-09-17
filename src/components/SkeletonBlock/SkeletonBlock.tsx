@@ -1,12 +1,12 @@
 import type { SkeletonBlockProps } from '../../types/components';
 import styles from './SkeletonBlock.module.css';
 
-export function SkeletonBlock({
+export const SkeletonBlock = ({
 	width,
 	height,
 	variant = 'text',
 	className = '',
-}: SkeletonBlockProps) {
+}: SkeletonBlockProps) => {
 	return (
 		<span
 			aria-hidden="true"
@@ -14,4 +14,4 @@ export function SkeletonBlock({
 			style={{ width, height }}
 		/>
 	);
-}
+};

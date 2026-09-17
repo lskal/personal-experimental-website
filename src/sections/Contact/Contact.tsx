@@ -12,7 +12,7 @@ const CONTACT_ROW_WIDTHS = SHOW_PHONE
 	? ['180px', '120px', '140px', '90px', '90px']
 	: ['180px', '140px', '90px', '90px'];
 
-export function Contact() {
+export const Contact = () => {
 	const { content, isLoading } = useLanguage();
 	const { contact, ui } = content;
 
@@ -81,4 +81,4 @@ export function Contact() {
 			</div>
 		</footer>
 	);
-}
+};

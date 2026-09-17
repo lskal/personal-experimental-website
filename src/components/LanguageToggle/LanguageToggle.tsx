@@ -1,7 +1,7 @@
 import { useLanguage } from '../../hooks/useLanguage';
 import styles from './LanguageToggle.module.css';
 
-export function LanguageToggle() {
+export const LanguageToggle = () => {
 	const { locale, toggleLocale } = useLanguage();
 	const nextLocaleLabel = locale === 'en' ? 'IT' : 'EN';
 
@@ -16,4 +16,4 @@ export function LanguageToggle() {
 			{nextLocaleLabel}
 		</button>
 	);
-}
+};

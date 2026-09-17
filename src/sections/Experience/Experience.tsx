@@ -4,7 +4,7 @@ import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
 import itemStyles from '../../components/CompanyTimelineItem/CompanyTimelineItem.module.css';
 import styles from './Experience.module.css';
 
-export function Experience() {
+export const Experience = () => {
 	const { content, isLoading } = useLanguage();
 
 	return (
@@ -41,10 +41,10 @@ export function Experience() {
 								</div>
 							</div>
 						))
-					: content.experience.map((entry) => (
+					: content.experience.map(entry => (
 							<CompanyTimelineItem key={entry.company} entry={entry} />
 						))}
 			</div>
 		</section>
 	);
-}
+};

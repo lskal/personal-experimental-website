@@ -8,14 +8,14 @@ import styles from './Hero.module.css';
 const EXPERIENCE_START = new Date(2019, 11, 1).getTime();
 const MS_PER_YEAR = 365.25 * 24 * 60 * 60 * 1000;
 
-function getYearsOfExperienceLabel(): string {
+const getYearsOfExperienceLabel = (): string => {
 	const exactYears = (Date.now() - EXPERIENCE_START) / MS_PER_YEAR;
 	const flooredYears = Math.floor(exactYears);
 	const isPastHalfYear = exactYears - flooredYears > 0.5;
 	return isPastHalfYear ? `${flooredYears}+` : String(flooredYears);
-}
+};
 
-export function Hero() {
+export const Hero = () => {
 	const { content, isLoading } = useLanguage();
 	const tagline = content.hero.tagline.replace(
 		'{years}',
@@ -54,4 +54,4 @@ export function Hero() {
 			</div>
 		</section>
 	);
-}
+};

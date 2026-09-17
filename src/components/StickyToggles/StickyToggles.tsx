@@ -2,7 +2,7 @@ import { ToggleButtons } from '../ToggleButtons/ToggleButtons';
 import { useStickyToggleVisibility } from '../../hooks/useStickyToggleVisibility';
 import styles from './StickyToggles.module.css';
 
-export function StickyToggles() {
+export const StickyToggles = () => {
 	const visible = useStickyToggleVisibility('#hero');
 
 	return (
@@ -10,4 +10,4 @@ export function StickyToggles() {
 			<ToggleButtons />
 		</div>
 	);
-}
+};

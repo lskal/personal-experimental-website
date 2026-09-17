@@ -17,27 +17,27 @@ const PLACEHOLDER_CONTENT: Record<Locale, SiteContent> = {
 	it: itContent,
 };
 
-function getInitialLocale(): Locale {
+const getInitialLocale = (): Locale => {
 	const stored = localStorage.getItem(STORAGE_KEY);
 	if (stored === 'en' || stored === 'it') {
 		return stored;
 	}
 
 	return navigator.language.toLowerCase().startsWith('it') ? 'it' : 'en';
-}
+};
 
-function otherLocale(locale: Locale): Locale {
+const otherLocale = (locale: Locale): Locale => {
 	return locale === 'en' ? 'it' : 'en';
-}
+};
 
-function getInitialContent(): Record<Locale, SiteContent> {
+const getInitialContent = (): Record<Locale, SiteContent> => {
 	return {
 		en: getCachedContent('en') ?? PLACEHOLDER_CONTENT.en,
 		it: getCachedContent('it') ?? PLACEHOLDER_CONTENT.it,
 	};
-}
+};
 
-function getInitialLoadedLocales(): Set<Locale> {
+const getInitialLoadedLocales = (): Set<Locale> => {
 	const loaded = new Set<Locale>();
 	if (getCachedContent('en')) {
 		loaded.add('en');
@@ -46,9 +46,9 @@ function getInitialLoadedLocales(): Set<Locale> {
 		loaded.add('it');
 	}
 	return loaded;
-}
+};
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
+export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 	const [locale, setLocale] = useState<Locale>(getInitialLocale);
 	const [contentByLocale, setContentByLocale] = useState(getInitialContent);
 	const [loadedLocales, setLoadedLocales] = useState(getInitialLoadedLocales);
@@ -125,4 +125,4 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 			{children}
 		</LanguageContext.Provider>
 	);
-}
+};

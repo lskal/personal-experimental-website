@@ -4,7 +4,7 @@ import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
 import cardStyles from '../../components/ProjectCard/ProjectCard.module.css';
 import styles from './Projects.module.css';
 
-export function Projects() {
+export const Projects = () => {
 	const { content, isLoading } = useLanguage();
 
 	return (
@@ -39,4 +39,4 @@ export function Projects() {
 			</div>
 		</section>
 	);
-}
+};

@@ -2,13 +2,13 @@ import type { CSSProperties, ElementType } from 'react';
 import type { CardProps } from '../../types/components';
 import styles from './Card.module.css';
 
-export function Card({
+export const Card = ({
 	as = 'div',
 	accent = 'experience',
 	active,
 	className,
 	children,
-}: CardProps) {
+}: CardProps) => {
 	const Element = as as ElementType;
 	const style = {
 		'--card-accent': `var(--color-${accent})`,
@@ -24,4 +24,4 @@ export function Card({
 			{children}
 		</Element>
 	);
-}
+};
