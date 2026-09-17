@@ -45,3 +45,10 @@ button {
 	border: none;
 	cursor: pointer;
 }
+
+:focus-visible {
+	outline: none;
+	box-shadow:
+		0 0 0 2px #ffffff,
+		0 0 0 4px #000000;
+}
