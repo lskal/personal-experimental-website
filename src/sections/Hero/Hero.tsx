@@ -1,6 +1,6 @@
 import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
-import { ToggleButtons } from '../../components/toggles/ToggleButtons/ToggleButtons';
+import { ToggleButtons } from '../../components/Toggles/ToggleButtons/ToggleButtons';
 import { PaletteSelector } from '../../components/PaletteSelector/PaletteSelector';
 import { HeroContactPanel } from './HeroContactPanel';
 import styles from './Hero.module.css';
