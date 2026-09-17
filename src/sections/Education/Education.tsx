@@ -60,6 +60,7 @@ export const Education = () => {
 										target="_blank"
 										rel="noreferrer"
 										className={styles.certLink}
+										aria-label={`${cert.name} certificate (opens in a new tab)`}
 									>
 										<ExternalLink size={18} />
 									</a>

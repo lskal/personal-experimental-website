@@ -1,0 +1,9 @@
+# Massimiliano Arosio
+
+> Portfolio of Massimiliano Arosio, a front-end developer with 6+ years of experience across React, Next.js, and modern web development.
+
+## Links
+
+- [GitHub](https://github.com/lskal)
+- [LinkedIn](https://www.linkedin.com/in/massimiliano-arosio/)
+- [Source code for this site](https://github.com/lskal/personal-experimental-website)

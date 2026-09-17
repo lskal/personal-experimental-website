@@ -43,7 +43,7 @@
 			rgba(var(--color-hero-rgb), var(--color-hero-tint-alpha)),
 			rgba(var(--color-hero-rgb), var(--color-hero-tint-alpha))
 		),
-		url('/avatar.jpg');
+		url('/avatar-mini.jpg');
 	background-blend-mode: var(--color-hero-tint-blend);
 	background-size: cover;
 	background-position: center;
