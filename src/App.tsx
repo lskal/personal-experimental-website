@@ -1,5 +1,5 @@
 import { SkipLink } from './components/SkipLink/SkipLink';
-import { StickyToggles } from './components/StickyToggles/StickyToggles';
+import { StickyToggles } from './components/toggles/StickyToggles/StickyToggles';
 import { Hero } from './sections/Hero/Hero';
 import { Experience } from './sections/Experience/Experience';
 import { Projects } from './sections/Projects/Projects';

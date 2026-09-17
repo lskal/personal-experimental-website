@@ -1,8 +1,15 @@
 .section {
+	position: relative;
 	padding: var(--space-9) var(--space-5);
 	background: var(--color-hero);
 	color: var(--color-hero-font);
 	text-align: center;
+}
+
+.scrollToTop {
+	position: absolute;
+	bottom: var(--space-4);
+	right: var(--space-4);
 }
 
 .title {

@@ -8,6 +8,14 @@ export interface TagProps {
 	children: ReactNode;
 }
 
+export interface ToggleProps {
+	onClick: () => void;
+	ariaLabel: string;
+	title: string;
+	wide?: boolean;
+	children: ReactNode;
+}
+
 export interface CardProps {
 	as?: 'div' | 'article' | 'details';
 	accent?: TagAccent;
