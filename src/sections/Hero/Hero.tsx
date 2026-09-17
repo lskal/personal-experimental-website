@@ -33,24 +33,12 @@ export function Hero() {
 				</div>
 			</div>
 			<div className={styles.inner}>
-				<div
-					className={styles.avatar}
-					role="img"
-					aria-label={content.hero.name}
-				/>
+				<div className={styles.avatar} role="img" aria-label={content.hero.name} />
 				{isLoading ? (
 					<div className={styles.text}>
-						<SkeletonBlock
-							className={styles.name}
-							width="220px"
-							height="1.2em"
-						/>
+						<SkeletonBlock className={styles.name} width="220px" height="1.2em" />
 						<SkeletonBlock className={styles.role} width="160px" height="1em" />
-						<SkeletonBlock
-							className={styles.tagline}
-							width="100%"
-							height="1em"
-						/>
+						<SkeletonBlock className={styles.tagline} width="100%" height="1em" />
 						<SkeletonBlock className={styles.bio} width="100%" height="1em" />
 						<SkeletonBlock className={styles.bio} width="80%" height="1em" />
 					</div>

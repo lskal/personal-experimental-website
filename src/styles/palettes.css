@@ -27,8 +27,8 @@
   (no separate --color-footer-* tokens) so it always matches the Hero band.
 */
 
-/* 2 — Botanical greens */
-:root[data-palette='2'] {
+/* 3 — Botanical greens */
+:root[data-palette='3'] {
 	--color-bg: #d7f9f1;
 	--color-surface: #d4dddb;
 	--color-text: #496938;
@@ -60,7 +60,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	:root[data-palette='2']:not([data-theme='light']) {
+	:root[data-palette='3']:not([data-theme='light']) {
 		--color-bg: #202a0e;
 		--color-surface: #484c41;
 		--color-text: #b2bf8d;
@@ -92,7 +92,7 @@
 	}
 }
 
-:root[data-palette='2'][data-theme='dark'] {
+:root[data-palette='3'][data-theme='dark'] {
 	--color-bg: #202a0e;
 	--color-surface: #484c41;
 	--color-text: #b2bf8d;
@@ -123,8 +123,8 @@
 	--color-skills-font: #000000;
 }
 
-/* 3 — Warm sunset */
-:root[data-palette='3'] {
+/* 2 — Warm sunset */
+:root[data-palette='2'] {
 	--color-bg: #bbdef0;
 	--color-surface: #c1c8cc;
 	--color-text: #7d4600;
@@ -156,7 +156,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	:root[data-palette='3']:not([data-theme='light']) {
+	:root[data-palette='2']:not([data-theme='light']) {
 		--color-bg: #00a6a6;
 		--color-surface: #547171;
 		--color-text: #fceea4;
@@ -188,7 +188,7 @@
 	}
 }
 
-:root[data-palette='3'][data-theme='dark'] {
+:root[data-palette='2'][data-theme='dark'] {
 	--color-bg: #00a6a6;
 	--color-surface: #547171;
 	--color-text: #fceea4;
@@ -411,8 +411,8 @@
 	--color-skills-font: #000000;
 }
 
-/* 6 — Violet garden */
-:root[data-palette='6'] {
+/* 7 — Violet garden */
+:root[data-palette='7'] {
 	--color-bg: #604582;
 	--color-surface: #7e7887;
 	--color-text: #0c100a;
@@ -444,7 +444,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	:root[data-palette='6']:not([data-theme='light']) {
+	:root[data-palette='7']:not([data-theme='light']) {
 		--color-bg: #54428e;
 		--color-surface: #74717e;
 		--color-text: #f2faf5;
@@ -476,7 +476,7 @@
 	}
 }
 
-:root[data-palette='6'][data-theme='dark'] {
+:root[data-palette='7'][data-theme='dark'] {
 	--color-bg: #54428e;
 	--color-surface: #74717e;
 	--color-text: #f2faf5;
@@ -507,8 +507,8 @@
 	--color-skills-font: #000000;
 }
 
-/* 7 — Indigo storm */
-:root[data-palette='7'] {
+/* 8 — Indigo storm */
+:root[data-palette='8'] {
 	--color-bg: #347fc4;
 	--color-surface: #a9aeb3;
 	--color-text: #000000;
@@ -540,7 +540,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	:root[data-palette='7']:not([data-theme='light']) {
+	:root[data-palette='8']:not([data-theme='light']) {
 		--color-bg: #272838;
 		--color-surface: #3d3d40;
 		--color-text: #9ea5d1;
@@ -572,7 +572,7 @@
 	}
 }
 
-:root[data-palette='7'][data-theme='dark'] {
+:root[data-palette='8'][data-theme='dark'] {
 	--color-bg: #272838;
 	--color-surface: #3d3d40;
 	--color-text: #9ea5d1;
@@ -603,8 +603,8 @@
 	--color-skills-font: #000000;
 }
 
-/* 8 — Forest twilight */
-:root[data-palette='8'] {
+/* 6 — Forest twilight */
+:root[data-palette='6'] {
 	--color-bg: #80b192;
 	--color-surface: #858d88;
 	--color-text: #232432;
@@ -636,7 +636,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	:root[data-palette='8']:not([data-theme='light']) {
+	:root[data-palette='6']:not([data-theme='light']) {
 		--color-bg: #493548;
 		--color-surface: #504c50;
 		--color-text: #a1e887;
@@ -668,7 +668,7 @@
 	}
 }
 
-:root[data-palette='8'][data-theme='dark'] {
+:root[data-palette='6'][data-theme='dark'] {
 	--color-bg: #493548;
 	--color-surface: #504c50;
 	--color-text: #a1e887;
