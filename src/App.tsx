@@ -13,9 +13,10 @@ const App = () => {
 	return (
 		<>
 			<SkipLink />
-			<main id="main-content" tabIndex={-1}>
+			<header>
 				<Hero />
-				<StickyToggles />
+			</header>
+			<main id="main-content" tabIndex={-1}>
 				<Experience />
 				<Languages />
 				<Projects />
@@ -24,6 +25,7 @@ const App = () => {
 				<Contact />
 				<PaletteDemo />
 			</main>
+			<StickyToggles />
 		</>
 	);
 };
