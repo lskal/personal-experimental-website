@@ -62,5 +62,10 @@
 
 .certLink {
 	flex-shrink: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: var(--space-7);
+	min-height: var(--space-7);
 	color: var(--color-education);
 }
