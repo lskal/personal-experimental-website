@@ -17,15 +17,19 @@ export const HeroContactPanel = () => {
 	return (
 		<Card as="div" accent="experience" className={styles.panel}>
 			<ul className={styles.list}>
-				<li className={styles.row}>
-					<MapPin size={18} aria-hidden="true" />
-					{contact.location}
-				</li>
-				<li className={styles.row}>
-					<Mail size={18} aria-hidden="true" />
-					<a href={`mailto:${contact.email}`}>{contact.email}</a>
-				</li>
-				{SHOW_PHONE && (
+				{contact.location && (
+					<li className={styles.row}>
+						<MapPin size={18} aria-hidden="true" />
+						{contact.location}
+					</li>
+				)}
+				{contact.email && (
+					<li className={styles.row}>
+						<Mail size={18} aria-hidden="true" />
+						<a href={`mailto:${contact.email}`}>{contact.email}</a>
+					</li>
+				)}
+				{SHOW_PHONE && contact.phone && (
 					<li className={styles.row}>
 						<Phone size={18} aria-hidden="true" />
 						<a href={`tel:${contact.phone}`}>{contact.phone}</a>
