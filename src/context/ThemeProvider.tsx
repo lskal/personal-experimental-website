@@ -4,7 +4,7 @@ import type { Theme } from '../types/context';
 
 const STORAGE_KEY = 'theme';
 
-function getInitialTheme(): Theme {
+const getInitialTheme = (): Theme => {
 	const stored = localStorage.getItem(STORAGE_KEY);
 	if (stored === 'light' || stored === 'dark') {
 		return stored;
@@ -12,9 +12,9 @@ function getInitialTheme(): Theme {
 
 	const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 	return prefersDark ? 'dark' : 'light';
-}
+};
 
-export function ThemeProvider({ children }: { children: ReactNode }) {
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 	const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
 	useEffect(() => {
@@ -31,4 +31,4 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 			{children}
 		</ThemeContext.Provider>
 	);
-}
+};

@@ -2,12 +2,12 @@ import './PaletteDemo.css';
 import type { Swatch, PaletteBlock } from '../../types/components';
 import { SHOW_PALETTE_DEMO } from '../../config/featureFlags';
 
-function reverseSectionHexes(sections: Swatch[]): Swatch[] {
+const reverseSectionHexes = (sections: Swatch[]): Swatch[] => {
 	return sections.map((swatch, index) => ({
 		label: swatch.label,
 		hex: sections[sections.length - 1 - index].hex,
 	}));
-}
+};
 
 const palettes: PaletteBlock[] = [
 	{
@@ -287,7 +287,7 @@ const palettes: PaletteBlock[] = [
 	},
 ];
 
-export function PaletteDemo() {
+export const PaletteDemo = () => {
 	if (!SHOW_PALETTE_DEMO) {
 		return null;
 	}
@@ -386,4 +386,4 @@ export function PaletteDemo() {
 			})}
 		</section>
 	);
-}
+};

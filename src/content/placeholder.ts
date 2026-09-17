@@ -10,7 +10,7 @@ const EDUCATION_COUNT = 3;
 const CERTIFICATIONS_COUNT = 7;
 const LANGUAGES_COUNT = 3;
 
-export function createPlaceholderContent(ui: UiStrings): SiteContent {
+export const createPlaceholderContent = (ui: UiStrings): SiteContent => {
 	const skills: SkillCategory[] = SKILLS_TAG_COUNTS.map(tagCount => ({
 		category: 'Loading…',
 		skills: Array.from({ length: tagCount }, () => 'Loading…'),
@@ -69,4 +69,4 @@ export function createPlaceholderContent(ui: UiStrings): SiteContent {
 			location: 'Loading…',
 		},
 	};
-}
+};

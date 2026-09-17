@@ -4,7 +4,7 @@ import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
 import { Card } from '../../components/Card/Card';
 import styles from './Education.module.css';
 
-export function Education() {
+export const Education = () => {
 	const { content, isLoading } = useLanguage();
 
 	return (
@@ -71,4 +71,4 @@ export function Education() {
 			</div>
 		</section>
 	);
-}
+};

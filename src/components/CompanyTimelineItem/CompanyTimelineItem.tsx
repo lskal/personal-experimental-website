@@ -4,10 +4,10 @@ import { Tag } from '../Tag/Tag';
 import { Card } from '../Card/Card';
 import styles from './CompanyTimelineItem.module.css';
 
-export function CompanyTimelineItem({
+export const CompanyTimelineItem = ({
 	entry,
 	defaultOpen = false,
-}: CompanyTimelineItemProps) {
+}: CompanyTimelineItemProps) => {
 	return (
 		<div className={styles.item}>
 			<span className={styles.dot} />
@@ -67,4 +67,4 @@ export function CompanyTimelineItem({
 			</Card>
 		</div>
 	);
-}
+};

@@ -4,7 +4,7 @@ import { Tag } from '../../components/Tag/Tag';
 import { Card } from '../../components/Card/Card';
 import styles from './Skills.module.css';
 
-export function Skills() {
+export const Skills = () => {
 	const { content, isLoading } = useLanguage();
 
 	return (
@@ -43,4 +43,4 @@ export function Skills() {
 			</div>
 		</section>
 	);
-}
+};

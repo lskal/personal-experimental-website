@@ -6,7 +6,7 @@ const REVEAL_THRESHOLD_PX = 200;
 // of view, but only after the user has scrolled back up by more than
 // REVEAL_THRESHOLD_PX without an intervening downward scroll — this avoids
 // flickering the bar in and out on small scroll wobbles.
-export function useStickyToggleVisibility(targetSelector: string) {
+export const useStickyToggleVisibility = (targetSelector: string) => {
 	const [targetVisible, setTargetVisible] = useState(true);
 	const [revealed, setRevealed] = useState(false);
 	const lastScrollY = useRef(0);
@@ -30,7 +30,7 @@ export function useStickyToggleVisibility(targetSelector: string) {
 		lastScrollY.current = window.scrollY;
 		let ticking = false;
 
-		function handleScroll() {
+		const handleScroll = () => {
 			if (ticking) {
 				return;
 			}
@@ -53,11 +53,11 @@ export function useStickyToggleVisibility(targetSelector: string) {
 				lastScrollY.current = currentY;
 				ticking = false;
 			});
-		}
+		};
 
 		window.addEventListener('scroll', handleScroll, { passive: true });
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
 	return !targetVisible && revealed;
-}
+};

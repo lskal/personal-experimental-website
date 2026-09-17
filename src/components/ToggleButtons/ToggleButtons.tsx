@@ -1,11 +1,11 @@
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
 import { LanguageToggle } from '../LanguageToggle/LanguageToggle';
 
-export function ToggleButtons() {
+export const ToggleButtons = () => {
 	return (
 		<>
 			<LanguageToggle />
 			<ThemeToggle />
 		</>
 	);
-}
+};

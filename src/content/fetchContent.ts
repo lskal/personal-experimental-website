@@ -3,30 +3,30 @@ import type { SiteContent } from '../types/content';
 
 const CACHE_PREFIX = 'site-content-cache-';
 
-function cacheKey(locale: Locale): string {
+const cacheKey = (locale: Locale): string => {
 	return `${CACHE_PREFIX}${locale}`;
-}
+};
 
-export function getCachedContent(locale: Locale): SiteContent | null {
+export const getCachedContent = (locale: Locale): SiteContent | null => {
 	try {
 		const raw = localStorage.getItem(cacheKey(locale));
 		return raw ? (JSON.parse(raw) as SiteContent) : null;
 	} catch {
 		return null;
 	}
-}
+};
 
-function setCachedContent(locale: Locale, content: SiteContent): void {
+const setCachedContent = (locale: Locale, content: SiteContent): void => {
 	try {
 		localStorage.setItem(cacheKey(locale), JSON.stringify(content));
 	} catch {
 		// localStorage unavailable (private browsing, quota exceeded) — caching is best-effort
 	}
-}
+};
 
-export async function fetchLocaleContent(
+export const fetchLocaleContent = async (
 	locale: Locale,
-): Promise<SiteContent | null> {
+): Promise<SiteContent | null> => {
 	try {
 		const response = await fetch(`/api/content?locale=${locale}`);
 		if (!response.ok) {
@@ -38,12 +38,12 @@ export async function fetchLocaleContent(
 	} catch {
 		return null;
 	}
-}
+};
 
-export function scheduleIdleFetch(callback: () => void): void {
+export const scheduleIdleFetch = (callback: () => void): void => {
 	if (typeof requestIdleCallback === 'function') {
 		requestIdleCallback(callback);
 	} else {
 		setTimeout(callback, 1000);
 	}
-}
+};

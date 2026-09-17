@@ -6,7 +6,7 @@ import { Tag } from '../Tag/Tag';
 import { Card } from '../Card/Card';
 import styles from './ProjectCard.module.css';
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export const ProjectCard = ({ project }: ProjectCardProps) => {
 	const { content } = useLanguage();
 
 	return (
@@ -48,4 +48,4 @@ export function ProjectCard({ project }: ProjectCardProps) {
 			)}
 		</Card>
 	);
-}
+};

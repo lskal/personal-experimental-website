@@ -9,7 +9,7 @@ import { Languages } from './sections/Languages/Languages';
 import { Contact } from './sections/Contact/Contact';
 import { PaletteDemo } from './components/PaletteDemo/PaletteDemo';
 
-function App() {
+const App = () => {
 	return (
 		<>
 			<SkipLink />
@@ -26,6 +26,6 @@ function App() {
 			</main>
 		</>
 	);
-}
+};
 
 export default App;
