@@ -11,7 +11,10 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
 	return (
 		<Card as="article" className={styles.card}>
-			<p className={styles.name}>{project.name}</p>
+			<div className={styles.header}>
+				<p className={styles.name}>{project.name}</p>
+				{project.badge && <span className={styles.badge}>{project.badge}</span>}
+			</div>
 			<p className={styles.description}>{project.description}</p>
 			<ul className={styles.stack}>
 				{project.stack.map(tech => (

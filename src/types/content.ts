@@ -26,6 +26,7 @@ export interface PersonalProject {
 	name: string;
 	description: string;
 	stack: string[];
+	badge?: string;
 	demoUrl?: string;
 	repoUrl?: string;
 }
