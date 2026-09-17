@@ -48,6 +48,10 @@
 	color: var(--color-experience);
 }
 
+.item .details[open] {
+	background: var(--color-surface);
+}
+
 .period {
 	font-size: var(--font-size-xs);
 	color: var(--color-text-muted);
