@@ -26,7 +26,7 @@ export const HeroContactPanel = () => {
 				{contact.email && (
 					<li className={styles.row}>
 						<Mail size={18} aria-hidden="true" />
-						<a href={`mailto:${contact.email}`}>{contact.email}</a>
+						<a href={`mailto:${contact.email}`}>{contact.email} mail here</a>
 					</li>
 				)}
 				{SHOW_PHONE && contact.phone && (
