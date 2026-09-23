@@ -79,3 +79,7 @@ Plain `npm run dev` also works for pure UI/styling work — the app falls back g
 ## Deployment
 
 The project is deployed on Vercel, on a custom domain (`marosio.dev`, DNS managed on Cloudflare, apex-only, DNS-only/no proxy so Vercel's own edge and SSL handle routing and certificates). Real content (both locales) is managed through a Vercel Global Config store, connected via the `GLOBAL_CONFIG` environment variable. `main` is the production branch — every merged pull request from `development` triggers a new production deployment automatically.
+
+## License
+
+This code is shared publicly for portfolio and review purposes only — it is not open source. See [LICENSE](./LICENSE) for details.
