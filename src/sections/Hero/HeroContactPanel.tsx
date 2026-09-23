@@ -6,7 +6,14 @@ import {
 } from '../../components/BrandIcons/BrandIcons';
 import { Card } from '../../components/Card/Card';
 import { useLanguage } from '../../hooks/useLanguage';
-import { SHOW_PHONE } from '../../config/featureFlags';
+import {
+	SHOW_EMAIL,
+	SHOW_GITHUB,
+	SHOW_LINKEDIN,
+	SHOW_LOCATION,
+	SHOW_MBTI,
+	SHOW_PHONE,
+} from '../../config/featureFlags';
 import { handleFromUrl } from '../../utils/handleFromUrl';
 import styles from './HeroContactPanel.module.css';
 
@@ -17,13 +24,13 @@ export const HeroContactPanel = () => {
 	return (
 		<Card as="div" accent="experience" className={styles.panel}>
 			<ul className={styles.list}>
-				{contact.location && (
+				{SHOW_LOCATION && contact.location && (
 					<li className={styles.row}>
 						<MapPin size={18} aria-hidden="true" />
 						{contact.location}
 					</li>
 				)}
-				{contact.email && (
+				{SHOW_EMAIL && contact.email && (
 					<li className={styles.row}>
 						<Mail size={18} aria-hidden="true" />
 						<a href={`mailto:${contact.email}`}>{contact.email}</a>
@@ -35,7 +42,7 @@ export const HeroContactPanel = () => {
 						<a href={`tel:${contact.phone}`}>{contact.phone}</a>
 					</li>
 				)}
-				{contact.githubUrl && (
+				{SHOW_GITHUB && contact.githubUrl && (
 					<li className={styles.row}>
 						<GithubIcon size={18} />
 						<a
@@ -48,7 +55,7 @@ export const HeroContactPanel = () => {
 						</a>
 					</li>
 				)}
-				{contact.linkedinUrl && (
+				{SHOW_LINKEDIN && contact.linkedinUrl && (
 					<li className={styles.row}>
 						<LinkedinIcon size={18} />
 						<a
@@ -61,21 +68,23 @@ export const HeroContactPanel = () => {
 						</a>
 					</li>
 				)}
-				<li className={styles.row}>
-					<PersonalityIcon size={18} />
-					{hero.mbtiUrl ? (
-						<a
-							href={hero.mbtiUrl}
-							target="_blank"
-							rel="noreferrer"
-							aria-label={`16Personalities profile: ${hero.mbti} (opens in a new tab)`}
-						>
-							{hero.mbti}
-						</a>
-					) : (
-						hero.mbti
-					)}
-				</li>
+				{SHOW_MBTI && hero.mbtiUrl && (
+					<li className={styles.row}>
+						<PersonalityIcon size={18} />
+						{hero.mbtiUrl ? (
+							<a
+								href={hero.mbtiUrl}
+								target="_blank"
+								rel="noreferrer"
+								aria-label={`16Personalities profile: ${hero.mbti} (opens in a new tab)`}
+							>
+								{hero.mbti}
+							</a>
+						) : (
+							hero.mbti
+						)}
+					</li>
+				)}
 			</ul>
 		</Card>
 	);

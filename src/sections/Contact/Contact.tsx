@@ -5,7 +5,13 @@ import {
 } from '../../components/BrandIcons/BrandIcons';
 import { useLanguage } from '../../hooks/useLanguage';
 import { SkeletonBlock } from '../../components/SkeletonBlock/SkeletonBlock';
-import { SHOW_PHONE } from '../../config/featureFlags';
+import {
+	SHOW_EMAIL,
+	SHOW_GITHUB,
+	SHOW_LINKEDIN,
+	SHOW_LOCATION,
+	SHOW_PHONE,
+} from '../../config/featureFlags';
 import { handleFromUrl } from '../../utils/handleFromUrl';
 import { ScrollToTopToggle } from '../../components/Toggles/ScrollToTopToggle/ScrollToTopToggle';
 import styles from './Contact.module.css';
@@ -45,14 +51,14 @@ export const Contact = () => {
 				{ui.sectionTitles.contact}
 			</h2>
 			<div className={styles.links}>
-				{contact.location && (
+				{SHOW_LOCATION && contact.location && (
 					<span className={styles.link}>
 						<MapPin size={20} aria-hidden="true" />
 						{contact.location}
 					</span>
 				)}
 
-				{contact.email && (
+				{SHOW_EMAIL && contact.email && (
 					<a href={`mailto:${contact.email}`} className={styles.link}>
 						<Mail size={20} aria-hidden="true" />
 						{contact.email}
@@ -64,7 +70,7 @@ export const Contact = () => {
 						{contact.phone}
 					</a>
 				)}
-				{contact.githubUrl && (
+				{SHOW_GITHUB && contact.githubUrl && (
 					<a
 						href={contact.githubUrl}
 						target="_blank"
@@ -76,7 +82,7 @@ export const Contact = () => {
 						{handleFromUrl(contact.githubUrl)}
 					</a>
 				)}
-				{contact.linkedinUrl && (
+				{SHOW_LINKEDIN && contact.linkedinUrl && (
 					<a
 						href={contact.linkedinUrl}
 						target="_blank"
