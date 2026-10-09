@@ -1,4 +1,5 @@
-import { ChevronDown } from 'lucide-react';
+import { useId, useState, type MouseEvent } from 'react';
+import { ChevronDown, ExternalLink } from 'lucide-react';
 import type { CompanyTimelineItemProps } from '../../types/components';
 import { Tag } from '../Tag/Tag';
 import { Card } from '../Card/Card';
@@ -8,29 +9,60 @@ export const CompanyTimelineItem = ({
 	entry,
 	defaultOpen = false,
 }: CompanyTimelineItemProps) => {
+	const [open, setOpen] = useState(defaultOpen);
+	const panelId = useId();
+
+	// Mouse convenience: the whole header toggles, as the old <summary> did.
+	// Keyboard/screen-reader users toggle via the chevron <button>; clicks on
+	// the company link are left alone.
+	const handleHeaderClick = (event: MouseEvent<HTMLDivElement>) => {
+		if ((event.target as HTMLElement).closest('a, button')) {
+			return;
+		}
+		setOpen(current => !current);
+	};
+
 	return (
 		<div className={styles.item}>
 			<span className={styles.dot} />
-			<Card as="details" active={defaultOpen} className={styles.details}>
-				<summary className={styles.summary}>
+			<Card
+				as="div"
+				active={open}
+				className={[styles.details, open && styles.open].filter(Boolean).join(' ')}
+			>
+				<div className={styles.summary} onClick={handleHeaderClick}>
 					<div className={styles.summaryText}>
 						<span className={styles.company}>
-							{entry.companyUrl ? (
-								<a href={entry.companyUrl} target="_blank" rel="noreferrer">
-									{entry.company}
+							{entry.company}
+							{entry.companyUrl && (
+								<a
+									href={entry.companyUrl}
+									target="_blank"
+									rel="noreferrer"
+									className={styles.companyLink}
+									aria-label={`${entry.company} website (opens in a new tab)`}
+								>
+									<ExternalLink size={16} aria-hidden="true" />
 								</a>
-							) : (
-								entry.company
 							)}
 						</span>
 						<span className={styles.role}>{entry.role}</span>
 						<span className={styles.period}>{entry.period}</span>
 						<p className={styles.companySummary}>{entry.summary}</p>
 					</div>
-					<ChevronDown className={styles.chevron} size={20} />
-				</summary>
+					<button
+						type="button"
+						className={styles.toggle}
+						aria-expanded={open}
+						aria-controls={panelId}
+						aria-label={entry.company}
+						onClick={() => setOpen(current => !current)}
+					>
+						<ChevronDown className={styles.chevron} size={20} aria-hidden="true" />
+					</button>
+				</div>
 
-				<div className={styles.projects}>
+				<div id={panelId} className={styles.projects} hidden={!open}>
 					{entry.projects.map(project => (
 						<article key={project.name} className={styles.project}>
 							<p className={styles.projectName}>
