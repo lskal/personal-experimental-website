@@ -16,6 +16,6 @@ createRoot(document.getElementById('root')!).render(
 				</LanguageProvider>
 			</PaletteProvider>
 		</ThemeProvider>
-		<Analytics />
+		{import.meta.env.PROD && <Analytics />}
 	</StrictMode>,
 );
