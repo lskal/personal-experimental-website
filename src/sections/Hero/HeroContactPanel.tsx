@@ -41,6 +41,7 @@ export const HeroContactPanel = () => {
 					</li>
 				)}
 				{SHOW_PHONE &&
+					offices.length > 0 &&
 					offices.map(office => (
 						<li key={office.country} className={styles.row}>
 							<FlagIcon country={office.country} size={18} />
