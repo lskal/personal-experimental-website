@@ -1,5 +1,6 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import {
+	FlagIcon,
 	GithubIcon,
 	LinkedinIcon,
 } from '../../components/BrandIcons/BrandIcons';
@@ -13,16 +14,24 @@ import {
 	SHOW_PHONE,
 } from '../../config/featureFlags';
 import { handleFromUrl } from '../../utils/handleFromUrl';
+import { getVisitorCountry } from '../../utils/visitorCountry';
+import { telHref, visibleOffices } from '../../utils/visibleOffices';
 import { ScrollToTopToggle } from '../../components/Toggles/ScrollToTopToggle/ScrollToTopToggle';
 import styles from './Contact.module.css';
 
-const CONTACT_ROW_WIDTHS = SHOW_PHONE
-	? ['180px', '120px', '140px', '90px', '90px']
-	: ['180px', '140px', '90px', '90px'];
+// Skeleton row widths: location, email, one per visible phone, GitHub, LinkedIn.
+const contactRowWidths = (phoneCount: number): string[] => [
+	'180px',
+	'140px',
+	...Array.from({ length: SHOW_PHONE ? phoneCount : 0 }, () => '120px'),
+	'90px',
+	'90px',
+];
 
 export const Contact = () => {
-	const { content, isLoading } = useLanguage();
+	const { content, isLoading, locale } = useLanguage();
 	const { contact, ui } = content;
+	const offices = visibleOffices(contact.offices, getVisitorCountry(), locale);
 
 	if (isLoading) {
 		return (
@@ -31,7 +40,7 @@ export const Contact = () => {
 					{ui.sectionTitles.contact}
 				</h2>
 				<div className={styles.links}>
-					{CONTACT_ROW_WIDTHS.map((width, index) => (
+					{contactRowWidths(offices.length).map((width, index) => (
 						<span key={index} className={styles.link}>
 							<SkeletonBlock variant="circle" width="20px" height="20px" />
 							<SkeletonBlock width={width} height="1em" />
@@ -51,10 +60,10 @@ export const Contact = () => {
 				{ui.sectionTitles.contact}
 			</h2>
 			<div className={styles.links}>
-				{SHOW_LOCATION && contact.location && (
+				{SHOW_LOCATION && offices.length > 0 && (
 					<span className={styles.link}>
 						<MapPin size={20} aria-hidden="true" />
-						{contact.location}
+						{offices.map(office => office.city).join(' || ')}
 					</span>
 				)}
 
@@ -64,12 +73,17 @@ export const Contact = () => {
 						{contact.email}
 					</a>
 				)}
-				{SHOW_PHONE && contact.phone && (
-					<a href={`tel:${contact.phone}`} className={styles.link}>
-						<Phone size={20} aria-hidden="true" />
-						{contact.phone}
-					</a>
-				)}
+				{SHOW_PHONE &&
+					offices.map(office => (
+						<a
+							key={office.country}
+							href={telHref(office.phone)}
+							className={styles.link}
+						>
+							<FlagIcon country={office.country} size={20} />
+							{office.phone}
+						</a>
+					))}
 				{SHOW_GITHUB && contact.githubUrl && (
 					<a
 						href={contact.githubUrl}

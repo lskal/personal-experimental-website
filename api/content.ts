@@ -1,6 +1,6 @@
 import { get } from '@vercel/global-config';
-import type { Locale } from '../src/types/context';
-import type { SiteContent } from '../src/types/content';
+import type { Locale } from '../src/types/context.js';
+import type { SiteContent } from '../src/types/content.js';
 
 export const config = { runtime: 'edge' };
 

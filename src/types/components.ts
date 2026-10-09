@@ -1,5 +1,9 @@
 import type { ReactNode } from 'react';
-import type { ExperienceEntry, PersonalProject } from './content';
+import type {
+	ExperienceEntry,
+	OfficeCountry,
+	PersonalProject,
+} from './content';
 
 export type TagAccent = 'skills' | 'projects' | 'languages' | 'experience';
 
@@ -26,6 +30,10 @@ export interface CardProps {
 
 export interface BrandIconProps {
 	size?: number;
+}
+
+export interface FlagIconProps extends BrandIconProps {
+	country: OfficeCountry;
 }
 
 export interface SkeletonBlockProps {

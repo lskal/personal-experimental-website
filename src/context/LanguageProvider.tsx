@@ -9,8 +9,11 @@ import {
 	getCachedContent,
 	scheduleIdleFetch,
 } from '../content/fetchContent';
+import { getVisitorCountry } from '../utils/visitorCountry';
 
-const STORAGE_KEY = 'locale';
+// Bumped from 'locale': the old key was written on every load (not just on
+// toggle), so it holds auto-picked values that would block IP-based detection.
+const STORAGE_KEY = 'locale-choice';
 
 const PLACEHOLDER_CONTENT: Record<Locale, SiteContent> = {
 	en: enContent,
@@ -23,7 +26,9 @@ const getInitialLocale = (): Locale => {
 		return stored;
 	}
 
-	return navigator.language.toLowerCase().startsWith('it') ? 'it' : 'en';
+	// IP country only, deliberately not navigator.language — device language
+	// doesn't say where the visitor is.
+	return getVisitorCountry() === 'IT' ? 'it' : 'en';
 };
 
 const otherLocale = (locale: Locale): Locale => {
@@ -56,7 +61,6 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
 	useEffect(() => {
 		document.documentElement.setAttribute('lang', locale);
-		localStorage.setItem(STORAGE_KEY, locale);
 	}, [locale]);
 
 	useEffect(() => {
@@ -109,8 +113,12 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps -- runs once after the priority locale is known, not on every locale toggle
 	}, []);
 
+	// Only an explicit toggle is persisted, so the IP-based default keeps
+	// applying until the visitor actually picks a language.
 	const toggleLocale = () => {
-		setLocale(current => otherLocale(current));
+		const next = otherLocale(locale);
+		localStorage.setItem(STORAGE_KEY, next);
+		setLocale(next);
 	};
 
 	return (
