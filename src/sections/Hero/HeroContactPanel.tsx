@@ -1,5 +1,6 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import {
+	FlagIcon,
 	GithubIcon,
 	LinkedinIcon,
 	PersonalityIcon,
@@ -15,19 +16,22 @@ import {
 	SHOW_PHONE,
 } from '../../config/featureFlags';
 import { handleFromUrl } from '../../utils/handleFromUrl';
+import { getVisitorCountry } from '../../utils/visitorCountry';
+import { telHref, visibleOffices } from '../../utils/visibleOffices';
 import styles from './HeroContactPanel.module.css';
 
 export const HeroContactPanel = () => {
-	const { content } = useLanguage();
+	const { content, locale } = useLanguage();
 	const { contact, hero } = content;
+	const offices = visibleOffices(contact.offices, getVisitorCountry(), locale);
 
 	return (
 		<Card as="div" accent="experience" className={styles.panel}>
 			<ul className={styles.list}>
-				{SHOW_LOCATION && contact.location && (
+				{SHOW_LOCATION && offices.length > 0 && (
 					<li className={styles.row}>
 						<MapPin size={18} aria-hidden="true" />
-						{contact.location}
+						{offices.map(office => office.city).join(' || ')}
 					</li>
 				)}
 				{SHOW_EMAIL && contact.email && (
@@ -36,12 +40,13 @@ export const HeroContactPanel = () => {
 						<a href={`mailto:${contact.email}`}>{contact.email}</a>
 					</li>
 				)}
-				{SHOW_PHONE && contact.phone && (
-					<li className={styles.row}>
-						<Phone size={18} aria-hidden="true" />
-						<a href={`tel:${contact.phone}`}>{contact.phone}</a>
-					</li>
-				)}
+				{SHOW_PHONE &&
+					offices.map(office => (
+						<li key={office.country} className={styles.row}>
+							<FlagIcon country={office.country} size={18} />
+							<a href={telHref(office.phone)}>{office.phone}</a>
+						</li>
+					))}
 				{SHOW_GITHUB && contact.githubUrl && (
 					<li className={styles.row}>
 						<GithubIcon size={18} />

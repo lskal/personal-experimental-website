@@ -93,6 +93,14 @@ export interface UiStrings {
 	};
 }
 
+export type OfficeCountry = 'IT' | 'PL';
+
+export interface ContactOffice {
+	country: OfficeCountry;
+	city: string;
+	phone: string;
+}
+
 export interface SiteContent {
 	ui: UiStrings;
 	hero: {
@@ -111,8 +119,7 @@ export interface SiteContent {
 	languages: LanguageSkill[];
 	contact: {
 		email: string;
-		phone: string;
-		location: string;
+		offices: ContactOffice[];
 		githubUrl?: string;
 		linkedinUrl?: string;
 	};

@@ -65,8 +65,10 @@ export const createPlaceholderContent = (ui: UiStrings): SiteContent => {
 		})),
 		contact: {
 			email: 'Loading…',
-			phone: 'Loading…',
-			location: 'Loading…',
+			offices: [
+				{ country: 'IT', city: 'Loading…', phone: 'Loading…' },
+				{ country: 'PL', city: 'Loading…', phone: 'Loading…' },
+			],
 		},
 	};
 };
